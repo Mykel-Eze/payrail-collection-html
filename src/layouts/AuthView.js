@@ -2,12 +2,25 @@ import "../css/auth.css"
 
 import logo from '../images/payrail-logo.svg';
 
-import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, NavLink, Redirect } from "react-router-dom";
 import { useEffect } from 'react';
+import $ from "jquery";
+import M from "materialize-css"
 
+import DefaultLogin from "../auth-pages/Login-Default";
+import RecognisedLogin from "../auth-pages/Login-Recognised";
+import EmailSignup from "../auth-pages/Signup-Email";
+import PhoneSignup from "../auth-pages/Signup-Phone";
+import AgentLogin from "../auth-pages/AgentLogin";
 
 const AuthView = () => {
     useEffect(() => {
+        var Dropdown = document.querySelectorAll('.dropdown-trigger');
+        M.Dropdown.init(Dropdown);
+
+        $("ul#language-list li a").click(function() {
+            $(".selected-language").text($(this).text())
+        });
     }, []);
 
     return (
@@ -16,36 +29,78 @@ const AuthView = () => {
                 <div id="auth-page-wrapper">
                     <div className="auth-nav-header">
                         <div className="container">
-                            <a href="/login">
-                                <img src={logo} alt="Payrail" className="brand-img" />
-                            </a>
+                            <div className="flex-div justify-content-btw">
+                                <a href="/" className="logo-side">
+                                    <img src={logo} alt="Payrail" className="brand-img" />
+                                </a>
+
+                                <div className="nav-right-side flex-div">
+                                    <div className="language-block-wrapper">
+                                        <button className="dropdown-trigger flex-div" data-target="language-list">
+                                            <img src={require('../images/globe-icon.svg').default} alt="globe-icon" className="globe-icon" />
+                                            <span className="selected-language">ENG</span>
+                                            <img src={require('../images/caret-1.svg').default} alt="caret" className="caret-1" />
+                                        </button>
+
+                                        {/* Dropdown Structure */}
+                                        <ul id='language-list' className='dropdown-content'>
+                                            <li><a href="#!">eng</a></li>
+                                            <li><a href="#!">fra</a></li>
+                                            <li><a href="#!">yor</a></li>
+                                            <li><a href="#!">hau</a></li>
+                                            <li><a href="#!">igb</a></li>
+                                            <li><a href="#!">chn</a></li>
+                                        </ul>
+                                    </div>
+                                    <div className="create-account-wrapper">
+                                        <NavLink to="/signup" className="create-account-btn pry-bg">
+                                            <span>Create account</span>
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <section className="auth-wrapper container">
                         <div className="auth-block-wrapper">
-                            <div className="center">
+                            <div className="">
                                 <ul className="form-nav">
                                     <li>
-                                        <NavLink to="/signup" className="route-link" activeClassName="active-link">
-                                            <span>Sign Up</span>
+                                        <NavLink to="/agent" className="route-link" activeClassName="active-link">
+                                            <span>Agent</span>
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/login" className="route-link" activeClassName="active-link">
-                                            <span>Log in</span>
+                                        <NavLink to="/merchant" className="route-link" activeClassName="active-link">
+                                            <span>Merchant</span>
                                         </NavLink>
                                     </li>
                                 </ul>
                             </div>
-
                             <Switch>
                                 <Route exact path="/">
-                                    <Redirect to="/signup" />
+                                    <Redirect to="/login-default" />
                                 </Route>
-                                {/* <Route exact path="/signup">
+                                <Route exact path="/login-default">
+                                    <DefaultLogin />
+                                </Route>
+                                <Route exact path="/login-recognised">
+                                    <RecognisedLogin />
+                                </Route>
+                                <Route exact path="/email-signup">
                                     <EmailSignup />
-                                </Route> */}
+                                </Route>
+                                <Route exact path="/phone-signup">
+                                    <PhoneSignup />
+                                </Route>
+
+                                <Route exact path="/agent">
+                                    <Redirect to="/agent/login" />
+                                </Route>
+                                <Route exact path="/agent/login">
+                                    <AgentLogin />
+                                </Route>
                             </Switch>
                         </div>
                         <div className="support-and-privacy flex-div justify-content-btw">
@@ -60,14 +115,17 @@ const AuthView = () => {
                         </div>
                     </section>
 
+                    <section className="sample-links">
+                        <NavLink to="/login-default">Login New</NavLink>
+                        <NavLink to="/login-recognised">Login Old</NavLink>
+                        <NavLink to="/email-signup">Email Signup</NavLink>
+                        <NavLink to="/phone-signup">Phone Signup</NavLink>
+                        <NavLink to="/agent/login">Agent Login</NavLink>
+                    </section>
+
 
                     <footer id="auth-footer">
                         <div className="flex-div container">
-                            <div className="trusted-block flex-div">
-                                {/* <img src={require("../images/trust.svg").default} alt="shield-icon" className="footer-item-icon" /> */}
-                                <span>Trusted by over <span className="pry-color">100k Business</span> like you!</span>
-                            </div>
-
                             <div className="copyright-div">
                                 © Angala Financial Technologies Limited. All Rights Reserved.
                             </div>
@@ -80,7 +138,7 @@ const AuthView = () => {
                     <div className="modal-content">
                         <div className="mpodal-content-block">
                             <div className="user-pix-div center mag-bottom-0">
-                                {/* <img src={require("../images/secure-lock.svg").default} alt="secure-lock" className="user-pix" /> */}
+                                <img src={require("../images/lock-closed.svg").default} alt="secure-lock" className="user-pix" />
                             </div>
                             <div className="user-detected-notice center">
                                 <h1>Please try again later</h1>

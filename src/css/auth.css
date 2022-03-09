@@ -1,4 +1,4 @@
-#auth-main-wrapper {
+#auth-page-wrapper {
     height: 100vh;
     min-height: 600px;
     width: 100%;
@@ -19,6 +19,40 @@
 .auth-nav-header img.brand-img {
     width: 120px;
 }
+button.dropdown-trigger.flex-div {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+}
+.language-block-wrapper {
+    margin-right: 25px;
+}
+a.create-account-btn {
+    display: block;
+    background: #89163B;
+    border-radius: 6px;
+    height: 44px;
+    line-height: 44px;
+    min-width: 160px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 0.5s;
+    border: 1px solid var(--pry-color);
+}
+a.create-account-btn.pry-bg:hover {
+    background-color: transparent;
+    color: var(--pry-color);
+}
+span.selected-language {
+    padding: 0 5px;
+}
+#language-list a, span.selected-language {
+    text-transform: uppercase;
+}
+.auth-desc a {
+    color: #58A55C;
+}
 @media(max-width: 600px) {
     #auth-main-wrapper {
         position: relative;
@@ -34,15 +68,10 @@ section.auth-wrapper.container {
 }
 .auth-block-wrapper {
     width: 90%;
-    max-width: 500px;
+    max-width: 430px;
     background: #FFFFFF;
-    border: 1px solid rgba(119, 119, 119, 0.2);
     box-sizing: border-box;
-    border-radius: 48px;
     margin: 20px auto;
-    /* transform: translateY(20%); */
-    padding: 20px 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
     position: relative;
     overflow-x: hidden;
 }
@@ -55,13 +84,14 @@ section.auth-wrapper.container {
     background-color: transparent;
 }
 .progress.load-progress .indeterminate {
-    background-color: #EA6212;
+    background-color: var(--pry-color);
 }
 ul.form-nav {
     display: inline-block;
-    background: #F9F9F9;
-    border-radius: 30.5px;
-    padding: 10px 15px;
+    background: #FCF9FA;
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    border-radius: 10px;
+    padding: 5px;
     position: relative;
     left: 0;
     right: 0;
@@ -71,17 +101,19 @@ ul.form-nav li {
     display: inline-block;
 }
 a.route-link {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 21px;
     text-align: center;
     color: #353D46;
     display: block;
     padding: 10px 10px;
+    min-width: 120px;
+    text-transform: uppercase;
 }
 a.route-link.active-link {
     color: white;
-    background: #EA6212;
-    border-radius: 24.5px;
+    background: var(--pry-color);
+    border-radius: 10px;
     padding: 10px 15px;
     min-width: 130px;
 }
@@ -89,7 +121,6 @@ h1.greet-title {
     font-weight: 600;
     font-size: 30px;
     line-height: 39px;
-    text-align: center;
     letter-spacing: -0.212264px;
     color: #353D46;
     margin: 0;
@@ -101,10 +132,10 @@ p.greet-desc, p.greet-email-desc {
     font-weight: normal;
     font-size: 13px;
     line-height: 16px;
-    text-align: center;
     color: #353D46;
     mix-blend-mode: normal;
     opacity: 0.5;
+    margin-bottom: 22px;
 }
 p.greet-desc a {
     color: #58A55C;
@@ -114,10 +145,10 @@ p.greet-email-desc a {
     color: #353D46;
 }
 .input-field input.inp-field, .select-wrapper input.select-dropdown {
-    background: #F9F9F9;
+    background: #FFFFFF;
     border: 1px solid rgba(119, 119, 119, 0.2) !important;
     box-sizing: border-box;
-    border-radius: 28.5px;
+    border-radius: 10px;    
     height: 55px;
     outline: none;
     box-shadow: none !important;
@@ -126,7 +157,7 @@ p.greet-email-desc a {
     width: 100%;
     font-size: 14px;
 }
-.input-field.col label {
+.input-field label {
     left: 25px;
     top: 7px;
     font-size: 14px;
@@ -162,7 +193,7 @@ span.show-password {
     margin-top: 10px;
 }
 .alt-link-div {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 16px;
     float: left;
     width: 100%;
@@ -179,11 +210,11 @@ span.show-password {
     margin: 20px 0 40px;
 }
 .submit-btn-wrapper {
-    margin: 35px 0 50px;
+    margin: 35px 0;
 }
 button.submit-btn {
-    background: #EA6212;
-    border-radius: 23px;
+    background: var(--pry-color);
+    border-radius: 10px;
     border: none;
     color: white;
     font-weight: 500;
@@ -191,13 +222,16 @@ button.submit-btn {
     line-height: 18px;
     text-align: center;
     font-family: var(--font);
-    min-width: 125px;
+    width: 100%;
     height: 46px;
     padding: 0 20px;
 }
+button.submit-btn:focus, button.submit-btn:hover {
+    background-color: var(--pry-color);
+}
 .support-and-privacy.flex-div.justify-content-btw {
     width: 100%;
-    max-width: 530px;
+    max-width: 430px;
     margin: auto;
     font-size: 13px;
     line-height: 16px;
@@ -219,6 +253,26 @@ img.caret-icon {
     top: 25px;
     z-index: 1;
     right: 30px;
+}
+span.toggle-show-password {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+    cursor: pointer;
+    color: var(--pry-color);
+}
+.phone-number-wrapper .select-wrapper input.select-dropdown {
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+}
+.phone-number-wrapper .input-field input.inp-field {
+    border-radius: 0 0 10px 10px;
+}
+.dropdown-content.select-dropdown {
+    width: 100% !important;
+    height: auto !important;
 }
 
 /* OTP Style */
@@ -255,3 +309,161 @@ img.caret-icon {
   background: transparent;
 }
 /* end of OTP Style */
+
+#identity-form p.greet-desc {
+    font-size: 14px;
+}
+#identity-form .input-row.row {
+    margin: 35px 0 40px;
+}
+
+#congrats-form {
+    padding-bottom: 40px;
+}
+#verified-form {
+    padding-bottom: 30px;
+}
+img.congrats-img {
+    position: relative;
+    max-width: 200px;
+    width: 50%;
+    /* margin-top: -100px; */
+    margin-bottom: 10px;
+}
+#verified-form img.congrats-img {
+    margin-bottom: 0;
+}
+
+form#reset-email-form, form#reset-phone-form, #new-password-form {
+    padding-top: 20px;
+}
+form#reset-phone-form {
+    display: none;
+}
+#new-password-form .submit-btn-wrapper {
+    margin-top: 0;
+}
+#old-password-row {
+    margin-bottom: 20px;
+}
+.input-field.status-error input {
+    box-shadow: 0px 0px 3px red !important;
+}
+small.error-text {
+    color: red;
+    margin-top: -5px;
+    display: block;
+    margin-left: 0px;
+}
+form#reset-phone-form .input-field {
+    margin-top: 30px;
+}
+
+#bvn-verification-form .modal-overlay {
+    opacity: 0 !important;
+}
+.agreement-div {
+    font-size: 12px;
+}
+.agreement-div a {
+    font-weight: bold;
+    color: black;
+}
+
+section.sample-links {
+    position: fixed;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width: 601px) {
+    .f-name-field {
+        padding-right: 10px !important;
+    }
+    .l-name-field {
+        padding-left: 10px !important;
+    }
+    #identity-form p.greet-desc {
+        width: 80%;
+        margin: auto;
+    }
+    div#lottie-2 {
+        top: -120px;
+        z-index: 1;
+    }
+    section.auth-wrapper.container {
+        z-index: 2;
+    }
+}
+@media(min-height: 801px) and (min-width: 993px) {
+    section.auth-wrapper.container {
+        top: 45%;
+    }
+    /* section.auth-wrapper.container.identity-page-wrapper {
+        transform: scale(0.85) translateY(-50%);
+    } */
+}
+@media(max-height: 800px) {
+    section.auth-wrapper.container {
+        transform: scale(0.83) translateY(-50%);
+    }
+    section.auth-wrapper.container.identity-page-wrapper {
+        transform: scale(0.8) translateY(-50%);
+    }
+}
+@media(max-width: 600px) {
+    .auth-block-wrapper {
+        width: 100%;
+    }
+    section.auth-wrapper.container {
+        top: 42%;
+    }
+    .submit-btn-wrapper.flex-div {
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 30px;
+        /* align-items: baseline; */
+    }
+    .txt-link-side {
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 330px) {
+    .alt-link-div.flex-div.justify-content-btw {
+        flex-direction: column;
+    }
+    .alt-link-div.flex-div button.txt-btn {
+        margin-bottom: 10px;
+    }
+}
+/* --- end of body-section Section --- */
+
+/* --- Footer Section --- */
+footer#auth-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+footer#auth-footer > .flex-div.container {
+    justify-content: center;
+    padding: 15px 0;
+}
+.copyright-div {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #353D46;;
+}
+@media(max-width: 600px) {
+    footer#auth-footer {
+        position: relative;
+        margin-top: 30px;
+    }
+    footer#auth-footer > .flex-div.container {
+        flex-direction: column;
+        padding: 10px 15px;
+        text-align: center;
+    }
+}
+/* --- end of Footer Section --- */

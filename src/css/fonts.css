@@ -18,3 +18,24 @@
     font-family: 'roboto-xbold';
     src: url('../fonts/Roboto/Roboto-Black.ttf');
 }
+
+@font-face {
+    font-family: 'pushpenny';
+    src: url('../fonts/PushPenny/PushPenny-Book.ttf');
+}
+@font-face {
+    font-family: 'pushpenny-bold';
+    src: url('../fonts/PushPenny/PushPenny-Bold.ttf');
+}
+@font-face {
+    font-family: 'pushpenny-light';
+    src: url('../fonts/PushPenny/PushPenny-Light.ttf');
+}
+@font-face {
+    font-family: 'pushpenny-medium';
+    src: url('../fonts/PushPenny/PushPenny-Medium.ttf');
+}
+@font-face {
+    font-family: 'pushpenny-xbold';
+    src: url('../fonts/PushPenny/PushPenny-ExtraBold.ttf');
+}

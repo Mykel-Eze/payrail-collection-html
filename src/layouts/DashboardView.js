@@ -20,6 +20,10 @@ const DashboardView = () => {
                         </a>
                     </div>
                 </div>
+
+                <h1 className="center">
+                    DashboardView
+                </h1>
             </div>
         </div>
     )
