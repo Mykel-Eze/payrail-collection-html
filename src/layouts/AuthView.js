@@ -25,6 +25,10 @@ import EmailVerified from "../auth-pages/EmailVerified";
 import PhoneVerified from "../auth-pages/PhoneVerified";
 import VerifyBVN from "../auth-pages/VerifyBVN";
 import BvnError from "../components/modals/BvnError";
+import AgentEmailIdentity from "../auth-pages/Email-AgentIdentity";
+import AgentPhoneIdentity from "../auth-pages/Phone-AgentIdentity";
+import MerchantEmailIdentity from "../auth-pages/Email-MerchantIdentity";
+import MerchantPhoneIdentity from "../auth-pages/Phone-MerchantIdentity";
 
 const AuthView = () => {
     useEffect(() => {
@@ -139,6 +143,12 @@ const AuthView = () => {
                                 <Route exact path="/agent/forgot-password">
                                     <AgentPassword />
                                 </Route>
+                                <Route exact path="/agent/email-identity">
+                                    <AgentEmailIdentity />
+                                </Route>
+                                <Route exact path="/agent/phone-identity">
+                                    <AgentPhoneIdentity />
+                                </Route>
 
                                 <Route exact path="/merchant">
                                     <Redirect to="/merchant/login" />
@@ -148,6 +158,12 @@ const AuthView = () => {
                                 </Route>
                                 <Route exact path="/merchant/forgot-password">
                                     <MerchantPassword />
+                                </Route>
+                                <Route exact path="/merchant/email-identity">
+                                    <MerchantEmailIdentity />
+                                </Route>
+                                <Route exact path="/merchant/phone-identity">
+                                    <MerchantPhoneIdentity />
                                 </Route>
                             </Switch>
                         </div>
@@ -178,6 +194,10 @@ const AuthView = () => {
                         <NavLink to="/email-verify-successful">Verify Email Successful</NavLink>
                         <NavLink to="/phone-verify-successful">Verify Phone Successful</NavLink>
                         <NavLink to="/verify-bvn">Verify BVN</NavLink>
+                        <NavLink to="/agent/email-identity">Agent Email Identity</NavLink>
+                        <NavLink to="/agent/phone-identity">Agent Phone Identity</NavLink>
+                        <NavLink to="/merchant/email-identity">Merchant Email Identity</NavLink>
+                        <NavLink to="/merchant/phone-identity">Merchant Phone Identity</NavLink>
                     </section>
 
 
