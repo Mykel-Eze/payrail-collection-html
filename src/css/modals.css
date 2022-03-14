@@ -1,0 +1,67 @@
+.modal.dashboard-modal {
+    max-width: 525px;
+    background: #FFFFFF;
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    box-sizing: border-box;
+    border-radius: 48px;
+    max-height: 85%;
+    padding: 20px;
+    transform: scale(0.83) !important;
+}
+.modal.dashboard-modal::-webkit-scrollbar {
+	display: none;
+}
+.modal-block-title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 36px;
+    color: #353D46;
+    margin: 0 0  20px;
+}
+span.cancel-modal.modal-close {
+    text-decoration: underline;
+}
+.modal.dashboard-modal .submit-btn-wrapper.flex-div {
+    margin: 40px 0 30px;
+    padding: 10px 0px;
+}
+img.modal-close.close-modal-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    cursor: pointer;
+}
+
+img.success-img {
+    width: 140px;
+    margin-top: 30px;
+}
+.success-modal-txt-content {
+    margin: 20px 0 40px;
+}
+
+h1.modal-title {
+    font-size: 26px;
+    font-family: var(--font-medium);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+button.btn.modal-btn {
+    border-radius: 10px;
+    font-size: 14px;
+    text-transform: none;
+    min-width: 150px;
+    height: 46px;
+    box-shadow: none;
+}
+button.btn.pry-btn.modal-btn {
+    background: #89163B;
+    margin: 20px auto;
+}
+.cta-btn-wrapper {
+    margin-top: 50px;
+}
+.datefield-wrapper .modal-overlay {
+    background: transparent;
+}

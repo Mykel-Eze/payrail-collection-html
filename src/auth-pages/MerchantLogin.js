@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 // import $ from "jquery";
 // import M from "materialize-css"
 
-const AgentLogin = () => {
+const MerchantLogin = () => {
     useEffect(()=>{
         document.querySelector("ul.form-nav").style.display = "inline-block";
     },[]);
@@ -32,6 +32,13 @@ const AgentLogin = () => {
             <form action="#" id="auth-form">
                 <div className="input-row row">
                     <div className="input-field">
+                        <input id="business-name" type="text" className="inp-field" />
+                        <label htmlFor="business-name">Business Name</label>
+                    </div>
+
+                    <div className="gap-height"></div>
+
+                    <div className="input-field">
                         <input id="password" type="password" className="inp-field password-field" />
                         <label htmlFor="password">Password</label>
                         <span className="toggle-show-password" onClick={passwordToggle}>Show</span>
@@ -43,7 +50,7 @@ const AgentLogin = () => {
                                 <u>Switch Account</u>
                             </NavLink>
                         </div>
-                        <NavLink to="/agent/forgot-password" className="pry-color">Forgot password?</NavLink>
+                        <NavLink to="/merchant/forgot-password" className="pry-color">Forgot password?</NavLink>
                     </div>
                 </div>
 
@@ -56,4 +63,4 @@ const AgentLogin = () => {
     )
 }
 
-export default AgentLogin;
+export default MerchantLogin;

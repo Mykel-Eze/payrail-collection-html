@@ -1,4 +1,5 @@
 import "../css/auth.css"
+import "../css/modals.css"
 
 import logo from '../images/payrail-logo.svg';
 
@@ -12,15 +13,31 @@ import RecognisedLogin from "../auth-pages/Login-Recognised";
 import EmailSignup from "../auth-pages/Signup-Email";
 import PhoneSignup from "../auth-pages/Signup-Phone";
 import AgentLogin from "../auth-pages/AgentLogin";
+import AgentPassword from "../auth-pages/AgentPasswordRecovery";
+import MerchantLogin from "../auth-pages/MerchantLogin";
+import MerchantPassword from "../auth-pages/MerchantPasswordRecovery";
+import SignupCompleted from "../auth-pages/SignupCompleted";
+import FailedAttemptsModal from "../components/modals/FailedAttempts";
+import DetectedOldUser from "../components/modals/DetectedOldUser";
+import VerifyEmailSignup from "../auth-pages/VerificationWithEmail";
+import VerifyPhoneSignup from "../auth-pages/VerificationWithPhone";
+import EmailVerified from "../auth-pages/EmailVerified";
+import PhoneVerified from "../auth-pages/PhoneVerified";
+import VerifyBVN from "../auth-pages/VerifyBVN";
+import BvnError from "../components/modals/BvnError";
 
 const AuthView = () => {
     useEffect(() => {
         var Dropdown = document.querySelectorAll('.dropdown-trigger');
         M.Dropdown.init(Dropdown);
 
+        var elemsModal = document.querySelectorAll('.modal');
+        M.Modal.init(elemsModal);
+
         $("ul#language-list li a").click(function() {
             $(".selected-language").text($(this).text())
         });
+
     }, []);
 
     return (
@@ -94,12 +111,43 @@ const AuthView = () => {
                                 <Route exact path="/phone-signup">
                                     <PhoneSignup />
                                 </Route>
+                                <Route exact path="/signup-complete">
+                                    <SignupCompleted />
+                                </Route>
+                                <Route exact path="/email-verification">
+                                    <VerifyEmailSignup />
+                                </Route>
+                                <Route exact path="/phone-verification">
+                                    <VerifyPhoneSignup />
+                                </Route>
+                                <Route exact path="/email-verify-successful">
+                                    <EmailVerified />
+                                </Route>
+                                <Route exact path="/phone-verify-successful">
+                                    <PhoneVerified />
+                                </Route>
+                                <Route exact path="/verify-bvn">
+                                    <VerifyBVN />
+                                </Route>
 
                                 <Route exact path="/agent">
                                     <Redirect to="/agent/login" />
                                 </Route>
                                 <Route exact path="/agent/login">
                                     <AgentLogin />
+                                </Route>
+                                <Route exact path="/agent/forgot-password">
+                                    <AgentPassword />
+                                </Route>
+
+                                <Route exact path="/merchant">
+                                    <Redirect to="/merchant/login" />
+                                </Route>
+                                <Route exact path="/merchant/login">
+                                    <MerchantLogin />
+                                </Route>
+                                <Route exact path="/merchant/forgot-password">
+                                    <MerchantPassword />
                                 </Route>
                             </Switch>
                         </div>
@@ -108,9 +156,9 @@ const AuthView = () => {
                                 Trouble signing in? <a href="/#" className="black-text">Contact support</a>
                             </div>
                             <div className="privacy-terms-side sm-black-txt">
-                                <a href="/#" className="p-link sm-black-txt">Privacy</a>
+                                <a href="#many-failed-attempts" className="p-link sm-black-txt modal-trigger">Privacy</a>
                                 <span className="p-line">|</span>
-                                <a href="/#" className="p-link sm-black-txt">Terms</a>
+                                <a href="#detected-olduser-modal" className="p-link sm-black-txt modal-trigger">Terms</a>
                             </div>
                         </div>
                     </section>
@@ -121,6 +169,15 @@ const AuthView = () => {
                         <NavLink to="/email-signup">Email Signup</NavLink>
                         <NavLink to="/phone-signup">Phone Signup</NavLink>
                         <NavLink to="/agent/login">Agent Login</NavLink>
+                        <NavLink to="/agent/forgot-password">Agent Password</NavLink>
+                        <NavLink to="/merchant/login">Merchant Login</NavLink>
+                        <NavLink to="/merchant/forgot-password">Merchant Password</NavLink>
+                        <NavLink to="/signup-complete">Signup Completed</NavLink>
+                        <NavLink to="/email-verification">Verification Email</NavLink>
+                        <NavLink to="/phone-verification">Verification Phone</NavLink>
+                        <NavLink to="/email-verify-successful">Verify Email Successful</NavLink>
+                        <NavLink to="/phone-verify-successful">Verify Phone Successful</NavLink>
+                        <NavLink to="/verify-bvn">Verify BVN</NavLink>
                     </section>
 
 
@@ -134,47 +191,13 @@ const AuthView = () => {
                 </div>
 
                 {/* <!-- Modal Section --> */}
-                <div id="many-failed-attempts" className="modal">
-                    <div className="modal-content">
-                        <div className="mpodal-content-block">
-                            <div className="user-pix-div center mag-bottom-0">
-                                <img src={require("../images/lock-closed.svg").default} alt="secure-lock" className="user-pix" />
-                            </div>
-                            <div className="user-detected-notice center">
-                                <h1>Please try again later</h1>
-                                <p>
-                                    You have been locked out because you signed with wrong details multiple times. 
-                                    Please wait for 30 minutes and try again correct details
-                                </p>
-                            </div>
-                            <div className="flex-btn-wrapper flex-div">
-                                <button type="button" className="btn pry-btn continue-btn modal-close">Okay</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <FailedAttemptsModal />
+                <DetectedOldUser />
+                <BvnError />
 
                 
                 {/* <!-- Modal Section --> */}
-                <div id="detected-olduser-modal" className="modal">
-                    <div className="modal-content">
-                        <div className="mpodal-content-block">
-                            <div className="user-pix-div center">
-                                <img src={require("../images/user-pix.png").default} alt="user" className="user-pix" />
-                            </div>
-                            <div className="user-detected-notice center">
-                                <h1>Olamide, we notice you exist within our ecosystem</h1>
-                                <p>
-                                    Click <b>continue</b> to use the same account details, <b>cancel</b> to create a fresh account.
-                                </p>
-                            </div>
-                            <div className="flex-btn-wrapper flex-div">
-                                <button type="button" className="btn pry-btn continue-btn">Continue</button>
-                                <button type="button" className="btn cancel-btn modal-close">Cancel</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </Router>
     )

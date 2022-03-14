@@ -1,9 +1,9 @@
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 // import $ from "jquery";
 // import M from "materialize-css"
 
-const AgentLogin = () => {
+const AgentPassword = () => {
     useEffect(()=>{
         document.querySelector("ul.form-nav").style.display = "inline-block";
     },[]);
@@ -21,7 +21,7 @@ const AgentLogin = () => {
         <div className="auth-block">
             <div className="auth-greet-title">
                 <h1 className="greet-title">
-                    Welcome back, <span>Olamide</span>
+                    Create new password, <span>Olamide</span>
                 </h1>
                 <p className="greet-desc">
                     Please check your browser’s address bar to be sure you’re on <br />
@@ -32,23 +32,27 @@ const AgentLogin = () => {
             <form action="#" id="auth-form">
                 <div className="input-row row">
                     <div className="input-field">
-                        <input id="password" type="password" className="inp-field password-field" />
-                        <label htmlFor="password">Password</label>
+                        <input id="old-password" type="password" className="inp-field password-field" />
+                        <label htmlFor="old-password">Old Password</label>
                         <span className="toggle-show-password" onClick={passwordToggle}>Show</span>
                     </div>
-                    <div className="alt-link-div flex-div justify-content-btw">
-                        <div className=''>
-                            <span>Not Olamide? </span> 
-                            <NavLink to="/login-default" className="pry-color">
-                                <u>Switch Account</u>
-                            </NavLink>
-                        </div>
-                        <NavLink to="/agent/forgot-password" className="pry-color">Forgot password?</NavLink>
+
+                    <div className="gap-height"></div>
+
+                    <div className="input-field">
+                        <input id="new-password" type="password" className="inp-field password-field" />
+                        <label htmlFor="new-password">New Password</label>
+                        <span className="toggle-show-password" onClick={passwordToggle}>Show</span>
+                    </div>
+                    <div className="input-field">
+                        <input id="confirm-password" type="password" className="inp-field password-field" />
+                        <label htmlFor="confirm-password">Confirm Password</label>
+                        <span className="toggle-show-password" onClick={passwordToggle}>Show</span>
                     </div>
                 </div>
 
                 <div className="submit-btn-wrapper">
-                    <button className="submit-btn pry-btn btn">Login</button>
+                    <button className="submit-btn pry-btn btn">Create new password</button>
                 </div>
             </form>
 
@@ -56,4 +60,4 @@ const AgentLogin = () => {
     )
 }
 
-export default AgentLogin;
+export default AgentPassword;

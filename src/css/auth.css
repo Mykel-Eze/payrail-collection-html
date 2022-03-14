@@ -130,7 +130,7 @@ h1.greet-title span {
 }
 p.greet-desc, p.greet-email-desc {
     font-weight: normal;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 16px;
     color: #353D46;
     mix-blend-mode: normal;
@@ -203,8 +203,9 @@ span.show-password {
 .txt-link-side {
     font-size: 13px;
     line-height: 16px;
-    text-align: center;
+    /* text-align: center; */
     color: #777777;
+    margin-bottom: 20px;
 }
 .input-row.row {
     margin: 20px 0 40px;
@@ -278,7 +279,7 @@ span.toggle-show-password {
 /* OTP Style */
 #verification-codes {
     display: flex;
-    margin: 50px 0 25px;
+    margin: 50px 0 10px;
 }
 #verification-codes input {
     text-align: center;
@@ -307,6 +308,12 @@ span.toggle-show-password {
 }
 #verification-codes input::selection {
   background: transparent;
+}
+.input-error-txt {
+    font-size: 12px;
+    letter-spacing: -0.1px;
+    color: var(--pry-color);
+    text-align: center;
 }
 /* end of OTP Style */
 
@@ -375,7 +382,107 @@ section.sample-links {
     right: 20px;
     display: flex;
     flex-direction: column;
+    top: 50%;
 }
+.gap-height {
+    height: 10px;
+}
+
+.input-row.row.ald {
+    margin-bottom: 20px;
+}
+
+
+/* --- Modal Section --- */
+div.modal:not(.datepicker-modal) {
+    background: #FFFFFF;
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    box-sizing: border-box;
+    border-radius: 33px;
+    max-width: 530px;
+}
+.user-pix-div {
+    margin: 20px 0;
+}
+img.user-pix {
+    max-width: 130px;
+}
+.user-detected-notice h1 {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.user-detected-notice p {
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #6E7883;
+}
+.flex-btn-wrapper.flex-div {
+    justify-content: center;
+    margin: 40px 0 20px;
+}
+.flex-btn-wrapper.flex-div :first-child {
+    margin-right: 20px;
+}
+
+button.btn {
+    box-shadow: none !important;
+    text-transform: none;
+}
+button.pry-btn {
+    min-width: 130px;
+    height: 46px;
+}
+button.pry-btn.continue-btn {
+    min-width: 130px;
+    background: var(--pry-color);
+    border-radius: 10px;
+}
+button.btn.cancel-btn {
+    color: #353D46;
+    font-size: 14px;
+    background: #FCF9FA;
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.mpodal-content-block {
+    padding: 10px 20px;
+}
+button.modal-btn.flex-div {
+    justify-content: center;
+}
+button.pry-btn.continue-btn span {
+    margin-right: 5px !important;
+}
+button.pry-btn.continue-btn span.right-arr {
+    font-size: 20px;
+}
+
+.datepicker-calendar .select-wrapper input.select-dropdown {
+    border: none !important;
+    padding: 0 !important;
+    width: 70px !important;
+}
+.datepicker-date-display {
+    background-color: var(--pry-color);
+}
+.datepicker-table td.is-today {
+    color: var(--pry-color);
+}
+.datepicker-day-button:focus {
+    background-color: rgba(234, 98, 18, 0.25);
+}
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+    color: var(--pry-color);
+}
+.datepicker-calendar button:focus, .datepicker-table td.is-selected {
+    background-color: rgba(234, 98, 18, 0.7) !important;
+}
+/* --- end of Modal Section --- */
 
 @media(min-width: 601px) {
     .f-name-field {
