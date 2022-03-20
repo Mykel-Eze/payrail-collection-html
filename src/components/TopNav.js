@@ -3,7 +3,7 @@ import "../css/top-nav.css";
 import { NavLink } from "react-router-dom";
 import M from "materialize-css";
 import { useEffect } from "react";
-import $ from "jquery";
+// import $ from "jquery";
 
 const TopNav = () => {
     useEffect(()=> {
