@@ -251,9 +251,9 @@ button.txt-btn {
 }
 img.caret-icon {
     position: absolute;
-    top: 25px;
+    top: 19px;
     z-index: 1;
-    right: 30px;
+    right: 23px;
 }
 span.toggle-show-password {
     position: absolute;
