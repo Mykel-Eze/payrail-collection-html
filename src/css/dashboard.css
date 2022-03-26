@@ -508,71 +508,22 @@ p.pending-description {
 }
 .dashboard-page button.pending-btn.pry-btn, .dashboard-page a.pending-btn.pry-btn {
     width: 90%;
-    height: 41px;
+    height: 46px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 400;
 }
 .dashboard-page a.pending-btn.pry-btn {
-    line-height: 41px;
+    line-height: 46px;
 }
 
-.docs-n-test-keys-wrapper {
-    display: grid;
-    grid-template-columns: 52% 1fr;
-    grid-gap: 20px;
-    margin: 60px 0 30px;
-}
-.docs-wrapper > .left-align {
-    width: 70%;
-}
-h4.dntk-title {
-    font-weight: 600;
+span.right-arr {
     font-size: 18px;
-    line-height: 23px;
-    margin-bottom: 12px;
+    padding-left: 5px;
 }
-p.dntk-description {
-    font-size: 14px;
-    line-height: 18px;
-    color: #6E7883;
-    margin: 20px 0;
-}
-.pry-btn-wrapper {
-    margin: 30px 0 20px;
-}
-.api-key-field.flex-div {
-    font-size: 12px;
-    line-height: 16px;
-    width: 100%;
-    position: relative;
-    background: #F9F9F9;
-    border: 1px solid rgba(119, 119, 119, 0.2);
-    box-sizing: border-box;
-    border-radius: 28.5px;
-    margin: 20px 0;
-    padding: 8px 15px;
-}
-input.api-key {
-    height: auto !important;
-    border: none !important;
-    margin: 0 !important;
-    font-size: 12px !important;
-}
-small.api-label {
-    font-size: 10px;
-    line-height: 13px;
-    color: #6E7883;
-    position: absolute;
-    background: #F9F9F9;
-    top: -9px;
-    padding: 0 5px;
-    left: 10px;
-}
-.api-keys-wrapper {
-    background: #F9F9F9;
-    border: 1px solid rgba(119, 119, 119, 0.2);
-    box-sizing: border-box;
-    border-radius: 48px;
-    padding: 20px 30px;
-}
+
 img.copy-icon {
     cursor: pointer;
 }
