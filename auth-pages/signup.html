@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../payrail-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#89163B" />
+    <meta name="author" class="Payrail">
+    <meta name="description" content="Payrail Collection web app" />
+    <link rel="apple-touch-icon" href="../payrail-icon.png" />
+    <title>Signup - Payrail Collection</title>
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../materialize.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <div id="root">
+        <div class="App">
+            <div>
+                <div id="auth-page-wrapper">
+                    <div class="auth-nav-header">
+                        <div class="container">
+                            <div class="flex-div justify-content-btw">
+                                <a href="/" class="logo-side">
+                                    <img src="../images/payrail-logo.svg" alt="Payrail" class="brand-img" />
+                                </a>
+            
+                                <div class="nav-right-side flex-div">
+                                    <div class="language-block-wrapper">
+                                        <button class="dropdown-trigger flex-div" data-target="language-list">
+                                            <img src="../images/globe-icon.svg" alt="globe-icon" class="globe-icon" />
+                                            <span class="selected-language">ENG</span>
+                                            <img src="../images/caret-1.svg" alt="caret" class="caret-1" />
+                                        </button>
+            
+                                        <!-- {/* Dropdown Structure */} -->
+                                        <ul id='language-list' class='dropdown-content'>
+                                            <li><a href="#!">eng</a></li>
+                                            <li><a href="#!">fra</a></li>
+                                            <li><a href="#!">yor</a></li>
+                                            <li><a href="#!">hau</a></li>
+                                            <li><a href="#!">igb</a></li>
+                                            <li><a href="#!">chn</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="create-account-wrapper">
+                                        <a href="/signup" class="create-account-btn pry-bg">
+                                            <span>Create account</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <section class="auth-wrapper container">
+                        <div class="auth-block-wrapper">
+                            <div class="auth-block">
+                                <div class="auth-greet-title">
+                                    <h1 class="greet-title">
+                                        <span>Let's get you started</span>
+                                    </h1>
+                                    <p class="greet-desc">
+                                        Please check your browser's address bar to be sure you're on <br />
+                                        <a href="https://collection.payrail.co" target="_blank" rel="noopener noreferrer">https://collection.payrail.co</a>
+                                    </p>
+                                </div>
+                    
+                                <form action="#" id="auth-form">
+                                    <div class="input-row row">
+                                        <div class="input-field">
+                                            <input id="email" type="email" class="inp-field" />
+                                            <label for="email">Email Address</label>
+                                        </div>
+                                        <div class="input-field" id='refer-wrapper' hidden>
+                                            <input id="invite-code" type="text" class="inp-field" />
+                                            <label for="invite-code">Invite code</label>
+                                        </div>
+                                        <div class="alt-link-div flex-div justify-content-btw">
+                                            <div class=''>
+                                                <span>Referred? </span> 
+                                                <span id='refer-trigger' class="pry-color pointer">
+                                                    <u>Click here</u>
+                                                </span>
+                                            </div>
+                                            <a href="/forgot-password" class="pry-color">Forgot password?</a>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="submit-btn-wrapper">
+                                        <button class="submit-btn pry-btn btn">Create Account</button>
+                                    </div>
+                                </form>
+                    
+                            </div>
+                        </div>
+                        <div class="support-and-privacy flex-div justify-content-btw">
+                            <div class="contact-side sm-black-txt">
+                                Trouble signing in? <a href="/#" class="black-text">Contact support</a>
+                            </div>
+                            <div class="privacy-terms-side sm-black-txt">
+                                <a href="#many-failed-attempts" class="p-link sm-black-txt modal-trigger">Privacy</a>
+                                <span class="p-line">|</span>
+                                <a href="#detected-olduser-modal" class="p-link sm-black-txt modal-trigger">Terms</a>
+                            </div>
+                        </div>
+                    </section>
+            
+            
+                    <footer id="auth-footer">
+                        <div class="flex-div container">
+                            <div class="copyright-div">
+                                © Angala Financial Technologies Limited. All Rights Reserved.
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+
+                <!--=== Modals Section ===-->
+                <!--=== end of Modals Section ===-->
+            </div>
+        </div>
+    </div>
+
+    <script src="../jquery.min.js"></script>
+    <script src="../materialize.min.js"></script>
+
+    <script>
+        var Dropdown = document.querySelectorAll('.dropdown-trigger');
+        M.Dropdown.init(Dropdown);
+
+        var elemsModal = document.querySelectorAll('.modal');
+        M.Modal.init(elemsModal);
+
+        $("ul#language-list li a").click(function() {
+            $(".selected-language").text($(this).text())
+        });
+
+        $("#refer-trigger").click(function(){
+            $("#refer-wrapper").show();
+            $(this).parent().css("visibility", "hidden");
+        })
+    </script>
+  </body>
+</html>

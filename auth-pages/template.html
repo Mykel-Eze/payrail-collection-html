@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../payrail-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#89163B" />
+    <meta name="author" class="Payrail">
+    <meta name="description" content="Payrail Collection web app" />
+    <link rel="apple-touch-icon" href="../payrail-icon.png" />
+    <title>Home - Payrail Collection</title>
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../materialize.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <div id="root">
+        <div class="App"></div>
+    </div>
+
+    <script src="../jquery.min.js"></script>
+    <script src="../materialize.min.js"></script>
+
+    <script>
+        var Dropdown = document.querySelectorAll('.dropdown-trigger');
+        M.Dropdown.init(Dropdown);
+
+        var elemsModal = document.querySelectorAll('.modal');
+        M.Modal.init(elemsModal);
+
+        $("ul#language-list li a").click(function() {
+            $(".selected-language").text($(this).text())
+        });
+        
+        document.querySelector("ul.form-nav").style.display = "none";
+
+        $("#refer-trigger").click(function(){
+            $("#refer-wrapper").show();
+            $(this).parent().css("visibility", "hidden");
+        })
+    </script>
+  </body>
+</html>
