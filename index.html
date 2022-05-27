@@ -10,15 +10,95 @@
     <link rel="apple-touch-icon" href="../payrail-icon.png" />
     <title>Payrail Collection</title>
 
-    <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="../materialize.css">
-    <link rel="stylesheet" href="../css/auth.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../css/modals.css">
-    <link rel="stylesheet" href="../css/top-nav.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./materialize.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/modals.css">
+    <link rel="stylesheet" href="./css/top-nav.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <style>
+      div#auth-pages {
+          margin-bottom: 50px;
+      }
+      .p-logo.center {
+          margin: 50px auto 30px;
+      }
+      h4.page-block-header {
+        background: var(--pry-color);
+        color: white;
+        font-family: var(--font-bold);
+        font-size: 30px;
+        padding: 15px 20px;
+        border-radius: 6px;
+      }
+      ul.pages-links-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      li.pages-link-block {
+          margin: 10px 0;
+          margin-right: 20px;
+      }
+      li.pages-link-block > a {
+          background-color: orange;
+          color: white;
+          font-size: 14px;
+          min-width: 120px;
+          display: block;
+          height: 42px;
+          line-height: 42px;
+          text-align: center;
+          font-weight: bold;
+          border-radius: 6px;
+      }
+      li.pages-link-block > a:hover {
+        background-color: var(--sec-color);
+      }
+    </style>
   </head>
   <body>
+
+    <section>
+      <div class="row">
+        <div class="container">
+          <div class="p-logo center">
+              <img src="./images/payrail-logo.svg" alt="Payrail" class="brand-img" />
+          </div>
+          <div id="auth-pages" class="pages-block">
+            <h4 class="page-block-header">Auth Pages (Done)</h4>
+            <ul class="pages-links-wrapper">
+              <li class="pages-link-block">
+                <a href="./auth-pages/signup.html" target="_blank">Signup (Email)</a>
+              </li>
+              <li class="pages-link-block">
+                <a href="./auth-pages/signup-phone.html" target="_blank">Signup (Phone)</a>
+              </li>
+              <li class="pages-link-block">
+                <a href="./auth-pages/forgot-password.html" target="_blank">Forgot Password</a>
+              </li>
+              <li class="pages-link-block">
+                <a href="./auth-pages/login-new-user.html" target="_blank">Login (New User)</a>
+              </li>
+              <li class="pages-link-block">
+                <a href="./auth-pages/login-old-user.html" target="_blank">Login (Old User)</a>
+              </li>
+              <li class="pages-link-block">
+                <a href="./auth-pages/login-agent.html" target="_blank">Login (Agent)</a>
+              </li>
+              <li class="pages-link-block">
+                <a href="./auth-pages/login-merchant.html" target="_blank">Login (Merchant)</a>
+              </li>
+            </ul>
+          </div>
+          <div id="auth-pages" class="pages-block">
+            <h4 class="page-block-header">Dashboard Pages (Done)</h4>
+            <ul class="pages-links-wrapper"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="../jquery.min.js"></script>
     <script src="../materialize.min.js"></script>

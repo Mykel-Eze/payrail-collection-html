@@ -47,7 +47,7 @@
                                         </ul>
                                     </div>
                                     <div class="create-account-wrapper">
-                                        <a href="/signup" class="create-account-btn pry-bg">
+                                        <a href="./signup.html" class="create-account-btn pry-bg">
                                             <span>Create account</span>
                                         </a>
                                     </div>
@@ -71,9 +71,18 @@
                     
                                 <form action="#" id="auth-form">
                                     <div class="input-row row">
-                                        <div class="input-field">
-                                            <input id="email" type="email" class="inp-field" />
-                                            <label for="email">Email Address</label>
+                                         <div class="input-field phone-number-wrapper">
+                                            <div class="input-field mag-bottom-0">
+                                                <select id="countries">
+                                                    <option value="Nigeria">Nigeria (+234)</option>
+                                                    <option value="Ghana">Ghana (+233)</option>
+                                                    <option value="USA">USA (+1)</option>
+                                                </select>
+                                                <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
+                                            </div>
+                                            <div class="input-field mag-top-0">
+                                                <input id="phone" type="tel" class="inp-field" placeholder="Phone Number" />
+                                            </div>
                                         </div>
                                         <div class="input-field" id='refer-wrapper' hidden>
                                             <input id="invite-code" type="text" class="inp-field" />
@@ -94,7 +103,6 @@
                                         <button class="submit-btn pry-btn btn">Create Account</button>
                                     </div>
                                 </form>
-                    
                             </div>
                         </div>
                         <div class="support-and-privacy flex-div justify-content-btw">
@@ -120,6 +128,46 @@
                 </div>
 
                 <!--=== Modals Section ===-->
+                <div id="detected-olduser-modal" class="modal dashboard-modal">
+                    <div class="modal-content">
+                        <div class="mpodal-content-block">
+                            <div class="user-pix-div center">
+                                <img src=../images/user-pix.png alt="user" class="user-pix" />
+                            </div>
+                            <div class="user-detected-notice center">
+                                <h1 class="modal-title">Olamide, we notice you exist within our ecosystem</h1>
+                                <p class="modal-desc">
+                                    Click <b>continue</b> to use the same account details, <b>cancel</b> to create a fresh account.
+                                </p>
+                            </div>
+                            <div class="flex-btn-wrapper flex-div">
+                                <button class="btn pry-btn continue-btn modal-btn flex-div">
+                                    <span>Continue</span> <span class='right-arr'>&rsaquo;</span>
+                                </button>
+                                <button class="btn cancel-btn modal-btn modal-close">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="many-failed-attempts" class="modal dashboard-modal">
+                    <div class="modal-content">
+                        <div class="mpodal-content-block">
+                            <div class="user-pix-div center mag-bottom-0">
+                                <img src="../images/lock-closed.svg" alt="secure-lock" class="user-pix" />
+                            </div>
+                            <div class="user-detected-notice center">
+                                <h1 class="modal-title">Please try again later</h1>
+                                <p class="modal-desc">
+                                    You are locked out because you signed in multiple times with the wrong details. Please try again 
+                                    in <b class="pry-color" id="countdown-tag">30:00</b> with your correct details.
+                                </p>
+                            </div>
+                            <div class="pry-btn-wrapper flex-div">
+                                <button type="button" class="btn pry-btn modal-btn modal-close">Okay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!--=== end of Modals Section ===-->
             </div>
         </div>
@@ -132,6 +180,9 @@
         var Dropdown = document.querySelectorAll('.dropdown-trigger');
         M.Dropdown.init(Dropdown);
 
+        var elemSelect = document.querySelectorAll('select');
+        M.FormSelect.init(elemSelect);
+
         var elemsModal = document.querySelectorAll('.modal');
         M.Modal.init(elemsModal);
 
@@ -143,6 +194,30 @@
             $("#refer-wrapper").show();
             $(this).parent().css("visibility", "hidden");
         })
+
+        countdown();
+
+        var interval;
+        function countdown() {
+            clearInterval(interval);
+            interval = setInterval( function() {
+                var timer = document.querySelector("#countdown-tag").innerHTML;
+                timer = timer.split(':');
+                var minutes = timer[0];
+                var seconds = timer[1];
+                seconds -= 1;
+                if (minutes < 0) return;
+                else if (seconds < 0 && minutes !== 0) {
+                    minutes -= 1;
+                    seconds = 59;
+                }
+                else if (seconds < 10) seconds = '0' + seconds;
+
+                document.querySelector("#countdown-tag").innerHTML = minutes + ':' + seconds;
+
+                if (minutes === 0 && seconds === 0) clearInterval(interval);
+            }, 1000);
+        }
     </script>
   </body>
 </html>
