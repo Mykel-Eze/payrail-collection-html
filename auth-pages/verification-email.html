@@ -8,7 +8,7 @@
     <meta name="author" content="Payrail">
     <meta name="description" content="Payrail Collection web app" />
     <link rel="apple-touch-icon" href="../payrail-icon.png" />
-    <title>Agent Login - Payrail Collection</title>
+    <title>Verification - Payrail Collection</title>
 
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../materialize.css">
@@ -58,54 +58,38 @@
             
                     <section class="auth-wrapper container">
                         <div class="auth-block-wrapper">
-                            <div class="">
-                                <ul class="form-nav">
-                                    <li>
-                                        <a href="#" class="route-link active-link">
-                                            <span>Agent</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./login-merchant.html" class="route-link">
-                                            <span>Merchant</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                             <div class="auth-block">
-                                <div class="auth-greet-title">
-                                    <h1 class="greet-title">
-                                        Welcome back, <span>Olamide</span>
-                                    </h1>
-                                    <p class="greet-desc">
-                                        Please check your browser’s address bar to be sure you’re on <br />
-                                        <a href="https://collection.payrail.co" target="_blank" rel="noopener noreferrer">https://collection.payrail.co</a>
-                                    </p>
-                                </div>
-                    
-                                <form action="#" id="auth-form">
+                                <form action="./verification-email-successful.html" id="verification-form">
+                                    <div class="auth-greet-title">
+                                        <h1 class="greet-title">
+                                            Enter the verification code
+                                        </h1>
+                                        <p class="greet-email-desc">
+                                           mideola@gmail.com. <a href="./signup.html"><u>Wrong email?</u></a>
+                                        </p>
+                                    </div>
                                     <div class="input-row row">
-                                        <div class="input-field">
-                                            <input id="password" type="password" class="inp-field password-field" />
-                                            <label for="password">Password</label>
-                                            <span class="toggle-show-password" onclick="passwordToggle(event)">Show</span>
+                                        <div id="verification-codes">
+                                            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
                                         </div>
-                                        <div class="alt-link-div flex-div justify-content-btw">
-                                            <div class=''>
-                                                <span>Not Olamide? </span> 
-                                                <a href="./login-new-user.html" class="pry-color">
-                                                    <u>Switch Account</u>
-                                                </a>
-                                            </div>
-                                            <a href="./forgot-password.html" class="pry-color">Forgot password?</a>
-                                        </div>
+                                        <div class="input-error-txt">Verification error or Invalid Code.</div>
                                     </div>
                     
-                                    <div class="submit-btn-wrapper">
-                                        <button class="submit-btn pry-btn btn">Login</button>
+                                    <div class="submit-btn-wrapper justify-content-btw">
+                                        <div class="txt-link-side">
+                                            Didn't get OTP?
+                                            <button type="button" class="txt-btn pry-color"><u>Resend</u></button>
+                                        </div>
+                                        <div class="btn-side">
+                                            <button class="submit-btn pointer modal-trigger">Verify</button>
+                                        </div>
                                     </div>
                                 </form>
-                    
                             </div>
                         </div>
                         <div class="support-and-privacy flex-div justify-content-btw">
@@ -190,19 +174,52 @@
             $(".selected-language").text($(this).text())
         });
 
-        $("#refer-trigger").click(function(){
-            $("#refer-wrapper").show();
-            $(this).parent().css("visibility", "hidden");
-        })
+        // OTP input Script
+        $(function () {
+            'use strict';
 
-        function passwordToggle(e) {
-            var passwordField = e.target.parentElement.querySelector(".password-field");
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-            } else {
-                passwordField.type = "password";
+            var body = $('body');
+
+            function goToNextInput(e) {
+                var key = e.which,
+                    t = $(e.target),
+                    sib = t.next('input');
+
+                if (key != 9 && (key < 48 || key > 57)) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                if (key === 9) {
+                    return true;
+                }
+
+                if (!sib || !sib.length) {
+                    sib = body.find('input').eq(0);
+                }
+                sib.select().focus();
             }
-        }
+
+            function onKeyDown(e) {
+                var key = e.which;
+
+                if (key === 9 || (key >= 48 && key <= 57)) {
+                    return true;
+                }
+
+                e.preventDefault();
+                return false;
+            }
+
+            function onFocus(e) {
+                $(e.target).select();
+            }
+
+            body.on('keyup', 'input', goToNextInput);
+            body.on('keydown', 'input', onKeyDown);
+            body.on('click', 'input', onFocus);
+
+        });
     </script>
   </body>
 </html>

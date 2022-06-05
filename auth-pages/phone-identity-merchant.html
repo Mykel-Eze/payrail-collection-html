@@ -8,7 +8,7 @@
     <meta name="author" content="Payrail">
     <meta name="description" content="Payrail Collection web app" />
     <link rel="apple-touch-icon" href="../payrail-icon.png" />
-    <title>Agent Login - Payrail Collection</title>
+    <title>Identity - Payrail Collection</title>
 
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../materialize.css">
@@ -61,12 +61,12 @@
                             <div class="">
                                 <ul class="form-nav">
                                     <li>
-                                        <a href="#" class="route-link active-link">
+                                        <a href="#" class="route-link">
                                             <span>Agent</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./login-merchant.html" class="route-link">
+                                        <a href="./login-merchant.html" class="route-link active-link">
                                             <span>Merchant</span>
                                         </a>
                                     </li>
@@ -75,34 +75,61 @@
                             <div class="auth-block">
                                 <div class="auth-greet-title">
                                     <h1 class="greet-title">
-                                        Welcome back, <span>Olamide</span>
+                                        <span>Your Idenitity</span>
                                     </h1>
                                     <p class="greet-desc">
-                                        Please check your browser’s address bar to be sure you’re on <br />
-                                        <a href="https://collection.payrail.co" target="_blank" rel="noopener noreferrer">https://collection.payrail.co</a>
+                                        Tell us more about you
                                     </p>
                                 </div>
                     
-                                <form action="#" id="auth-form">
-                                    <div class="input-row row">
+                                <form action="./signup-completed.html" id="auth-form">
+                                    <div class="input-row row ald">
+                                        <div class="grid-field input-field">
+                                            <div class="input-field mag-0">
+                                                <input id="first_name" type="text" class="inp-field" />
+                                                <label for="first_name">First Name</label>
+                                            </div>
+                                            <div class="input-field mag-0">
+                                                <input id="last_name" type="text" class="inp-field" />
+                                                <label for="last_name">Last Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field">
+                                            <input id="business_name" type="text" class="inp-field" />
+                                            <label for="business_name">Business Name</label>
+                                        </div>
+                                        <div class="input-field phone-number-wrapper">
+                                            <div class="input-field mag-bottom-0">
+                                                <select  id="countries">
+                                                    <option value="Nigeria">Nigeria (+234)</option>
+                                                    <option value="Ghana">Ghana (+233)</option>
+                                                    <option value="USA">USA (+1)</option>
+                                                </select>
+                                                <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
+                                            </div>
+                                            <div class="input-field mag-top-0">
+                                                <input id="phone" type="tel" class="inp-field" placeholder="Phone Number" />
+                                            </div>
+                                        </div>
+                                        <div class="input-field">
+                                            <input id="username" type="text" class="inp-field" />
+                                            <label for="username">Username</label>
+                                        </div>
                                         <div class="input-field">
                                             <input id="password" type="password" class="inp-field password-field" />
                                             <label for="password">Password</label>
                                             <span class="toggle-show-password" onclick="passwordToggle(event)">Show</span>
                                         </div>
-                                        <div class="alt-link-div flex-div justify-content-btw">
+                                        <div class="alt-link-div">
                                             <div class=''>
-                                                <span>Not Olamide? </span> 
-                                                <a href="./login-new-user.html" class="pry-color">
-                                                    <u>Switch Account</u>
-                                                </a>
+                                                By clicking <b>“Verify”</b>  your agree to Payrail 
+                                                <a href="/#" class="bold-txt black-txt"> Policy</a> and <a href="/#" class="bold-txt black-txt">Terms </a>  
                                             </div>
-                                            <a href="./forgot-password.html" class="pry-color">Forgot password?</a>
                                         </div>
                                     </div>
                     
-                                    <div class="submit-btn-wrapper">
-                                        <button class="submit-btn pry-btn btn">Login</button>
+                                    <div class="submit-btn-wrapper mag-top-0 pidn">
+                                        <button class="submit-btn pry-btn btn">Verify</button>
                                     </div>
                                 </form>
                     
@@ -190,10 +217,12 @@
             $(".selected-language").text($(this).text())
         });
 
-        $("#refer-trigger").click(function(){
-            $("#refer-wrapper").show();
-            $(this).parent().css("visibility", "hidden");
-        })
+        var elemSelect = document.querySelectorAll('select');
+        M.FormSelect.init(elemSelect);
+        var elemsDatepicker = document.querySelectorAll('.datepicker');
+        M.Datepicker.init(elemsDatepicker);
+        
+        document.querySelector("section.auth-wrapper.container").classList.add("identity-page-wrapper");
 
         function passwordToggle(e) {
             var passwordField = e.target.parentElement.querySelector(".password-field");

@@ -8,7 +8,7 @@
     <meta name="author" content="Payrail">
     <meta name="description" content="Payrail Collection web app" />
     <link rel="apple-touch-icon" href="../payrail-icon.png" />
-    <title>Agent Login - Payrail Collection</title>
+    <title>Signup Completed - Payrail Collection</title>
 
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../materialize.css">
@@ -58,51 +58,16 @@
             
                     <section class="auth-wrapper container">
                         <div class="auth-block-wrapper">
-                            <div class="">
-                                <ul class="form-nav">
-                                    <li>
-                                        <a href="#" class="route-link active-link">
-                                            <span>Agent</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./login-merchant.html" class="route-link">
-                                            <span>Merchant</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                             <div class="auth-block">
-                                <div class="auth-greet-title">
-                                    <h1 class="greet-title">
-                                        Welcome back, <span>Olamide</span>
-                                    </h1>
-                                    <p class="greet-desc">
-                                        Please check your browser’s address bar to be sure you’re on <br />
-                                        <a href="https://collection.payrail.co" target="_blank" rel="noopener noreferrer">https://collection.payrail.co</a>
-                                    </p>
-                                </div>
-                    
-                                <form action="#" id="auth-form">
-                                    <div class="input-row row">
-                                        <div class="input-field">
-                                            <input id="password" type="password" class="inp-field password-field" />
-                                            <label for="password">Password</label>
-                                            <span class="toggle-show-password" onclick="passwordToggle(event)">Show</span>
-                                        </div>
-                                        <div class="alt-link-div flex-div justify-content-btw">
-                                            <div class=''>
-                                                <span>Not Olamide? </span> 
-                                                <a href="./login-new-user.html" class="pry-color">
-                                                    <u>Switch Account</u>
-                                                </a>
-                                            </div>
-                                            <a href="./forgot-password.html" class="pry-color">Forgot password?</a>
-                                        </div>
-                                    </div>
-                    
-                                    <div class="submit-btn-wrapper">
-                                        <button class="submit-btn pry-btn btn">Login</button>
+                                <form id="congrats-form" action="/login">
+                                    <div class="auth-greet-title center">
+                                        <img src="../images/completed.svg" alt="congrats" class="congrats-img" />
+                                        <h1 class="greet-title">
+                                            Awesome! <br/> Olamide, you are good to go  
+                                        </h1>
+                                        <p class="greet-desc">
+                                            Your account has been created! You can log in to your account now
+                                        </p>
                                     </div>
                                 </form>
                     
@@ -190,19 +155,9 @@
             $(".selected-language").text($(this).text())
         });
 
-        $("#refer-trigger").click(function(){
-            $("#refer-wrapper").show();
-            $(this).parent().css("visibility", "hidden");
-        })
-
-        function passwordToggle(e) {
-            var passwordField = e.target.parentElement.querySelector(".password-field");
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-            } else {
-                passwordField.type = "password";
-            }
-        }
+        setTimeout(function(){
+            window.location.href = './login-old-user.html';
+        }, 5000);
     </script>
   </body>
 </html>
