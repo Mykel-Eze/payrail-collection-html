@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../materialize.css">
+    <link rel="stylesheet" href="../css/auth.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/top-nav.css">
     <link rel="stylesheet" href="../css/modals.css">
@@ -19,7 +20,389 @@
   </head>
   <body>
 
+    <div id="root">
+      <div class="App">
+          <div id="body-wrapper" class='dashboard-page'>
+            <!--=== SideBar Section ===-->
+            <section id="side-bar">
+                <div class="container">
+                    <div class='user-block-wrapper'>
+                        <div class="dropdown-trigger flex-div" data-target="user-dropdown">
+                            <div class="user-details flex-div">
+                                <!-- See: https://github.com/ambassify/react-avatar  for React-Avatar-->
+                                <img src="../images/default-avatar.svg" alt="Olamide Olagunju" class="no-user-avatar">
+                            </div>
+                            <div class="user-name-details">
+                                <div class="user-name-txt bold-txt truncate">Olamide Olagunju</div>
+                                <div class="user-role">Agent</div>
+                            </div>
+                            <div class="caret-div">
+                                <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
+                            </div>
+                        </div>
+                        <ul id='user-dropdown' class='dropdown-content'>
+                            <li>
+                                <a href="#!">Go to profile</a>
+                            </li>
+                            <li class="divider" tabIndex="-1"></li>
+                            <li>
+                                <a href="#!">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-list-wrapper">
+                        <div class="nav-list-1">
+                            <ul class="collapsible">
+                                <li class="link-wrapper">
+                                    <div class="collapsible-header pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/home-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Home</span>
+                                        </div>
+                                        <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
+                                    </div>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            <li class="pg-sub-link">
+                                                <a href="/dashboard/getting-started">
+                                                    Get Started
+                                                    <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                </a>
+                                            </li>
+                                            <li class="pg-sub-link">
+                                                <a href="/dashboard/home">
+                                                    Overview
+                                                    <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="/wallet" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/wallet-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Wallet</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="/customers" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/customers-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Customers</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="/transactions" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/tranx-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Transactions</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="/payout" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Payout</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="/#" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/support-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Support</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="brand-logo">
+                        <a href="/dashboard">
+                            <img src="../images/payrail-logo.svg" alt="Payrail" class="brand-img" />
+                        </a>
+                        <div class="sidebar-footer">
+                            © Angala Financial Technologies Limited.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--=== end of SideBar Section ===-->
+
+            <!--=== Main Content ===-->
+            <section id="content-body">
+                <!--=== Top-Nav Section ===-->
+                <nav class="top-nav">
+                    <div class="flex-div align-content-center justify-content-btw">
+                        <div id="search-form">
+                            <div class="rel search-block flex-div">
+                                <img src="../images/search.svg" alt="icon" class="search-btn-img" />
+                                <input id="search" type="search" class="search-input" placeholder="Search Customer, payout, transactions" />
+                            </div>
+                        </div>
+        
+                        <div class="user-session-wrapper flex-div">
+                            <a href="/dashboard/settings" class="topnav-btn hover-scale">
+                                <img src="../images/settings.svg" alt="icon" class="topnav-btn-img tbi-default*" />
+                            </a>
+                            <a href="/#" class="topnav-btn hover-scale">
+                                <img src="../images/notification.svg" alt="icon" class="topnav-btn-img" />
+                            </a>
+                            <div class="create-account-wrapper">
+                                <a href="/signup" class="create-account-btn pry-bg">
+                                    <span>MAKE COLLECTION</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!--=== end of Top-Nav Section ===-->
+
+                <div class="page-content-block-wrapper">
+                  <div class="page-content-wrapper">
+                      <div class="container">
+                          <div class="section-row-wrapper grid-row-2">
+                              <div class="wallet-card">
+                                  <div class="balance-wrapper">
+                                      <div class="input-field" id="balance-select-wrapper">
+                                          <select onchange="showDiv()" id="balance-type">
+                                              <option value="1">Collection Balance</option>
+                                              <option value="2">Commission Balance</option>
+                                          </select>
+                                          <img src="../images/caret-down-red.svg" alt="caret" class="inp-caret-icon" />
+                                      </div>
+                                      <div id="collection-block">
+                                          <h4 class="wallet-balance bold-txt">
+                                              <small >₦</small>35,000,000.09
+                                          </h4>
+                  
+                                          <div class="flex-div balance-btns-wrapper">
+                                              <button class="balance-btn pry-btn">
+                                                  Add money <span>&rsaquo;</span>
+                                              </button>
+                                              <button class="balance-btn sec-btn">
+                                                  Withdraw <span>&rsaquo;</span>
+                                              </button>
+                                          </div>
+                                      </div>
+                                      <div id="commision-block" hidden>
+                                          <h4 class="wallet-balance bold-txt">
+                                              <small >₦</small>10,000.09
+                                          </h4>
+                  
+                                          <div class="flex-div balance-btns-wrapper">
+                                              <button class="balance-btn sec-btn">
+                                                  Withdraw <span>&rsaquo;</span>
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <div class="section-block payment-reminder-block">
+                                  <div class="section-block-header-2 flex-div">
+                                      <span>PAYMENT REMINDER</span>
+                                      <span>Amount</span>
+                                  </div>
+                  
+                                  <div class="payment-reminder-table">
+                                      <div class="payment-reminder-row flex-div">
+                                          <div>CUS1092</div>
+                                          <div>Iya Micheal Store</div>
+                                          <div>₦100,000</div>
+                                      </div>
+                                      <div class="payment-reminder-row flex-div">
+                                          <div>CUS0092</div>
+                                          <div>Bola Grocery Store</div>
+                                          <div>₦99,980</div>
+                                      </div>
+                                      <div class="payment-reminder-row flex-div">
+                                          <div>CUS3492</div>
+                                          <div>Okon and Sons</div>
+                                          <div>₦500,000</div>
+                                      </div>
+                                  </div>
+                  
+                                  <div class="payment-reminder-footer flex-div">
+                                      <div class="flex-div pr-modal-trigger">
+                                          <img src="../images/transaction-icon-2.svg" alt="icon" />
+                                          <span>Transactions</span>
+                                      </div>
+                                      <div class="flex-div pr-modal-trigger">
+                                          <img src="../images/customers-icon-2.svg" alt="icon" />
+                                          <span>Customers</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                  
+                          <div class="section-row-wrapper grid-row-2">
+                              <div class="section-block-2 success-rate-wrapper-block">
+                                  <div class="section-block-header flex-div">
+                                      <span>Total customers</span>
+                                      <span>Owing customers</span>
+                                      <span>Total debt</span>
+                                  </div>
+                  
+                                  <div class="flex-div justify-content-btw">
+                                      <h4 class="fig-title">720</h4>
+                                      <h4 class="fig-title">300</h4>
+                                      <h4 class="fig-title pry-color">₦20,000,000.00</h4>
+                                  </div>
+                              </div>
+                  
+                              <div class="section-block-2 bill-payment-wrapper-block">
+                                  <div class="section-block-header-2 flex-div">
+                                      <span>Pending payments</span>
+                                      <span>PAYOUTS</span>
+                                  </div>
+                  
+                                  <div class="flex-div justify-content-btw">
+                                      <h4 class="fig-title">10</h4>
+                                      <h4 class="fig-title pry-color">₦300,000.00</h4>
+                                  </div>
+                              </div>
+                          </div>
+                  
+                          <div class="section-row-wrapper grid-row-1">
+                              <div class="section-block recent-tranx-wrapper">
+                                  <div class="section-block-header flex-div">
+                                      <span>RECENT TRANSACTION</span>
+                                      <a href="/#" class="flex-div view-all-link">
+                                          <span>VIEW ALL</span>
+                                      </a>
+                                  </div>
+                  
+                                  <div class="recent-tranx-table-wrapper">
+                                      <table class="brief-tranx-table responsive-table">
+                                          <tbody>
+                                              <tr>
+                                                  <td>
+                                                      <div class="flex-div">
+                                                          <img src="../images/received-icon.svg" alt="transaction icon" class="tranx-activity-icon" />
+                                                          <div class="tranx-activity-details">
+                                                              <div class="tranx-activity">Payout from Payrail</div>
+                                                              <small class="tranx-activity-status">Processed</small>
+                                                          </div>
+                                                      </div>
+                                                  </td>
+                                                  <td>
+                                                      <span>08148620099</span>
+                                                  </td>
+                                                  <td>
+                                                      <span>Bill Payment </span>
+                                                  </td>
+                                                  <td>
+                                                      <div class="flex-div">
+                                                          <div class="tranx-activity-details">
+                                                              <div class="tranx-activity tranx-amount failed-transaction">- ₦10,000</div>
+                                                              <small class="tranx-activity-status">01 Sept, 04:25 AM</small>
+                                                          </div>
+                                                          <img src="../images/menu-circle.svg" alt="icon" class="table-menu-circle" />
+                                                      </div>
+                                                  </td>
+                                              </tr>
+                                              <tr>
+                                                  <td>
+                                                      <div class="flex-div">
+                                                          <img src="../images/received-icon.svg" alt="transaction icon" class="tranx-activity-icon" />
+                                                          <div class="tranx-activity-details">
+                                                              <div class="tranx-activity">Olamide sent you Money</div>
+                                                              <small class="tranx-activity-status">Received</small>
+                                                          </div>
+                                                      </div>
+                                                  </td>
+                                                  <td>
+                                                      <span>1078234098</span>
+                                                  </td>
+                                                  <td>
+                                                      <span>Income </span>
+                                                  </td>
+                                                  <td>
+                                                      <div class="flex-div">
+                                                          <div class="tranx-activity-details">
+                                                              <div class="tranx-activity tranx-amount success-transaction">+ ₦10,000</div>
+                                                              <small class="tranx-activity-status">28 Aug, 01:50 PM</small>
+                                                          </div>
+                                                          <img src="../images/menu-circle.svg" alt="icon" class="table-menu-circle" />
+                                                      </div>
+                                                  </td>
+                                              </tr>
+                                              <tr>
+                                                  <td>
+                                                      <div class="flex-div">
+                                                          <img src="../images/send-icon.svg" alt="transaction icon" class="tranx-activity-icon" />
+                                                          <div class="tranx-activity-details">
+                                                              <div class="tranx-activity">Sent Money to Unilever</div>
+                                                              <small class="tranx-activity-status">Processed</small>
+                                                          </div>
+                                                      </div>
+                                                  </td>
+                                                  <td>
+                                                      <span>18902789012</span>
+                                                  </td>
+                                                  <td>
+                                                      <span>Transfer</span>
+                                                  </td>
+                                                  <td>
+                                                      <div class="flex-div">
+                                                          <div class="tranx-activity-details">
+                                                              <div class="tranx-activity tranx-amount pending-transaction">- ₦10,000</div>
+                                                              <small class="tranx-activity-status">20 Aug, 02:30 PM</small>
+                                                          </div>
+                                                          <img src="../images/menu-circle.svg" alt="icon" class="table-menu-circle" />
+                                                      </div>
+                                                  </td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </section>
+            <!--=== end of Main Content ===-->
+          </div>
+      </div>
+    </div>
+    
+
     <script src="../jquery.min.js"></script>
     <script src="../materialize.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var elemsCollapsible = document.querySelectorAll('.collapsible');
+          M.Collapsible.init(elemsCollapsible);
+
+          var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+          M.Dropdown.init(elemsDropdown, {
+              constrainWidth: true,
+              coverTrigger: false,
+              hover: true
+          });
+
+          var elemSelect = document.querySelectorAll('select');
+          M.FormSelect.init(elemSelect, {
+              coverTrigger: false
+          });
+      });
+      const balanceType = document.querySelector("#balance-type");
+      function showDiv(){
+          if(balanceType.value === 1){
+          document.getElementById('collection-block').style.display = "block";
+          document.getElementById('commision-block').style.display = "none";
+          } else{
+          document.getElementById('collection-block').style.display = "none";
+          document.getElementById('commision-block').style.display = "block";
+          }
+      } 
+    </script>
   </body>
 </html>

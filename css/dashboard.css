@@ -25,7 +25,7 @@ a:hover {
 }
 /*---============== SideBar Styling =================---*/
 #side-bar {
-    background-color: #F9F9F9;
+    background-color: #FFFFFF;
     color: #93A3C0;
     transition: width 1.5s;
     padding: 10px 0;
@@ -62,6 +62,9 @@ a:hover {
 #side-bar .brand-logo .brand-img {
     width: 100%;
     max-width: 115px;
+}
+#side-bar img.caret-icon {
+    top: 20px;
 }
 .sidebar-footer {
     font-size: 12px;
@@ -128,9 +131,9 @@ img.a-link-img {
 }
 .link-wrapper.active .pg-link, .link-wrapper .pg-sub-link a.active,
 .link-wrapper .pg-sub-link a:hover, .nav-list-wrapper ul li.link-wrapper a.pg-link:hover {
-    background: #FFFFFF;
+    background: #FCF9FA;
     box-shadow: 2px 6px 15px -1px rgba(0, 0, 0, 0.03);
-    text-decoration: none;
+    border-radius: 10px;
 }
 .link-wrapper .pg-sub-link:not(:last-child) {
     margin-bottom: 10px;
@@ -205,7 +208,7 @@ li.link-wrapper.active .caret-icon {
 
 /*---=== Dashboard-Home ===---*/
 section#content-body {
-    background-color: white;
+    background-color: #F9F9F9;
     color: #353D46;
 }
 .page-content-block-wrapper {
@@ -300,7 +303,7 @@ h4.wallet-balance {
 }
 .balance-wrapper button.balance-btn {
     border: none;
-    border-radius: 10px !important;
+    border-radius: 6px !important;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
