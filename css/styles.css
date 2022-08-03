@@ -1,11 +1,11 @@
 :root {
     --pry-color: #89163B;
     --sec-color: #353D46;
-	--font: 'roboto', sans-serif;
-    --font-bold: 'roboto-bold', sans-serif;
-    --font-medium: 'roboto-medium', sans-serif;
-    --font-light: 'roboto-light', sans-serif;
-    --font-xbold: 'roboto-xbold', sans-serif;
+	--font: 'pushpenny', sans-serif;
+    --font-bold: 'pushpenny-bold', sans-serif;
+    --font-medium: 'pushpenny-medium', sans-serif;
+    --font-light: 'pushpenny-light', sans-serif;
+    --font-xbold: 'pushpenny-xbold', sans-serif;
 
     width: 100%;
     overflow-x: hidden;
