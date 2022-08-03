@@ -262,6 +262,12 @@
     display: none;
 }
 
+#drop:hover .country-list {
+    display: block;
+    z-index: 20;
+    background-color: #fff;    
+}
+
 .show {
     display: block;
     z-index: 20;

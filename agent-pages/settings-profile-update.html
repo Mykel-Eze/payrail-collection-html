@@ -311,22 +311,14 @@
           const fileInputs = Array.from(document.getElementsByClassName('file-input'))
           const fileNames = Array.from(document.getElementsByClassName('filename'))
           const countryLists = Array.from(document.getElementsByClassName('country-list'))
-          const dropDownButtons = Array.from(document.getElementsByClassName('update-drop-down-button'))
           const profileUpdateInputs = Array.from(document.getElementsByClassName('profile-update-input'))
           
           countryLists.forEach((ul, index)=> {
             let listItems = Array.from(ul.children)
             listItems.forEach(item => {
                 item.addEventListener('click', ()=>{
-                    profileUpdateInputs[index].value = item.innerHTML
-                    ul.classList.remove('show')                    
+                    profileUpdateInputs[index].value = item.innerHTML                    
                 })
-            })
-          })
-
-          dropDownButtons.forEach((button, index) => {
-            button.addEventListener('click', ()=>{
-                countryLists[index].classList.add('show')
             })
           })
 
