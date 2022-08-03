@@ -278,8 +278,8 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <label for="address-checkbox">
-                                            <input type="checkbox" name="address-checkbox" id="address-check">
+                                            <label id="address-checkbox-label" for="address-checkbox">
+                                            <input type="checkbox" name="address-checkbox" class="filled-in" id="address-checkbox">
                                             <span>Same as business address</span>
                                             </label>
                                         </div>
@@ -312,6 +312,9 @@
           const fileNames = Array.from(document.getElementsByClassName('filename'))
           const countryLists = Array.from(document.getElementsByClassName('country-list'))
           const profileUpdateInputs = Array.from(document.getElementsByClassName('profile-update-input'))
+          const addressCheckbox = document.getElementById('address-checkbox-label')
+
+          addressCheckbox.addEventListener('click', (e) => {console.log(e)})
           
           countryLists.forEach((ul, index)=> {
             let listItems = Array.from(ul.children)
