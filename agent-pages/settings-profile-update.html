@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../payrail-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#89163B" />
+    <meta name="author" content="Payrail">
+    <meta name="description" content="Payrail Collection web app" />
+    <link rel="apple-touch-icon" href="../payrail-icon.png" />
+    <title>Home - Payrail Collection</title>
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../materialize.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/top-nav.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+
+    <div id="root">
+        <div class="App">
+            <div id="body-wrapper" class='dashboard-page'>
+              <!--=== SideBar Section ===-->
+              <section id="side-bar">
+                  <div class="container">
+                      <div class='user-block-wrapper'>
+                          <div class="dropdown-trigger flex-div" data-target="user-dropdown">
+                              <div class="user-details flex-div">
+                                    <!-- See: https://github.com/ambassify/react-avatar  for React-Avatar-->
+                                    <img src="../images/default-avatar.svg" alt="Olamide Olagunju" class="no-user-avatar">
+                                </div>
+                              <div class="user-name-details">
+                                  <div class="user-name-txt bold-txt truncate">Olamide Olagunju</div>
+                                  <div class="user-role">Agent</div>
+                              </div>
+                              <div class="caret-div">
+                                  <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
+                              </div>
+                          </div>
+                          <ul id='user-dropdown' class='dropdown-content'>
+                              <li>
+                                  <a href="#!">Go to profile</a>
+                              </li>
+                              <li class="divider" tabIndex="-1"></li>
+                              <li>
+                                  <a href="#!">Log out</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="nav-list-wrapper">
+                          <div class="nav-list-1">
+                              <ul class="collapsible">
+                                  <li class="link-wrapper">
+                                      <div class="collapsible-header pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/home-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Home</span>
+                                          </div>
+                                          <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
+                                      </div>
+                                      <div class="collapsible-body">
+                                          <ul>
+                                              <li class="pg-sub-link">
+                                                  <a href="/dashboard/getting-started">
+                                                      Get Started
+                                                      <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                  </a>
+                                              </li>
+                                              <li class="pg-sub-link">
+                                                  <a href="/dashboard/home">
+                                                      Overview
+                                                      <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/wallet" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/wallet-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Wallet</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/customers" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/customers-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Customers</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/transactions" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/tranx-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Transactions</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/payout" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Payout</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/#" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/support-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Support</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="brand-logo">
+                            <a href="/dashboard">
+                                <img src="../images/payrail-logo.svg" alt="Payrail" class="brand-img" />
+                            </a>
+                            <div class="sidebar-footer">
+                                © Angala Financial Technologies Limited.
+                            </div>
+                      </div>
+                  </div>
+              </section>
+              <!--=== end of SideBar Section ===-->
+    
+              <!--=== Main Content ===-->
+              <section id="content-body">
+                  <!--=== Top-Nav Section ===-->
+                  <nav class="top-nav">
+                      <div class="flex-div align-content-center justify-content-btw">
+                          <div id="search-form">
+                              <div class="rel search-block flex-div">
+                                  <img src="../images/search.svg" alt="icon" class="search-btn-img" />
+                                  <input id="search" type="search" class="search-input" placeholder="Search Customer, payout, transactions" />
+                              </div>
+                          </div>
+          
+                          <div class="user-session-wrapper flex-div">
+                              <a href="/dashboard/settings" class="topnav-btn hover-scale">
+                                  <img src="../images/settings.svg" alt="icon" class="topnav-btn-img tbi-default*" />
+                              </a>
+                              <a href="/#" class="topnav-btn hover-scale">
+                                  <img src="../images/notification.svg" alt="icon" class="topnav-btn-img" />
+                              </a>
+                              <div class="create-account-wrapper">
+                                  <a href="/signup" class="create-account-btn pry-bg">
+                                      <span>MAKE COLLECTION</span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </nav>
+                  <!--=== end of Top-Nav Section ===-->
+    
+                  <div class="page-content-block-wrapper">
+                      <!--work area-->
+                      <div class="page-content-wrapper">
+                        <div class="container" id="settings-container">
+                            <div id="settings-nav">
+                                <div id="nav-menu-header">Settings</div>
+                                <div id="settings-nav-menu">                                    
+                                        <li class="active-list-item">Profile</li>
+                                        <li>Security</li>
+                                        <li>Compliance</li>
+                                        <li>Preference</li>                                    
+                                </div>
+                            </div>
+                            <div id="settings-user-page-body"> 
+                                <div>
+                                   <a href="./settings-profile.html"><img src="../images/back.svg" alt="Go Back"></a>
+                                </div>       
+                                
+                                <div id="settings-user-page-header">
+                                    <div>
+                                        <div id="settings-user-page-image"></div>
+                                    </div>
+                                    <div id="settings-user-page-idcard">
+                                        <div id="settings-user-page-idcard-name">Olamide Olagunju</div>
+                                        <div id="settings-user-page-idcard-id"> Merchant ID: 109298</div>
+                                    </div>
+                                </div>
+                                <form id="settings-profile-update-form" action="#">
+                                    <div id="left-form-side" class="settings-profile-form-part">
+                                        <div class="settings-profile-update-form-input-holder">
+                                            <div class="settings-profile-update-form-label">
+                                                Residential Address
+                                            </div>
+                                            <input type="text" placeholder="Enter your address here" />
+                                            <img src="../images/path.svg" alt="">
+                                        </div>
+                                        <div class="settings-profile-update-form-input-holder sub-form">
+                                            <div class="settings-profile-update-form-label">Nationality</div>
+                                            <input class="profile-update-input" type="text" placeholder="Please specify" />
+                                            <div id="drop">
+                                                <button class="update-drop-down-button">
+                                                    <img  src="../images/caret-1.svg" alt="">
+                                                </button> 
+                                                <ul id="id-select" class="country-list">
+                                                    <li>eng</li>
+                                                    <li>fra</li>
+                                                    <li>yor</li>
+                                                    <li>hau</li>
+                                                    <li>igb</li>
+                                                    <li>chn</li>
+                                                </ul>                         
+                                            </div>
+                                        </div>                                
+                                            <div class="update-form-id-section sub-form">
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <input class="profile-update-input" id="country-field" type="text" placeholder="Choose a form of ID" />
+                                                    <div id="drop">
+                                                        <button class="update-drop-down-button">
+                                                            <img  src="../images/caret-1.svg" alt="">
+                                                        </button> 
+                                                        <ul id="id-select" class="country-list">
+                                                            <li>eng</li>
+                                                            <li>fra</li>
+                                                            <li>yor</li>
+                                                            <li>hau</li>
+                                                            <li>igb</li>
+                                                            <li>chn</li>
+                                                        </ul>                         
+                                                    </div>
+                                                </div>
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <input id="country-field" type="text" placeholder="ID Number" />
+                                                </div>
+                                                <div class="settings-profile-update-form-input-holder id-section-input">                                                    
+                                                    <input type="text" class="filename" name="" id="id-filename" placeholder="Drag and drop document here or Browse">                                                                                                
+                                                                                                             
+                                                    <label class="file-label" id="id-file-label" for="id-file">Choose file</label>
+                                                    <input class="file-input" id="id-file" type="file">                                                                                                     
+                                                </div>
+                                            </div>    
+                                            
+                                            <div id="save-btn" class="create-account-wrapper">
+                                                <a href="/signup" class="create-account-btn pry-bg">
+                                                    <span>Save</span>
+                                                </a>
+                                            </div>
+                                        
+                                    </div>
+                                    <div id="right-form-side" class="settings-profile-form-part">
+                                        <div id="address-section" class="update-form-id-section">
+                                            <div class="settings-profile-update-form-input-holder address-section-input">
+                                                
+                                                <input class="profile-update-input" id="country-field" type="text" placeholder="Choose proof of address" />
+                                                    <div id="drop">
+                                                        <button class="update-drop-down-button">
+                                                            <img  src="../images/caret-1.svg" alt="">
+                                                        </button> 
+                                                        <ul id="id-select" class="country-list">
+                                                            <li>eng</li>
+                                                            <li>fra</li>
+                                                            <li>yor</li>
+                                                            <li>hau</li>
+                                                            <li>igb</li>
+                                                            <li>chn</li>
+                                                        </ul>                         
+                                                    </div>
+                                            </div>
+                                            <div class="settings-profile-update-form-input-holder address-section-input">
+                                                <input type="text" class="filename" name="" id="address-filename" placeholder="Drag and drop document here or Browse">                                                                                                
+                                                                                                             
+                                                    <label class="file-label" id="address-file-label" for="address-file">Choose file</label>
+                                                    <input class="file-input" id="address-file" type="file"> 
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label id="address-checkbox-label" for="address-checkbox">
+                                            <input type="checkbox" name="address-checkbox" class="filled-in" id="address-checkbox">
+                                            <span>Same as business address</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </section>
+              <!--=== end of Main Content ===-->
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../jquery.min.js"></script>
+    <script src="../materialize.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var elemsCollapsible = document.querySelectorAll('.collapsible');
+          M.Collapsible.init(elemsCollapsible);
+
+
+          
+
+          const fileInputs = Array.from(document.getElementsByClassName('file-input'))
+          const fileNames = Array.from(document.getElementsByClassName('filename'))
+          const countryLists = Array.from(document.getElementsByClassName('country-list'))
+          const profileUpdateInputs = Array.from(document.getElementsByClassName('profile-update-input'))
+          const addressCheckbox = document.getElementById('address-checkbox-label')
+
+          addressCheckbox.addEventListener('click', (e) => {console.log(e)})
+          
+          countryLists.forEach((ul, index)=> {
+            let listItems = Array.from(ul.children)
+            listItems.forEach(item => {
+                item.addEventListener('click', ()=>{
+                    profileUpdateInputs[index].value = item.innerHTML                    
+                })
+            })
+          })
+
+
+         fileInputs.forEach((input, index) => {
+            input.addEventListener('change', (e)=>{pickFile(e, index, fileNames)})
+         })
+          
+
+          function pickFile(e, index, fileTarget) {
+            fileTarget[index].value = e.target.files[0].name
+            console.log(e)
+          }
+          
+          
+
+          var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+          M.Dropdown.init(elemsDropdown, {
+              constrainWidth: true,
+              coverTrigger: false,
+              hover: true
+          });
+      });
+      const balanceType = document.querySelector("#balance-type");
+      function showDiv(){
+          if(balanceType.value === 1){
+          document.getElementById('collection-block').style.display = "block";
+          document.getElementById('commision-block').style.display = "none";
+          } else{
+          document.getElementById('collection-block').style.display = "none";
+          document.getElementById('commision-block').style.display = "block";
+          }
+      }
+          
+    </script>
+  </body>
+</html>

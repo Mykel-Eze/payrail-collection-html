@@ -1,0 +1,481 @@
+#settings-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#settings-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 94px;
+    border-bottom: 2px solid #979797;
+}
+
+#nav-menu-header {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#settings-nav-menu {
+    /* border: 1px solid #89163B; */
+    height: 24px;
+}
+
+#settings-nav-menu li {
+    font-size: 18px;
+    list-style: none;
+    display: inline;
+}
+
+#settings-nav-menu li:nth-child(1n+2) {
+    margin-left: 29px;
+}
+
+
+#settings-nav-menu li:hover {
+    cursor: pointer;
+    z-index: 5;
+    border-bottom: 1px solid #89163B;
+    font-weight: bolder;
+}
+
+#settings-nav-menu li.active-list-item {
+    cursor: pointer;
+    z-index: 5;
+    border-bottom: 1px solid #89163B;
+    font-weight: bolder;
+}
+
+#settings-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin-top: 20px;
+}
+
+#settings-security-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+}
+
+
+ .settings-profile-card {
+    height: 80px;
+    width: 47%;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    border-radius: 10px;   
+    border: 1px solid rgb(128, 127, 127, .3);  
+}
+
+.settings-profile-card:nth-child(1n+3) {
+    margin-top: 15px;
+}
+
+
+
+#profile-card-image-holder {
+    display: flex;
+}
+
+.profile-card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(128, 127, 127, .3);
+    width: 50%;
+    margin: auto;
+    border-radius: 30px;
+}
+  
+.profile-card-image:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+
+
+#profile-card-details{
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    align-self: center;
+}
+
+#profile-card-name {
+    font-size: 1.3em;
+    color: #353D46;
+}
+
+#profile-card-email {
+    font-size: 12px;
+    color: #979797;
+}
+
+#profile-card-title {
+   margin-top: auto;
+   font-size: 0.7em;
+   font-weight: bold;
+   color: #89163B;
+}
+
+#profile-card-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #89163B;
+    font-size: 18px;
+}
+
+.profile-card-edit-btn a {
+    color: #89163B;
+}
+
+/* settings user page  */
+#settings-user-page-body {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+}
+
+#settings-user-page-header {
+    width: 284px;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 30px;
+}
+
+#settings-user-page-image {
+    border: 1px solid black;
+    border: 1px solid #979797;
+    width: 75%;
+    margin: auto;
+    border-radius: 30px;
+}
+  
+#settings-user-page-image:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+#settings-user-page-idcard {
+    display: flex;
+    flex-direction: column;
+}
+
+#settings-user-page-idcard-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#settings-user-page-idcard-id {
+    font-size: 12px;
+    color: #6E7883;
+}
+
+#settings-profile-update-form {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+}
+
+.settings-profile-form-part {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-profile-form-part div.sub-form:nth-child(1n+2) {
+    margin-top: 20px;
+}
+
+.settings-profile-update-form-input-holder {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border: 1px solid rgb(128, 127, 127, .3);
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 100%;
+    padding:0 15px 0 15px;
+}
+
+
+#settings-profile-update-form div input {
+    width: 68%;
+    height: 40%;
+    border: none;
+    font-size: 14px;
+}
+
+#drop {
+    position: absolute;
+    right: 0;
+    height: 30px;
+    width: 20px;
+}
+
+
+.update-drop-down-button {
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.update-drop-down-button:focus {
+    background-color: #FFFFFF;
+}
+
+.settings-profile-update-form-label {
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 13px;
+    z-index: 9;
+    background-color: inherit;
+    font-size: 10px;
+    color: rgb(128, 127, 127, .9);
+}
+
+.country-list {
+    position: absolute;
+    border: 1px solid #eee;
+    margin-left: -85px;
+    margin-top: -5px;
+    min-height: 50px;
+    width: 100px;
+    display: none;
+}
+
+#drop:hover .country-list {
+    display: block;
+    z-index: 20;
+    background-color: #fff;    
+}
+
+.show {
+    display: block;
+    z-index: 20;
+    background-color: #fff;
+}
+
+.country-list li {
+    height: 35px;
+    padding: 5px;
+    display: flex;
+    align-items: center; 
+    cursor: pointer;   
+    color: rgba(0, 0, 0, 0.87);
+}
+
+
+.country-list li:hover {
+    background-color: #eee;
+}
+
+
+.update-form-id-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-form-id-section .id-section-input:nth-child(1n+1) {
+    margin: 0;
+    border: 1px solid rgb(128, 127, 127, .3);
+    border-radius: 0;
+}
+
+
+.update-form-id-section .id-section-input:first-child {
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+}
+
+.update-form-id-section .id-section-input:last-child {
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+}
+
+#address-section div:nth-child(1n+2) {
+    margin: 0;
+}
+
+#id-file, #address-file {
+    display: none;
+}
+
+.file-label {
+    color: #89163B;
+}
+.file-label:hover {
+    cursor: pointer;
+}
+
+
+
+#address-section .address-section-input:first-child {
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+}
+#address-section .address-section-input:last-child {
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid rgb(128, 127, 127, .3);
+}
+
+#save-btn {
+    width: 100px;
+    margin-top: 40px;
+}
+
+#settings-security-form {
+    border: 1px solid rgb(128, 127, 127, .3);
+    width: 70%;
+    margin-top: 25px;
+    border-radius: 10px;
+    min-height: 200px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+#two-factor-auth {
+    border: 1px solid rgb(128, 127, 127, .3);
+    width: 70%;
+    margin-top: 20px;
+    border-radius: 10px;
+    min-height: 150px;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;    
+}
+
+#two-factor-auth div{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#two-factor-auth div div{
+    display: flex;
+    justify-content: center;
+    color: #353D46;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#two-factor-auth div div:nth-child(1n+2) {
+    font-size: 12px;
+    justify-content: flex-start;
+    color: rgb(128, 127, 127, .3);
+    font-weight: normal;
+}
+
+/* #two-factor-auth div:nth-child(1n+2) {
+    margin-top: 15px;
+} */
+
+#two-factor-auth 
+
+#settings-security-form section:nth-child(1n+2) {
+    margin-top: 20px;
+}
+
+#security-form-section-tab {
+    height: 40px;
+    border-bottom: 1px solid rgb(128, 127, 127, .3);
+    padding: 0;
+}
+
+#security-form-section-tab ul {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 83%;
+    /* border: 1px solid #89163B; */
+    margin-top: 0;
+}
+
+#security-form-section-tab ul li {
+    height: 100%;
+    width: fit-content;
+}
+
+#security-form-section-tab ul li.active {
+    border-bottom: 1px solid #89163B;
+}
+
+#security-form-input-section {
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    justify-content: space-between;
+}
+
+#security-form-pin-section, .pin-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.pin-entry {
+    display: flex;
+    width: fit-content;
+}
+
+.pin-entry #pin-input {
+    width: 55px;
+    height: 55px;
+    border: 1px solid rgb(128, 127, 127, .3);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 790px) {
+
+    #settings-body {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* border: 1px solid black; */
+    }
+    
+    .settings-profile-card {
+        width: 90%;
+        min-width: 250px;    
+    }   
+    
+    .settings-profile-card:nth-child(1n+2) {
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 952px) {
+    #profile-card-name {
+        font-size: 1em;
+    }   
+  }
+
+  
+
+
