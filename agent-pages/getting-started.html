@@ -163,19 +163,60 @@
                   <!--=== end of Top-Nav Section ===-->
     
                   <div class="page-content-block-wrapper">
-                      <Switch>
-                          <!-- {/*---==== Contents Sections  ====---*/} -->
-                          <Route path="/dashboard">
-                              <Redirect href="/dashboard/home" />
-                          </Route>
-                          <Route path="/dashboard/home">
-                              <DashboardHome />
-                          </Route>
-                          <Route path="/dashboard/getting-started">
-                              <GettingStarted />
-                          </Route>
-                          <!-- {/*---==== end of Contents Sections  ====---*/} -->
-                      </Switch>
+                    <div class="page-content-wrapper">
+                        <div class="container">
+                            <div class="greeting-wrapper">
+                                <h2 class="greet-user flex-div">
+                                    <span>Hello! Agent Olamide </span>
+                                    <img src="../images/waving-hand.svg" alt="waving hand" class="waving-hand" />
+                                </h2>
+                                <span>Welcome to Payrail Collector. Let’s get your account up and running  </span>
+                            </div>
+            
+            
+                            <div class="pending-actions-wrapper">
+                                <div class="pending-action-block">
+                                    <div class="center">
+                                        <img src="../images/pending-upload.svg" alt="pending-icon" class="pending-img" />
+                                        <p class="pending-description">
+                                            Complete your KYC verification
+                                        </p>
+                                        <div class="pending-btn-wrapper">
+                                            <a href="./pending-tasks" class="pending-btn pry-btn">
+                                                Complete KYC <span class="right-arr">&rsaquo;</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pending-action-block">
+                                    <div class="center">
+                                        <img src="../images/pending-tour.svg" alt="pending-icon" class="pending-img" />
+                                        <p class="pending-description">
+                                            Know to your dashboard
+                                        </p>
+                                        <div class="pending-btn-wrapper">
+                                            <button class="pending-btn pry-btn">
+                                                Take a Tour <span class="right-arr">&rsaquo;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pending-action-block">
+                                    <div class="center">
+                                        <img src="../images/pending-chat.svg" alt="pending-icon" class="pending-img" />
+                                        <p class="pending-description">
+                                            Get answers to questions 
+                                        </p>
+                                        <div class="pending-btn-wrapper">
+                                            <button class="pending-btn pry-btn">
+                                                Go to Support <span class="right-arr">&rsaquo;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                   </div>
               </section>
               <!--=== end of Main Content ===-->
