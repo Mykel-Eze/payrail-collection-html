@@ -63,9 +63,6 @@ a:hover {
     width: 100%;
     max-width: 115px;
 }
-#side-bar img.caret-icon {
-    top: 20px;
-}
 .sidebar-footer {
     font-size: 12px;
     line-height: 16px;
@@ -559,15 +556,14 @@ h2.page-title {
     line-height: 1;
 }
 
-form#kyc-form {
-    background: #F9F9F9;
-    border: 1px solid rgba(119, 119, 119, 0.2);
+#kyc-form {
     box-sizing: border-box;
-    border-radius: 48px;
     min-height: 400px;
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
-    padding: 30px 50px;
+}
+.dashboard-page .input-field>label:not(.label-icon).active {
+    transform: translateY(-15px) scale(0.85) !important;
 }
 .change-avatar-wrapper .file-field .btn {
     float: none;
@@ -626,6 +622,7 @@ h4.username {
     font-weight: 600;
     font-size: 22px;
     line-height: 29px;
+    margin: 0;
 }
 .username-wrapper span {
     font-size: 12px;
@@ -636,10 +633,10 @@ h4.username {
 .dashboard-form .single-field .form-inp-field, 
 .dashboard-form .single-field .select-dropdown.dropdown-trigger,
 .dashboard-form textarea.form-inp-field {
-    background: #F9F9F9 !important;
+    background: #FFFFFF !important;
     border: 1px solid rgba(119, 119, 119, 0.2) !important;
     box-sizing: border-box !important;
-    border-radius: 28.5px !important;
+    border-radius: 10px !important;
     box-shadow: none !important;
     height: 54px !important;
     padding: 0 24px !important;
@@ -663,6 +660,12 @@ h4.username {
     line-height: 18px;
     border-color: rgba(119, 119, 119, 0.2) !important;
     margin-bottom: 0;
+}
+.dashboard-form .multiple-fields .select-dropdown.dropdown-trigger {
+    border-radius: 0 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
 }
 .dashboard-form .multiple-fields .last-inp-field {
     margin-bottom: 0;
@@ -735,8 +738,9 @@ form.dashboard-form .multiple-fields .file-field .file-path-wrapper {
 .input-field.multiple-fields {
     border: 1px solid rgba(119, 119, 119, 0.2);
     box-sizing: border-box;
-    border-radius: 28.5px;
+    border-radius: 10px;
     /* overflow: hidden; */
+    background-color: #FFFFFF;
 }
 .input-field.grid-field {
     display: grid;
@@ -806,6 +810,9 @@ form.dashboard-form .input-field {
 form.dashboard-form #business-details .submit-btn-wrapper {
     margin-top: 40px;
 }
+button.submit-btn {
+    cursor: pointer;
+}
 
 .form-header-wrapper {
     width: 80%;
@@ -862,7 +869,7 @@ span.hide-social-input {
     cursor: pointer;
 }
 div.review-field {
-    background: #F9F9F9;
+    background: #FFFFFF;
     border: 1px solid rgba(119, 119, 119, 0.2);
     box-sizing: border-box;
     border-radius: 28.5px;
@@ -870,10 +877,6 @@ div.review-field {
     margin: 20px 0;
     padding: 0 20px;
     justify-content: space-between;
-    cursor: pointer;
-}
-div.review-field:hover {
-    background-color: #FFFFFF;
 }
 button.pry-btn[disabled] {
     background: rgba(110, 120, 131, 0.5);
@@ -882,6 +885,24 @@ div#done-btn-wrapper {
     position: fixed;
     bottom: 20px;
     right: 20px;
+}
+
+.dashboard-form .user-detected-notice.center {
+    margin: 10px 0 30px;
+} 
+.dashboard-form h1.modal-title {
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+.dashboard-form p.modal-desc {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: #777777;
+    margin-top: 10px;
 }
 
 @media(max-width: 600px) {

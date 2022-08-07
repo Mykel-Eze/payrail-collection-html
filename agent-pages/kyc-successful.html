@@ -162,63 +162,45 @@
                   </nav>
                   <!--=== end of Top-Nav Section ===-->
     
-                  <div class="page-content-block-wrapper">
-                    <div class="page-content-wrapper">
-                        <div class="container">
-                            <div class="greeting-wrapper">
-                                <h2 class="greet-user flex-div">
-                                    <span>Hello! Agent Olamide </span>
-                                    <img src="../images/waving-hand.svg" alt="waving hand" class="waving-hand" />
-                                </h2>
-                                <span>Welcome to Payrail Collector. Let’s get your account up and running  </span>
-                            </div>
-            
-            
-                            <div class="pending-actions-wrapper">
-                                <div class="pending-action-block">
-                                    <div class="center">
-                                        <img src="../images/pending-upload.svg" alt="pending-icon" class="pending-img" />
-                                        <p class="pending-description">
-                                            Complete your KYC verification
-                                        </p>
-                                        <div class="pending-btn-wrapper">
-                                            <a href="./pending-tasks.html" class="pending-btn pry-btn">
-                                                Complete KYC <span class="right-arr">&rsaquo;</span>
-                                            </a>
-                                        </div>
+                    <div class="page-content-block-wrapper">
+                        <div class="page-content-wrapper">
+                            <div class="container">
+                                <div class="page-header-wrapper">
+                                    <div class="left-align">
+                                        <h2 class="page-title">Complete your KYC</h2>
+                                        <span>
+                                            Olamide, it’s important you update your profile to increase your transaction and loan purpose
+                                        </span>
                                     </div>
                                 </div>
-                                <div class="pending-action-block">
-                                    <div class="center">
-                                        <img src="../images/pending-tour.svg" alt="pending-icon" class="pending-img" />
-                                        <p class="pending-description">
-                                            Know to your dashboard
-                                        </p>
-                                        <div class="pending-btn-wrapper">
-                                            <button class="pending-btn pry-btn">
-                                                Take a Tour <span class="right-arr">&rsaquo;</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pending-action-block">
-                                    <div class="center">
-                                        <img src="../images/pending-chat.svg" alt="pending-icon" class="pending-img" />
-                                        <p class="pending-description">
-                                            Get answers to questions 
-                                        </p>
-                                        <div class="pending-btn-wrapper">
-                                            <button class="pending-btn pry-btn">
-                                                Go to Support <span class="right-arr">&rsaquo;</span>
-                                            </button>
+                
+                                <div class="pending-tasks-wrapper">
+                                    <div class="kyc-form-wrapper">
+                                        <div id="kyc-form" class="dashboard-form">
+                                            <div class="row">
+                                                    <div id="review-kyc-application">
+                                                        <div class="user-pix-div center mag-bottom-0">
+                                                        <img src="../images/completed.svg" alt="completed" class="user-pix" />
+                                                    </div>
+                                                    <div class="user-detected-notice center">
+                                                        <h1 class="modal-title">KYC submission succesful</h1>
+                                                        <p class="modal-desc">
+                                                            The details you provided are under review
+                                                        </p>
+                                                    </div>
+                                                    <div class="review-field flex-div" id="personal-info">
+                                                        <span class="review-field-txt">Personal Information</span>
+                                                        <img src="../images/pending-review-icon.svg" alt="pending-status" class="review-status-icon" />
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  </div>
-              </section>
+                </section>
               <!--=== end of Main Content ===-->
             </div>
         </div>
@@ -229,27 +211,23 @@
     <script src="../materialize.min.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          var elemsCollapsible = document.querySelectorAll('.collapsible');
-          M.Collapsible.init(elemsCollapsible);
+        document.addEventListener('DOMContentLoaded', function() {
+            var elemsCollapsible = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(elemsCollapsible);
 
-          var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
-          M.Dropdown.init(elemsDropdown, {
-              constrainWidth: true,
-              coverTrigger: false,
-              hover: true
-          });
-      });
-      const balanceType = document.querySelector("#balance-type");
-      function showDiv(){
-          if(balanceType.value === 1){
-          document.getElementById('collection-block').style.display = "block";
-          document.getElementById('commision-block').style.display = "none";
-          } else{
-          document.getElementById('collection-block').style.display = "none";
-          document.getElementById('commision-block').style.display = "block";
-          }
-      } 
+            var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(elemsDropdown, {
+                constrainWidth: true,
+                coverTrigger: false
+            });
+        });
+
+        setTimeout(
+            function() {  
+                window.location="./getting-started.html"; 
+            } 
+        , 3000);
+        
     </script>
   </body>
 </html>
