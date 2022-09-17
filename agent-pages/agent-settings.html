@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../payrail-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#89163B" />
+    <meta name="author" content="Payrail">
+    <meta name="description" content="Payrail Collection web app" />
+    <link rel="apple-touch-icon" href="../payrail-icon.png" />
+    <title>Home - Payrail Collection</title>
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../materialize.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/top-nav.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/agent-settings.css">
+    <!-- <link rel="stylesheet" href="../css/settings.css"> -->
+</head>
+
+<body>
+
+    <div id="root">
+        <div class="App">
+            <div id="body-wrapper" class='dashboard-page'>
+                <!--=== SideBar Section ===-->
+                <section id="side-bar">
+                    <div class="container">
+                        <div class='user-block-wrapper'>
+                            <div class="dropdown-trigger flex-div" data-target="user-dropdown">
+                                <div class="user-details flex-div">
+                                    <!-- See: https://github.com/ambassify/react-avatar  for React-Avatar-->
+                                    <img src="../images/default-avatar.svg" alt="Olamide Olagunju"
+                                        class="no-user-avatar">
+                                </div>
+                                <div class="user-name-details">
+                                    <div class="user-name-txt bold-txt truncate">Olamide Olagunju</div>
+                                    <div class="user-role">Agent</div>
+                                </div>
+                                <div class="caret-div">
+                                    <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
+                                </div>
+                            </div>
+                            <ul id='user-dropdown' class='dropdown-content'>
+                                <li>
+                                    <a href="#!">Go to profile</a>
+                                </li>
+                                <li class="divider" tabIndex="-1"></li>
+                                <li>
+                                    <a href="#!">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-list-wrapper">
+                            <div class="nav-list-1">
+                                <ul class="collapsible">
+                                    <li class="link-wrapper">
+                                        <div class="collapsible-header pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/home-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Home</span>
+                                            </div>
+                                            <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
+                                        </div>
+                                        <div class="collapsible-body">
+                                            <ul>
+                                                <li class="pg-sub-link">
+                                                    <a href="./getting-started.html">
+                                                        Get Started
+                                                        <img src="../images/curvy.svg" alt="curved-path"
+                                                            class="curved-path" />
+                                                    </a>
+                                                </li>
+                                                <li class="pg-sub-link">
+                                                    <a href="./home.html">
+                                                        Overview
+                                                        <img src="../images/curvy.svg" alt="curved-path"
+                                                            class="curved-path" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="link-wrapper">
+                                        <a href="/wallet" class="pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/wallet-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Wallet</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="link-wrapper">
+                                        <a href="/customers" class="pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/customers-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Customers</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="link-wrapper">
+                                        <a href="/transactions" class="pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/tranx-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Transactions</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="link-wrapper">
+                                        <a href="/payout" class="pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Payout</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="link-wrapper">
+                                        <a href="/#" class="pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/support-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Support</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="brand-logo">
+                            <a href="../index.html">
+                                <img src="../images/payrail-logo.svg" alt="Payrail" class="brand-img" />
+                            </a>
+                            <div class="sidebar-footer">
+                                © Angala Financial Technologies Limited.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--=== end of SideBar Section ===-->
+
+                <!--=== Main Content ===-->
+                <section id="content-body">
+                    <!--=== Top-Nav Section ===-->
+                    <nav class="top-nav">
+                        <div class="flex-div align-content-center justify-content-btw">
+                            <div id="search-form">
+                                <div class="rel search-block flex-div">
+                                    <img src="../images/search.svg" alt="icon" class="search-btn-img" />
+                                    <input id="search" type="search" class="search-input"
+                                        placeholder="Search Customer, payout, transactions" />
+                                </div>
+                            </div>
+
+                            <div class="user-session-wrapper flex-div">
+                                <a href="/dashboard/settings" class="topnav-btn hover-scale">
+                                    <img src="../images/settings.svg" alt="icon" class="topnav-btn-img tbi-default*" />
+                                </a>
+                                <a href="/#" class="topnav-btn hover-scale">
+                                    <img src="../images/notification.svg" alt="icon" class="topnav-btn-img" />
+                                </a>
+                                <div class="create-account-wrapper">
+                                    <a href="/signup" class="create-account-btn pry-bg">
+                                        <span>MAKE COLLECTION</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <!--=== end of Top-Nav Section ===-->
+
+                    <div class="page-content-block-wrapper">
+                        <Switch>
+                            <!-- {/*---==== Contents Sections  ====---*/} -->
+                            <Route path="/dashboard">
+                                <Redirect href="/dashboard/home" />
+                            </Route>
+                            <Route path="/dashboard/home">
+                                <DashboardHome />
+                            </Route>
+                            <Route path="/dashboard/getting-started">
+                                <GettingStarted />
+                            </Route>
+                            <!-- {/*---==== end of Contents Sections  ====---*/} -->
+                        </Switch>
+                        <div class="page-content-wrapper">
+                            <div class="container" id="settings-container">
+                                <div id="settings-nav">
+                                    <div id="nav-menu-header">Settings</div>
+                                    <div id="settings-nav-menu">
+                                        <li><button class="focused settings-category ">Profile</button></li>
+                                        <li><button class="settings-category">Security</button></li>
+                                        <li><button class="settings-category">Compliance</button></li>
+                                        <li><button class="settings-category">Preference</button></li>
+                                    </div>
+                                </div>
+                                <!-- <section class="agent-tabs" id="agent-profile-tab">
+                                    <div class="profile-details">
+                                        <div class="agent-profile-card-left">
+                                            <h3>Profile Photo</h3>
+                                            <h4>Choose a new avatar to be used across Payrail</h4>
+                                            <h4>We accept files in PNG or JPG format, with a <br>
+                                                maximum size of 5 MB. Change photo
+                                            </h4>
+                                        </div>
+                                        <div class="agent-profile-card-right">
+                                            <div id="avatar-holder">
+                                                <img src="../images/avatar-default.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="profile-details">
+                                        <div class="agent-profile-card-left">
+                                            <h3>Name</h3>
+                                            <h4>
+                                                Changes cannot be made to your name after <br>
+                                                account creation.
+                                            </h4>
+                                        </div>
+                                        <div class="agent-profile-card-right">
+                                            <div id="agent-profile-input-holder-sub" class="agent-profile-input-holder-sub">
+                                                <label for="firstname">Legal First Name</label>
+                                                <input name="firstname" type="text" placeholder="Firstname">
+                                            </div>
+                                            <div id="agent-profile-input-holder-sub" class="agent-profile-input-holder-sub">
+                                                <label for="firstname">Legal First Name</label>
+                                                <input name="firstname" type="text" placeholder="Lastname">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="profile-details">
+                                        <div class="agent-profile-card-left">
+                                            <h3>Email address</h3>
+                                            <h4>
+                                                All communications and activity notifications <br>
+                                                from your account will be sent to your email <br>
+                                                address.
+                                            </h4>
+                                        </div>
+                                        <div class="agent-profile-card-right">
+                                            <div id="agent-profile-input-holder" class="agent-profile-input-holder">
+                                                <label for="email">Email Address</label>
+                                                <input name="email" type="text" placeholder="address@email.com">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="profile-details">
+                                        <div class="agent-profile-card-left">
+                                            <h3>Phone number</h3>
+                                            <h4>
+                                                Your phone number can be used as a security <br>
+                                                measure to validate your actions on the <br>
+                                                account.
+                                            </h4>
+                                        </div>
+                                        <div class="agent-profile-card-right">
+                                            <div id="agent-profile-input-holder" class="agent-profile-input-holder">
+                                                <label for="email">Phone Number</label>
+                                                <input name="email" type="text" placeholder="+234 xxx-xxx-xxxx">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="save-btn">
+                                        <button href="/signup" class="create-account-btn pry-bg">
+                                            <span>SAVE CHANGES</span> <svg width="6" height="10"
+                                                viewBox="0 0 6 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0.670123 0C0.292212 0 -0.001091 0.293122 -0.001091 0.665163C-0.001091 0.851183 0.0722351 1.02029 0.201965 1.14994L4.15028 5.00564L0.201965 8.85006C0.0722351 8.97971 -0.001091 9.15445 -0.001091 9.33484C-0.001091 9.70688 0.292212 10 0.670123 10C0.850617 10 1.00855 9.93236 1.13264 9.80834L5.52091 5.52424C5.67885 5.37768 5.75781 5.19729 5.75781 5C5.75781 4.80271 5.67885 4.6336 5.52655 4.4814L1.13828 0.191657C1.00855 0.0676432 0.850617 0 0.670123 0Z"
+                                                    fill="#353D46" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </section> -->
+
+                                <section class="agent-tabs" id="agent-compliance-tab">
+                                    <!-- <div class="profile-details">
+                                        <div class="agent-profile-card-left">
+                                            <h3>BVN</h3>
+                                            <h4>
+                                                The Security and Exchange Commission (SEC) <br>
+                                                requires that we collect your BVN.
+                                            </h4>
+                                        </div>
+                                        <div class="agent-profile-card-right">
+                                            <div id="agent-profile-input-holder" class="agent-profile-input-holder">
+                                                <label for="bvn">BVN</label>
+                                                <input name="bvn" type="text" placeholder="xxx-xxx-xxxx">
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <!-- <div class="profile-details">
+                                        <div class="agent-profile-card-left">
+                                            <h3>Government Valid ID</h3>
+                                            <h4>
+                                                Any option of the ID choice you select must <br>
+                                                have minimum of 183 days (6 months) before <br>
+                                                the expiry date.
+                                            </h4>
+                                        </div>
+                                        <div class="agent-profile-card-right">
+                                            <div class="update-form-id-section sub-form">
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <input class="profile-update-input" id="country-field" type="text"
+                                                        placeholder="Choose a form of ID" />
+                                                    <div id="drop">
+                                                        <button class="update-drop-down-button">
+                                                            <img src="../images/caret-1.svg" alt="">
+                                                        </button>
+                                                        <ul id="id-select" class="country-list">
+                                                            <li>eng</li>
+                                                            <li>fra</li>
+                                                            <li>yor</li>
+                                                            <li>hau</li>
+                                                            <li>igb</li>
+                                                            <li>chn</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <input id="country-field" type="text" placeholder="ID Number" />
+                                                </div>
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <input type="text" class="filename" name="" id="id-filename"
+                                                        placeholder="Drag and drop document here or Browse">
+
+                                                    <label class="file-label" id="id-file-label" for="id-file">
+                                                        Provided
+                                                    </label>
+                                                    <input class="file-input" id="id-file" type="file">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <!-- <div class="profile-details">
+                                        <div class="agent-profile-card-left">
+                                            <h3>Proof of address</h3>
+                                            <h4>
+                                                Any option of the utility bill choice you select <br>
+                                                must have a minimum of 92 days (3 months) <br>
+                                                before the expiriy date.
+                                            </h4>
+                                        </div>
+                                        <div class="agent-profile-card-right">
+                                            <div class="update-form-id-section sub-form">
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <input class="profile-update-input" id="country-field" type="text"
+                                                        placeholder="Choose a form of ID" />
+                                                    <div id="drop">
+                                                        <button class="update-drop-down-button">
+                                                            <img src="../images/caret-1.svg" alt="">
+                                                        </button>
+                                                        <ul id="id-select" class="country-list">
+                                                            <li>eng</li>
+                                                            <li>fra</li>
+                                                            <li>yor</li>
+                                                            <li>hau</li>
+                                                            <li>igb</li>
+                                                            <li>chn</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <input type="text" class="filename" name="" id="id-filename"
+                                                        placeholder="Drag and drop document here or Browse">
+
+                                                    <label class="file-label" id="id-file-label" for="id-file">
+                                                        Provided
+                                                    </label>
+                                                    <input class="file-input" id="id-file" type="file">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <!-- <div class="profile-details">
+                                        <div class="agent-profile-card-left">
+                                            <h3>Send a guarantor request</h3>
+                                            <h4>
+                                                Only send this to people who know you well <br>
+                                                enough to vouch for you.
+                                            </h4>
+                                        </div>
+                                        <div class="agent-profile-card-right">
+                                            <div class="update-form-id-section sub-form">
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <h3>Guarantor 1</h3>
+                                                    <button data-target="guarantor-form-modal" class="modal-trigger">
+                                                        <img src="../images/right-arrow.svg" alt="">
+                                                    </button>
+                                                </div>
+
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <h3>Guarantor 2</h3>
+                                                    <button data-target="guarantor-form-modal" class="modal-trigger">
+                                                        <img src="../images/right-arrow.svg" alt="">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="save-btn">
+                                        <button class="create-account-btn pry-bg">
+                                            <span>SAVE CHANGES</span> <svg width="6" height="10" viewBox="0 0 6 10"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0.670123 0C0.292212 0 -0.001091 0.293122 -0.001091 0.665163C-0.001091 0.851183 0.0722351 1.02029 0.201965 1.14994L4.15028 5.00564L0.201965 8.85006C0.0722351 8.97971 -0.001091 9.15445 -0.001091 9.33484C-0.001091 9.70688 0.292212 10 0.670123 10C0.850617 10 1.00855 9.93236 1.13264 9.80834L5.52091 5.52424C5.67885 5.37768 5.75781 5.19729 5.75781 5C5.75781 4.80271 5.67885 4.6336 5.52655 4.4814L1.13828 0.191657C1.00855 0.0676432 0.850617 0 0.670123 0Z"
+                                                    fill="#353D46" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <form action="" class="modal" id="guarantor-form-modal">
+                                        <section class="guarantor-form-title-section">
+                                            <h3>
+                                                Guarantor Form
+                                            </h3>
+                                            <button id="close-modal" class="modal-close">
+                                                <img src="../images/close-modal.png" alt="" srcset="">
+                                            </button>
+                                        </section>
+
+                                        <section class="guarantor-form-details-section">
+                                            <h4>
+                                                Enter the details of your guarantor, a form will be sent him/her
+                                            </h4>
+                                            <section class="guarantor-name-info">
+                                                <div id="agent-profile-input-holder-sub"
+                                                    class="agent-profile-input-holder-sub">
+                                                    <label for="guarantor-firstname">First Name</label>
+                                                    <input name="firstname" type="text" placeholder="Firstname">
+                                                </div>
+                                                <div id="agent-profile-input-holder-sub"
+                                                    class="agent-profile-input-holder-sub">
+                                                    <label for="guarantor-lastname">Last Name</label>
+                                                    <input name="guarantor-lastname" type="text"
+                                                        placeholder="Firstname">
+                                                </div>
+                                            </section>
+                                            <div id="agent-profile-input-holder"
+                                                class="agent-profile-input-holder guarantor-mail-info">
+                                                <label for="guarantor-email">Email Address</label>
+                                                <input name="guarantor-email" type="text"
+                                                    placeholder="address@email.com">
+                                            </div>
+                                        </section>
+
+                                        <div class="modal-divider" style=" border-top:1px solid #777777;"></div>
+
+                                        <div id="save-btn" class="create-account-wrapper">
+                                            <a href="#guarantor-success-modal" class="create-account-btn pry-bg modal-trigger">
+                                                <span>SEND REQUEST</span>
+                                            </a>
+                                        </div>
+
+                                    </form>
+
+                                    <div class="modal" id="guarantor-success-modal">
+                                        <button class="modal-close">
+                                            <img src="../images/close-modal.png" alt="" srcset="">
+                                        </button>
+                                        <div>
+                                            <img src="../images/completed.svg" alt="">
+                                        </div>
+                                        <section>
+                                            <div>Request Sent</div>
+                                            <div>Please notify your guarantor that a request has been sent</div>
+                                        </section>
+                                    </div> -->
+                                </section>
+                                <!-- <section class="agent-tabs" id="agent-preference-tab">
+                                    <div data-tab="Preference" class="settings-category-section" id="settings-security-body">
+                                        <section id="settings-preference">
+                                            <div>
+                                                <div>Messages</div>
+                                                <div>
+                                                    Receive reminders, updates, and other reminders <br>
+                                                    related to your customers on Payrail Collection.
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="compliance-document">
+                                                <div class="preference">Email</div>
+                                                <div class="preference-toggler inactive">
+                                                    <div class="preference-toggle-btn"></div>
+                                                </div>
+                                            </div>
+                                            <div class="compliance-document">
+                                                <div class="preference">Text messages</div>
+                                                <div class="preference-toggler inactive">
+                                                    <div class="preference-toggle-btn"></div>
+                                                </div>
+                                            </div>
+                                            <div class="compliance-document">
+                                                <div class="preference">Browser</div>
+                                                <div class="preference-toggler inactive">
+                                                    <div class="preference-toggle-btn"></div>
+                                                </div>
+                                            </div>
+                                            <div class="compliance-document">
+                                                <div class="">
+                                                    Receive notifications outside of your browser on <br>
+                                                    either desktop or mobile web
+                                                </div>
+
+                                            </div>
+                                        </section>
+                                        <section id="settings-preference">
+                                            <div>
+                                                <div>Reminders</div>
+                                                <div>
+                                                    Receive reminders, updates, and other reminders related to your <br>
+                                                    customers on Payrail Collection.
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="compliance-document">
+                                                <div class="preference">Email</div>
+                                                <div class="preference-toggler inactive">
+                                                    <div class="preference-toggle-btn"></div>
+                                                </div>
+                                            </div>
+                                            <div class="compliance-document">
+                                                <div class="preference">Text messages</div>
+                                                <div class="preference-toggler inactive">
+                                                    <div class="preference-toggle-btn"></div>
+                                                </div>
+                                            </div>
+                                            <div class="compliance-document">
+                                                <div class="preference">Browser</div>
+                                                <div class="preference-toggler inactive">
+                                                    <div class="preference-toggle-btn"></div>
+                                                </div>
+                                            </div>
+                                            <div class="compliance-document">
+                                                <div class="">
+                                                    Receive notifications outside of your browser on <br>
+                                                    either desktop or mobile web
+                                                </div>
+
+                                            </div>
+                                        </section>
+
+                                        <div id="save-btn">
+                                            <button href="/signup" class="create-account-btn pry-bg">
+                                                <span>SAVE CHANGES</span> <svg width="6" height="10" viewBox="0 0 6 10"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M0.670123 0C0.292212 0 -0.001091 0.293122 -0.001091 0.665163C-0.001091 0.851183 0.0722351 1.02029 0.201965 1.14994L4.15028 5.00564L0.201965 8.85006C0.0722351 8.97971 -0.001091 9.15445 -0.001091 9.33484C-0.001091 9.70688 0.292212 10 0.670123 10C0.850617 10 1.00855 9.93236 1.13264 9.80834L5.52091 5.52424C5.67885 5.37768 5.75781 5.19729 5.75781 5C5.75781 4.80271 5.67885 4.6336 5.52655 4.4814L1.13828 0.191657C1.00855 0.0676432 0.850617 0 0.670123 0Z"
+                                                        fill="#353D46" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section> -->
+                            </div>
+                        </div>
+                </section>
+                <!--=== end of Main Content ===-->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../jquery.min.js"></script>
+    <script src="../materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elemsCollapsible = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(elemsCollapsible);
+
+            var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(elemsDropdown, {
+                constrainWidth: true,
+                coverTrigger: false,
+                hover: true
+            });
+        });
+
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+
+        $('#close-modal').on('click', function (e) {
+            e.preventDefault();
+        })
+
+        $('.settings-category').each(function () {
+            $(this).on('click', function (e) {
+                let category = e.target.innerHTML
+                $('.settings-category').removeClass('focused')
+                $('.settings-category').css('border-bottom', 'none')
+                $(this).addClass("focused")
+                $(this).css('border-bottom', '1px solid #89163B')
+                $('.settings-category-section').each(function (e) {
+                    $(this).css('display', 'none')
+                    $(this).removeClass('show')
+                    let theSection = Array.from($(this))
+                    if (theSection[0].dataset.tab == category) {
+                        $(this).addClass('show')
+                        $(this).css('display', 'flex')
+                    }
+                })
+
+            })
+        })
+
+
+        const balanceType = document.querySelector("#balance-type");
+        function showDiv() {
+            if (balanceType.value === 1) {
+                document.getElementById('collection-block').style.display = "block";
+                document.getElementById('commision-block').style.display = "none";
+            } else {
+                document.getElementById('collection-block').style.display = "none";
+                document.getElementById('commision-block').style.display = "block";
+            }
+        } 
+    </script>
+</body>
+
+</html>

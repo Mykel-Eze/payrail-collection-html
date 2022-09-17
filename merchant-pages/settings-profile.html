@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <link rel="icon" href="../payrail-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,240 +19,971 @@
     <link rel="stylesheet" href="../css/top-nav.css">
     <link rel="stylesheet" href="../css/modals.css">
     <link rel="stylesheet" href="../css/styles.css">
-  </head>
-  <body>
+</head>
+
+<body>
 
     <div id="root">
         <div class="App">
             <div id="body-wrapper" class='dashboard-page'>
-              <!--=== SideBar Section ===-->
-              <section id="side-bar">
-                  <div class="container">
-                      <div class='user-block-wrapper'>
-                          <div class="dropdown-trigger flex-div" data-target="user-dropdown">
-                              <div class="user-details flex-div">
+                <!--=== SideBar Section ===-->
+                <section id="side-bar">
+                    <div class="container">
+                        <div class='user-block-wrapper'>
+                            <div class="dropdown-trigger flex-div" data-target="user-dropdown">
+                                <div class="user-details flex-div">
                                     <!-- See: https://github.com/ambassify/react-avatar  for React-Avatar-->
-                                    <img src="../images/default-avatar.svg" alt="Olamide Olagunju" class="no-user-avatar">
+                                    <img src="../images/default-avatar.svg" alt="Olamide Olagunju"
+                                        class="no-user-avatar">
                                 </div>
-                              <div class="user-name-details">
-                                  <div class="user-name-txt bold-txt truncate">Olamide Olagunju</div>
-                                  <div class="user-role">Agent</div>
-                              </div>
-                              <div class="caret-div">
-                                  <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
-                              </div>
-                          </div>
-                          <ul id='user-dropdown' class='dropdown-content'>
-                              <li>
-                                  <a href="#!">Go to profile</a>
-                              </li>
-                              <li class="divider" tabIndex="-1"></li>
-                              <li>
-                                  <a href="#!">Log out</a>
-                              </li>
-                          </ul>
-                      </div>
-                      <div class="nav-list-wrapper">
-                          <div class="nav-list-1">
-                              <ul class="collapsible">
-                                  <li class="link-wrapper">
-                                      <div class="collapsible-header pg-link">
-                                          <div class="flex-div">
-                                              <img src="../images/home-icon.svg" alt="icon" class="link-img" />
-                                              <span class="link-txt">Home</span>
-                                          </div>
-                                          <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
-                                      </div>
-                                      <div class="collapsible-body">
-                                          <ul>
-                                              <li class="pg-sub-link">
-                                                  <a href="/dashboard/getting-started">
-                                                      Get Started
-                                                      <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
-                                                  </a>
-                                              </li>
-                                              <li class="pg-sub-link">
-                                                  <a href="/dashboard/home">
-                                                      Overview
-                                                      <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
-                                                  </a>
-                                              </li>
-                                          </ul>
-                                      </div>
-                                  </li>
-                                  <li class="link-wrapper">
-                                      <a href="/wallet" class="pg-link">
-                                          <div class="flex-div">
-                                              <img src="../images/wallet-icon.svg" alt="icon" class="link-img" />
-                                              <span class="link-txt">Wallet</span>
-                                          </div>
-                                      </a>
-                                  </li>
-                                  <li class="link-wrapper">
-                                      <a href="/customers" class="pg-link">
-                                          <div class="flex-div">
-                                              <img src="../images/customers-icon.svg" alt="icon" class="link-img" />
-                                              <span class="link-txt">Customers</span>
-                                          </div>
-                                      </a>
-                                  </li>
-                                  <li class="link-wrapper">
-                                      <a href="/transactions" class="pg-link">
-                                          <div class="flex-div">
-                                              <img src="../images/tranx-icon.svg" alt="icon" class="link-img" />
-                                              <span class="link-txt">Transactions</span>
-                                          </div>
-                                      </a>
-                                  </li>
-                                  <li class="link-wrapper">
-                                      <a href="/payout" class="pg-link">
-                                          <div class="flex-div">
-                                              <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
-                                              <span class="link-txt">Payout</span>
-                                          </div>
-                                      </a>
-                                  </li>
-                                  <li class="link-wrapper">
-                                      <a href="/#" class="pg-link">
-                                          <div class="flex-div">
-                                              <img src="../images/support-icon.svg" alt="icon" class="link-img" />
-                                              <span class="link-txt">Support</span>
-                                          </div>
-                                      </a>
-                                  </li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="brand-logo">
+                                <div class="user-name-details">
+                                    <div class="user-name-txt bold-txt truncate">Olamide Olagunju</div>
+                                    <div class="user-role">Agent</div>
+                                </div>
+                                <div class="caret-div">
+                                    <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
+                                </div>
+                            </div>
+                            <ul id='user-dropdown' class='dropdown-content'>
+                                <li>
+                                    <a href="#!">Go to profile</a>
+                                </li>
+                                <li class="divider" tabIndex="-1"></li>
+                                <li>
+                                    <a href="#!">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-list-wrapper">
+                            <div class="nav-list-1">
+                                <ul class="collapsible">
+                                    <li class="link-wrapper">
+                                        <div class="collapsible-header pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/home-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Home</span>
+                                            </div>
+                                            <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
+                                        </div>
+                                        <div class="collapsible-body">
+                                            <ul>
+                                                <li class="pg-sub-link">
+                                                    <a href="/dashboard/getting-started">
+                                                        Get Started
+                                                        <img src="../images/curvy.svg" alt="curved-path"
+                                                            class="curved-path" />
+                                                    </a>
+                                                </li>
+                                                <li class="pg-sub-link">
+                                                    <a href="/dashboard/home">
+                                                        Overview
+                                                        <img src="../images/curvy.svg" alt="curved-path"
+                                                            class="curved-path" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="link-wrapper">
+                                        <a href="/wallet" class="pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/wallet-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Wallet</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="link-wrapper">
+                                        <a href="/customers" class="pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/customers-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Customers</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="link-wrapper">
+                                        <a href="/transactions" class="pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/tranx-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Transactions</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="link-wrapper">
+                                        <a href="/payout" class="pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Payout</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="link-wrapper">
+                                        <a href="/#" class="pg-link">
+                                            <div class="flex-div">
+                                                <img src="../images/support-icon.svg" alt="icon" class="link-img" />
+                                                <span class="link-txt">Support</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="brand-logo">
                             <a href="/dashboard">
                                 <img src="../images/payrail-logo.svg" alt="Payrail" class="brand-img" />
                             </a>
                             <div class="sidebar-footer">
                                 © Angala Financial Technologies Limited.
                             </div>
-                      </div>
-                  </div>
-              </section>
-              <!--=== end of SideBar Section ===-->
-    
-              <!--=== Main Content ===-->
-              <section id="content-body">
-                  <!--=== Top-Nav Section ===-->
-                  <nav class="top-nav">
-                      <div class="flex-div align-content-center justify-content-btw">
-                          <div id="search-form">
-                              <div class="rel search-block flex-div">
-                                  <img src="../images/search.svg" alt="icon" class="search-btn-img" />
-                                  <input id="search" type="search" class="search-input" placeholder="Search Customer, payout, transactions" />
-                              </div>
-                          </div>
-          
-                          <div class="user-session-wrapper flex-div">
-                              <a href="/dashboard/settings" class="topnav-btn hover-scale">
-                                  <img src="../images/settings.svg" alt="icon" class="topnav-btn-img tbi-default*" />
-                              </a>
-                              <a href="/#" class="topnav-btn hover-scale">
-                                  <img src="../images/notification.svg" alt="icon" class="topnav-btn-img" />
-                              </a>
-                              <div class="create-account-wrapper">
-                                  <a href="/signup" class="create-account-btn pry-bg">
-                                      <span>MAKE COLLECTION</span>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </nav>
-                  <!--=== end of Top-Nav Section ===-->
-    
-                  <div class="page-content-block-wrapper">
-                      <!--work area-->
-                      <div class="page-content-wrapper">
-                        <div class="container" id="settings-container">
-                            <div id="settings-nav">
-                                <div id="nav-menu-header">Settings</div>
-                                <div id="settings-nav-menu">                                    
-                                        <li class="active-list-item">Profile</li>
-                                        <li>Security</li>
-                                        <li>Compliance</li>
-                                        <li>Preference</li>                                    
+                        </div>
+                    </div>
+                </section>
+                <!--=== end of SideBar Section ===-->
+
+                <!--=== Main Content ===-->
+                <section id="content-body">
+                    <!--=== Top-Nav Section ===-->
+                    <nav class="top-nav">
+                        <div class="flex-div align-content-center justify-content-btw">
+                            <div id="search-form">
+                                <div class="rel search-block flex-div">
+                                    <img src="../images/search.svg" alt="icon" class="search-btn-img" />
+                                    <input id="search" type="search" class="search-input"
+                                        placeholder="Search Customer, payout, transactions" />
                                 </div>
                             </div>
-                            <div id="settings-body">
-                                <div class="settings-profile-card">
-                                    <div id="profile-card-image-holder">
-                                        <div class="profile-card-image">OO</div>
-                                    </div>
-                                    <div id="profile-card-details">
-                                        <div id="profile-card-name">Olamide Olagunju</div>
-                                        <div id="profile-card-email">mideola@gmail.com</div>
-                                        <div id="profile-card-title">Owner.Director.Shareholder</div>
-                                    </div>
-                                    <div id="profile-card-edit">
-                                        <div class="profile-card-edit-btn"><a href="./settings-profile-update.html">Edit</a></div>
-                                    </div>
-                                </div>
-                                <div class="settings-profile-card">
-                                    <div id="profile-card-image-holder">
-                                        <div class="profile-card-image"><img src="../images/plus.svg" alt=""></div>
-                                    </div>
-                                    <div id="profile-card-details">
-                                        <div id="profile-card-name">Olamide Olagunju</div>
-                                        <div id="profile-card-email">mideola@gmail.com</div>
-                                        <div id="profile-card-title">Owner.Director.Shareholder</div>
-                                    </div>
-                                    <div id="profile-card-edit">
-                                        <div class="profile-card-edit-btn"><a href="./settings-profile-update.html">Edit</a></div>
-                                    </div>
-                                </div>
-                                <div class="settings-profile-card">
-                                    <div id="profile-card-image-holder">
-                                        <div class="profile-card-image"><img src="../images/plus.svg" alt=""></div>
-                                    </div>
-                                    <div id="profile-card-details">
-                                        <div id="profile-card-name">Olamide Olagunju</div>
-                                        <div id="profile-card-email">mideola@gmail.com</div>
-                                        <div id="profile-card-title">Owner.Director.Shareholder</div>
-                                    </div>
-                                    <div id="profile-card-edit">
-                                        <div class="profile-card-edit-btn"><a href="./settings-profile-update.html">Edit</a></div>
-                                    </div>
+
+                            <div class="user-session-wrapper flex-div">
+                                <a href="/dashboard/settings" class="topnav-btn hover-scale">
+                                    <img src="../images/settings.svg" alt="icon" class="topnav-btn-img tbi-default*" />
+                                </a>
+                                <a href="/#" class="topnav-btn hover-scale">
+                                    <img src="../images/notification.svg" alt="icon" class="topnav-btn-img" />
+                                </a>
+                                <div class="create-account-wrapper">
+                                    <a href="/signup" class="create-account-btn pry-bg">
+                                        <span>MAKE COLLECTION</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                      </div>
-                  </div>
-              </section>
-              <!--=== end of Main Content ===-->
+                    </nav>
+                    <!--=== end of Top-Nav Section ===-->
+
+                    <div class="page-content-block-wrapper">
+                        <!--work area-->
+                        <div class="page-content-wrapper">
+                            <div class="container" id="settings-container">
+                                <div id="settings-nav">
+                                    <div id="nav-menu-header">Settings</div>
+                                    <div id="settings-nav-menu">
+                                        <li><button class="focused settings-category ">Profile</button></li>
+                                        <li><button class="settings-category">Security</button></li>
+                                        <li><button class="settings-category">Compliance</button></li>
+                                        <li><button class="settings-category">Preference</button></li>
+                                    </div>
+                                </div>
+                                <div data-tab="Profile" class="settings-category-section show" id="settings-body">
+                                    <div class="settings-profile-card">
+                                        <div id="profile-card-image-holder">
+                                            <div class="profile-card-image">OO</div>
+                                        </div>
+                                        <div id="profile-card-details">
+                                            <div id="profile-card-name">Olamide Olagunju</div>
+                                            <div id="profile-card-email">mideola@gmail.com</div>
+                                            <div id="profile-card-title">Owner.Director.Shareholder</div>
+                                        </div>
+                                        <div id="profile-card-edit">
+                                            <div class="profile-card-edit-btn"><button>Edit</button></div>
+                                        </div>
+                                    </div>
+                                    <div class="settings-profile-card">
+                                        <div id="profile-card-image-holder">
+                                            <div class="profile-card-image"><img src="../images/plus.svg" alt=""></div>
+                                        </div>
+                                        <div id="profile-card-details">
+                                            <div id="profile-card-name">Olamide Olagunju</div>
+                                            <div id="profile-card-email">mideola@gmail.com</div>
+                                            <div id="profile-card-title">Owner.Director.Shareholder</div>
+                                        </div>
+                                        <div id="profile-card-edit">
+                                            <div class="profile-card-edit-btn"><button>Edit</button></div>
+                                        </div>
+                                    </div>
+                                    <div class="settings-profile-card">
+                                        <div id="profile-card-image-holder">
+                                            <div class="profile-card-image"><img src="../images/plus.svg" alt=""></div>
+                                        </div>
+                                        <div id="profile-card-details">
+                                            <div id="profile-card-name">Olamide Olagunju</div>
+                                            <div id="profile-card-email">mideola@gmail.com</div>
+                                            <div id="profile-card-title">Owner.Director.Shareholder</div>
+                                        </div>
+                                        <div id="profile-card-edit">
+                                            <div class="profile-card-edit-btn"><button>Edit</button></div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="settings-category-section" id="settings-user-page-body">
+                                    <div>
+                                        <button id="user-back-button" href="./settings-profile.html"><img
+                                                src="../images/back.svg" alt="Go Back"></button>
+                                    </div>
+
+                                    <div id="settings-user-page-header">
+                                        <div>
+                                            <div id="settings-user-page-image"></div>
+                                        </div>
+                                        <div id="settings-user-page-idcard">
+                                            <div id="settings-user-page-idcard-name">Olamide Olagunju</div>
+                                            <div id="settings-user-page-idcard-id"> Merchant ID: 109298</div>
+                                        </div>
+                                    </div>
+                                    <form id="settings-profile-update-form" action="#">
+                                        <div id="left-form-side" class="settings-profile-form-part">
+                                            <div class="settings-profile-update-form-input-holder">
+                                                <div class="settings-profile-update-form-label">
+                                                    Residential Address
+                                                </div>
+                                                <input type="text" placeholder="Enter your address here" />
+                                                <img src="../images/path.svg" alt="">
+                                            </div>
+                                            <div class="settings-profile-update-form-input-holder sub-form">
+                                                <div class="settings-profile-update-form-label">Nationality</div>
+                                                <input id="nationality" class="profile-update-input" type="text"
+                                                    placeholder="Please specify" />
+                                                <div id="drop">
+                                                    <button class="update-drop-down-button">
+                                                        <img src="../images/caret-1.svg" alt="">
+                                                    </button>
+                                                    <ul id="id-select" class="country-list">
+                                                        <li>eng</li>
+                                                        <li>fra</li>
+                                                        <li>yor</li>
+                                                        <li>hau</li>
+                                                        <li>igb</li>
+                                                        <li>chn</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="update-form-id-section sub-form">
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <input class="profile-update-input" id="country-field" type="text"
+                                                        placeholder="Choose a form of ID" />
+                                                    <div id="drop">
+                                                        <button class="update-drop-down-button">
+                                                            <img src="../images/caret-1.svg" alt="">
+                                                        </button>
+                                                        <ul id="id-select" class="country-list">
+                                                            <li>eng</li>
+                                                            <li>fra</li>
+                                                            <li>yor</li>
+                                                            <li>hau</li>
+                                                            <li>igb</li>
+                                                            <li>chn</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <input id="country-field" type="text" placeholder="ID Number" />
+                                                </div>
+                                                <div class="settings-profile-update-form-input-holder id-section-input">
+                                                    <input type="text" class="filename" name="" id="id-filename"
+                                                        placeholder="Drag and drop document here or Browse">
+
+                                                    <label class="file-label" id="id-file-label" for="id-file">Choose
+                                                        file</label>
+                                                    <input class="file-input" id="id-file" type="file">
+                                                </div>
+                                            </div>
+
+                                            <div id="save-btn" class="create-account-wrapper">
+                                                <a href="/signup" class="create-account-btn pry-bg">
+                                                    <span>Save</span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div id="right-form-side" class="settings-profile-form-part">
+                                            <div id="address-section" class="update-form-id-section">
+                                                <div
+                                                    class="settings-profile-update-form-input-holder address-section-input">
+
+                                                    <input class="profile-update-input" id="country-field" type="text"
+                                                        placeholder="Choose proof of address" />
+                                                    <div id="drop">
+                                                        <button class="update-drop-down-button">
+                                                            <img src="../images/caret-1.svg" alt="">
+                                                        </button>
+                                                        <ul id="id-select" class="country-list">
+                                                            <li>eng</li>
+                                                            <li>fra</li>
+                                                            <li>yor</li>
+                                                            <li>hau</li>
+                                                            <li>igb</li>
+                                                            <li>chn</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="settings-profile-update-form-input-holder address-section-input">
+                                                    <input type="text" class="filename" name="" id="address-filename"
+                                                        placeholder="Drag and drop document here or Browse">
+
+                                                    <label class="file-label" id="address-file-label"
+                                                        for="address-file">Choose file</label>
+                                                    <input class="file-input" id="address-file" type="file">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label id="address-checkbox-label" for="address-checkbox">
+                                                    <input type="checkbox" name="address-checkbox" class="filled-in"
+                                                        id="address-checkbox">
+                                                    <span>Same as business address</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+
+                                </div>
+                                <div data-tab="Security" class="settings-category-section" id="settings-security-body">
+                                    <form id="settings-security-form" action="">
+                                        <section id="security-form-section-tab">
+                                            <ul>
+                                                <li class="security-tab active">Login Password</li>
+                                                <li class="security-tab">Transaction Pin</li>
+                                            </ul>
+                                        </section>
+                                        <section data-security="Login Password" class="security-tab-section active"
+                                            id="security-form-input-section">
+                                            <div>
+                                                <div>
+                                                    <h6>Passwords must be at least 8 characters long</h6>
+                                                    <div class="settings-profile-update-form-input-holder">
+                                                        <div class="settings-profile-update-form-label">Current Password
+                                                        </div>
+                                                        <input id="country-field" type="text"
+                                                            placeholder="Enter your current password" />
+                                                        <div id="drop">
+                                                            <button class="update-drop-down-button">
+                                                                show
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="settings-profile-update-form-input-holder">
+                                                        <div class="settings-profile-update-form-label">New Password
+                                                        </div>
+                                                        <input id="country-field" type="text"
+                                                            placeholder="Enter new password" />
+                                                        <div id="drop">
+                                                            <button class="update-drop-down-button">
+                                                                show
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="settings-profile-update-form-input-holder">
+                                                        <div class="settings-profile-update-form-label">Repeat New
+                                                            Password
+                                                        </div>
+                                                        <input id="country-field" type="text"
+                                                            placeholder="Enter new password again" />
+                                                        <div id="drop">
+                                                            <button class="update-drop-down-button">
+                                                                show
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div id="save-btn" class="create-account-wrapper">
+                                                    <a href="/signup" class="create-account-btn pry-bg">
+                                                        <span>Change Password</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </section>
+
+                                        <section class="security-tab-section" id="security-form-pin-section">
+                                            <div class="pin-section-heading">Enter your Current Payrail Transaction PIN
+                                            </div>
+                                            <div class="pin-section">
+                                                <div id="current-pin" class="pin-entry">
+                                                    <input class="pin-input" id="pin-input" type="text" maxlength="1">
+                                                    <input class="pin-input" id="pin-input" type="text" maxlength="1">
+                                                    <input class="pin-input" id="pin-input" type="text" maxlength="1">
+                                                    <input class="pin-input" id="pin-input" type="text" maxlength="1">
+                                                </div>
+                                            </div>
+
+                                            <div id="save-btn" class="create-account-wrapper">
+                                                <a href="#pin-updated-modal"
+                                                    class="create-account-btn pry-bg modal-trigger">
+                                                    <span>Next</span>
+                                                </a>
+                                            </div>
+                                        </section>
+
+                                        <section data-security="Transaction Pin" class="security-tab-section"
+                                            id="security-form-pin-section">
+                                            <div class="pin-section">
+                                                <div class="pin-section-heading">Create a Payrail Transaction PIN</div>
+                                                <div class="pin-section-heading">Always keep your PIN private</div>
+                                                <div class="pin-entry">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                </div>
+                                            </div>
+                                            <div class="pin-section">
+                                                <div class="pin-section-heading">Input the exact PIN you entered above
+                                                </div>
+                                                <div class="pin-entry">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                </div>
+                                            </div>
+
+                                            <div id="save-btn" class="create-account-wrapper">
+                                                <a href="#auth-modal" class="create-account-btn pry-bg modal-trigger">
+                                                    <span>Next</span>
+                                                </a>
+                                            </div>
+                                        </section>
+                                    </form>
+
+                                    <div class="modal" id="pin-success-modal">
+                                        <button class="modal-close modal-close-button">
+                                            <img src="../images/close-modal.png" alt="" srcset="">
+                                        </button>
+                                        <div>
+                                            <img src="../images/completed.svg" alt="">
+                                        </div>
+                                        <section>
+                                            <div>PIN Update successful</div>
+                                            <div>Always keep your PIN private</div>
+                                        </section>
+                                    </div>
+
+                                    <div class="modal" id="otp-success-modal">
+                                        <button class="modal-close modal-close-button">
+                                            <img src="../images/close-modal.png" alt="" srcset="">
+                                        </button>
+                                        <div>
+                                            <img src="../images/completed.svg" alt="">
+                                        </div>
+                                        <section>
+                                            <div>OTP Devlivery Method Update</div>
+                                            <div>Successfully set prefered on time passwords (OTP) delivery method</div>
+                                        </section>
+                                    </div>
+
+                                    <div action="" class="modal" id="request-otp-modal">
+                                        <section class="request-otp-title-section">
+                                            <h3>
+                                                Receive OTP via email
+                                            </h3>
+                                            <button id="close-modal" class="modal-close">
+                                                <img src="../images/close-modal.png" alt="" srcset="">
+                                            </button>
+                                        </section>
+
+                                        <section class="request-otp-details-section">
+                                            <h4>
+                                                Your one-time password will be sent to your email address
+                                            </h4>
+                                        </section>
+
+                                        <div class="modal-divider" style=" border-top:1px solid #777777;"></div>
+                                        <div id="otp-request-button-holder">
+                                            <div id="save-btn" class="create-account-wrapper">
+                                                <button class="create-account-btn pry-bg modal-close">
+                                                    <span>CANCEL</span>
+                                                </button>
+                                            </div>
+                                            <div id="save-btn" class="create-account-wrapper">
+                                                <a href="#guarantor-success-modal"
+                                                    class="create-account-btn pry-bg modal-trigger">
+                                                    <span>ENABLE EMAIL OTP</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div action="" class="modal" id="auth-modal">
+                                        <button id="close-modal" class="modal-close modal-close-button">
+                                            <img src="../images/close-modal.png" alt="" srcset="">
+                                        </button>
+                                        <section class="request-otp-title-section">
+                                            <h3>
+                                                Enable two-step authentication
+                                            </h3>
+                                        </section>
+
+                                        <section class="request-otp-details-section">
+                                            <h4>
+                                                Whenever you sign in to your Payrail account, you will need to <br>
+                                                enter both your password and a security code sent to your <br>
+                                                device.
+                                            </h4>
+                                        </section>
+
+                                        <section id="auth-apps">
+                                            <h4>1. Download either of these apps and add your payrail account </h4>
+                                            <section id="auth-app-buttons">
+                                                <div style="display: flex; width:45%; justify-content:space-between;">
+                                                    <button>
+                                                        <img src="../images/google-auth.png" alt="" srcset="">
+                                                        <h4>Google Authenticator</h4>
+                                                    </button>
+                                                </div>
+                                                <div style="display: flex; width:45%; justify-content:space-between;">
+                                                    <button>
+                                                        <img src="../images/authy.png" alt="" srcset="">
+                                                        <h4>Authy App</h4>
+                                                    </button>
+                                                </div>
+                                            </section>
+
+                                        </section>
+
+                                        <section id="otp-auth">
+                                            <h4>2. Scan this QR code and enter the 6 digit OTP displayed on the app</h4>
+                                            <section>
+                                                <div id="qr-code">
+
+                                                </div>
+                                                <div id="security-code"
+                                                    style="display: flex; justify-content:space-between;">
+                                                    <div class="pin-section">
+                                                        <div class="pin-section-heading">Enter the 6 digit security code
+                                                        </div>
+                                                        <div class="pin-entry">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                        </section>
+
+                                        <div class="modal-divider" style=" border-top:1px solid #777777;"></div>
+
+                                        <div id="save-btn" class="create-account-wrapper">
+                                            <a href="#guarantor-success-modal"
+                                                class="create-account-btn pry-bg modal-trigger">
+                                                <span>COMPLETE SETUP</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="two-factor-auth">
+                                        <div>
+                                            <div>Two-Factor authentication (2FA)</div>
+                                            <div>Choose your prefered method of receiving one time passwords(OTP)</div>
+                                        </div>
+                                        <div>
+                                            <label class="two-factor-radio" for="radio-email">
+                                                <input class="with-gap" type="radio" id="1" name="radio-email" checked>
+                                                <span>Receive OTP via email and SMS</span>
+                                            </label>
+                                            <label class="two-factor-radio" for="radio-email">
+                                                <input class="with-gap" type="radio" id="2" name="radio-email">
+                                                <span>Receive OTP via Authenticator app</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-tab="Compliance" class="settings-category-section"
+                                    id="settings-security-body">
+                                    <section id="settings-compliance">
+                                        <section id="compliance-section-tab">
+                                            <ul>
+                                                <li class="compliance-tab active-compliance-tab">Contact</li>
+                                                <li class="compliance-tab">Document</li>
+                                                <li class="compliance-tab">Reference</li>
+                                            </ul>
+                                        </section>
+
+                                        <form data-compliance="Contact" class="compliance-section active"
+                                            id="compliance-contact-form" action="">
+
+                                            <div class="settings-profile-update-form-input-holder">
+                                                <div class="settings-profile-update-form-label">Business Email Address
+                                                </div>
+                                                <input type="text" placeholder="Enter Business Email" />
+
+                                            </div>
+
+
+                                            <div class="settings-profile-update-form-input-holder">
+                                                <div class="settings-profile-update-form-label">Business Phone Number
+                                                </div>
+                                                <input type="text" placeholder="Enter Business Phone Number" />
+
+                                            </div>
+                                            <div class="settings-profile-update-form-input-holder">
+                                                <div class="settings-profile-update-form-label">Business Address</div>
+                                                <input type="text" placeholder="Enter Business Address" />
+
+                                            </div>
+
+
+                                            <div id="save-btn">
+                                                <button href="/signup" class="create-account-btn pry-bg">
+                                                    <span>SAVE CHANGES</span> <svg width="6" height="10"
+                                                        viewBox="0 0 6 10" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M0.670123 0C0.292212 0 -0.001091 0.293122 -0.001091 0.665163C-0.001091 0.851183 0.0722351 1.02029 0.201965 1.14994L4.15028 5.00564L0.201965 8.85006C0.0722351 8.97971 -0.001091 9.15445 -0.001091 9.33484C-0.001091 9.70688 0.292212 10 0.670123 10C0.850617 10 1.00855 9.93236 1.13264 9.80834L5.52091 5.52424C5.67885 5.37768 5.75781 5.19729 5.75781 5C5.75781 4.80271 5.67885 4.6336 5.52655 4.4814L1.13828 0.191657C1.00855 0.0676432 0.850617 0 0.670123 0Z"
+                                                            fill="#353D46" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+
+                                        </form>
+
+                                        <div data-compliance="Document" class="compliance-section">
+                                            <div class="compliance-document">
+                                                <div>CAC Document</div>
+                                                <div>Approved</div>
+                                            </div>
+                                            <div class="compliance-document">
+                                                <div>CAC Document</div>
+                                                <div>Approved</div>
+                                            </div>
+                                            <div class="compliance-document">
+                                                <div>CAC Document</div>
+                                                <div>Approved</div>
+                                            </div>
+                                            <div class="compliance-document">
+                                                <div>CAC Document</div>
+                                                <div>Approved</div>
+                                            </div>
+                                            <div class="compliance-document">
+                                                <div>CAC Document</div>
+                                                <div>Approved</div>
+                                            </div>
+                                        </div>
+
+                                        <div data-compliance="Reference" id="address-section"
+                                            class="update-form-id-section compliance-section">
+                                            <div
+                                                class="settings-profile-update-form-input-holder address-section-input">
+                                                <h3>Reference 1</h3>
+                                                <div id="drop">
+                                                    <button data-target="referee-form-modal" class="update-drop-down-button modal-trigger">
+                                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M0.670123 0C0.292212 0 -0.001091 0.293122 -0.001091 0.665163C-0.001091 0.851183 0.0722351 1.02029 0.201965 1.14994L4.15028 5.00564L0.201965 8.85006C0.0722351 8.97971 -0.001091 9.15445 -0.001091 9.33484C-0.001091 9.70688 0.292212 10 0.670123 10C0.850617 10 1.00855 9.93236 1.13264 9.80834L5.52091 5.52424C5.67885 5.37768 5.75781 5.19729 5.75781 5C5.75781 4.80271 5.67885 4.6336 5.52655 4.4814L1.13828 0.191657C1.00855 0.0676432 0.850617 0 0.670123 0Z"
+                                                                fill="#89163B" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="settings-profile-update-form-input-holder address-section-input">
+                                                <h3>Reference 2</h3>
+                                                <div id="drop">
+                                                    <button data-target="#referee-form-modal" class="update-drop-down-button modal-trigger">
+                                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M0.670123 0C0.292212 0 -0.001091 0.293122 -0.001091 0.665163C-0.001091 0.851183 0.0722351 1.02029 0.201965 1.14994L4.15028 5.00564L0.201965 8.85006C0.0722351 8.97971 -0.001091 9.15445 -0.001091 9.33484C-0.001091 9.70688 0.292212 10 0.670123 10C0.850617 10 1.00855 9.93236 1.13264 9.80834L5.52091 5.52424C5.67885 5.37768 5.75781 5.19729 5.75781 5C5.75781 4.80271 5.67885 4.6336 5.52655 4.4814L1.13828 0.191657C1.00855 0.0676432 0.850617 0 0.670123 0Z"
+                                                                fill="#89163B" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            
+                                            <form action="" class="modal" id="referee-form-modal">
+                                                <section class="referee-form-title-section">
+                                                    <h3>
+                                                        Referee Form
+                                                    </h3>
+                                                    <button id="close-modal" class="modal-close">
+                                                        <img src="../images/close-modal.png" alt="" srcset="">
+                                                    </button>
+                                                </section>
+        
+                                                <section class="referee-form-details-section">
+                                                    <h4>
+                                                        Enter the details of your guarantor, a form will be sent him/her
+                                                    </h4>
+                                                    <section class="referee-name-info">
+                                                        <div id="agent-profile-input-holder-sub"
+                                                            class="agent-profile-input-holder-sub">
+                                                            <label for="referee-firstname">First Name</label>
+                                                            <input name="referee-firstname" type="text" placeholder="Firstname">
+                                                        </div>
+                                                        <div id="agent-profile-input-holder-sub"
+                                                            class="agent-profile-input-holder-sub">
+                                                            <label for="referee-lastname">Last Name</label>
+                                                            <input name="referee-lastname" type="text"
+                                                                placeholder="Lastname">
+                                                        </div>
+                                                    </section>
+                                                    
+                                                    <div id="agent-profile-input-holder"
+                                                        class="agent-profile-input-holder referee-mail-info">
+                                                        <label for="referee-email">Email Address</label>
+                                                        <input name="referee-email" type="text"
+                                                            placeholder="address@email.com">
+                                                    </div>
+                                                </section>
+
+                                                      
+                                                
+                                                <section id="settings-modal-divider" class="settings-modal-divider"></section>
+        
+                                                <div id="save-btn" class="create-account-wrapper">
+                                                    <a href="#referee-success-modal" class="create-account-btn pry-bg modal-trigger">
+                                                        <span>SEND REQUEST</span>
+                                                    </a>
+                                                </div>
+        
+                                            </form>
+
+                                        </div>
+
+
+                                    </section>
+                                </div>
+                                <div data-tab="Preference" class="settings-category-section"
+                                    id="settings-security-body">
+                                    <section id="settings-preference">
+                                        <div>
+                                            <div>Messages</div>
+                                            <div>
+                                                Receive reminders, updates, and other reminders <br>
+                                                related to your customers on Payrail Collection.
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="compliance-document">
+                                            <div class="preference">Email</div>
+                                            <div class="preference-toggler inactive">
+                                                <div class="preference-toggle-btn"></div>
+                                            </div>
+                                        </div>
+                                        <div class="compliance-document">
+                                            <div class="preference">Text messages</div>
+                                            <div class="preference-toggler inactive">
+                                                <div class="preference-toggle-btn"></div>
+                                            </div>
+                                        </div>
+                                        <div class="compliance-document">
+                                            <div class="preference">Browser</div>
+                                            <div class="preference-toggler inactive">
+                                                <div class="preference-toggle-btn"></div>
+                                            </div>
+                                        </div>
+                                        <div class="compliance-document">
+                                            <div class="">
+                                                Receive notifications outside of your browser on <br>
+                                                either desktop or mobile web
+                                            </div>
+
+                                        </div>
+                                    </section>
+
+                                    <div id="save-btn">
+                                        <button href="/signup" class="create-account-btn pry-bg">
+                                            <span>SAVE CHANGES</span> <svg width="6" height="10" viewBox="0 0 6 10"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0.670123 0C0.292212 0 -0.001091 0.293122 -0.001091 0.665163C-0.001091 0.851183 0.0722351 1.02029 0.201965 1.14994L4.15028 5.00564L0.201965 8.85006C0.0722351 8.97971 -0.001091 9.15445 -0.001091 9.33484C-0.001091 9.70688 0.292212 10 0.670123 10C0.850617 10 1.00855 9.93236 1.13264 9.80834L5.52091 5.52424C5.67885 5.37768 5.75781 5.19729 5.75781 5C5.75781 4.80271 5.67885 4.6336 5.52655 4.4814L1.13828 0.191657C1.00855 0.0676432 0.850617 0 0.670123 0Z"
+                                                    fill="#353D46" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
             </div>
+            </section>
+            <!--=== end of Main Content ===-->
         </div>
     </div>
-    
+    </div>
+
 
     <script src="../jquery.min.js"></script>
     <script src="../materialize.min.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          var elemsCollapsible = document.querySelectorAll('.collapsible');
-          M.Collapsible.init(elemsCollapsible);
+        document.addEventListener('DOMContentLoaded', function () {
+            var elemsCollapsible = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(elemsCollapsible);
 
-          var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
-          M.Dropdown.init(elemsDropdown, {
-              constrainWidth: true,
-              coverTrigger: false,
-              hover: true
-          });
-      });
-      const balanceType = document.querySelector("#balance-type");
-      function showDiv(){
-          if(balanceType.value === 1){
-          document.getElementById('collection-block').style.display = "block";
-          document.getElementById('commision-block').style.display = "none";
-          } else{
-          document.getElementById('collection-block').style.display = "none";
-          document.getElementById('commision-block').style.display = "block";
-          }
-      } 
+            var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(elemsDropdown, {
+                constrainWidth: true,
+                coverTrigger: false,
+                hover: true
+            });
+        });
+
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+
+        $('.settings-category').each(function () {
+            $(this).on('click', function (e) {
+                let category = e.target.innerHTML
+                $('.settings-category').removeClass('focused')
+                $('.settings-category').css('border-bottom', 'none')
+                $(this).addClass("focused")
+                $(this).css('border-bottom', '1px solid #89163B')
+                $('.settings-category-section').each(function (e) {
+                    $(this).css('display', 'none')
+                    $(this).removeClass('show')
+                    let theSection = Array.from($(this))
+                    if (theSection[0].dataset.tab == category) {
+                        $(this).addClass('show')
+                        $(this).css('display', 'flex')
+                    }
+                })
+
+            })
+        })
+
+        $('.security-tab').each(function () {
+            $(this).on('click', function (e) {
+                let category = e.target.innerHTML
+                $('.security-tab').removeClass('active')
+                $(this).addClass("active")
+                $('.security-tab-section').each(function (e) {
+                    $(this).removeClass('active')
+                    let theSection = Array.from($(this))
+                    if (theSection[0].dataset.security == category) {
+                        $(this).addClass('active')
+                    }
+                })
+
+            })
+        })
+
+        $('.create-pin').each(function (index) {
+            $(this.dataset.index = index)
+            $(this).on("keyup", function (e) {
+                const theInput = e.target
+                let value = theInput.value;
+                let fieldIndex = theInput.dataset.index
+                console.log(fieldIndex)
+                let classArray = Array.from($(".create-pin"))
+                if (value.length > 0 && !Number(value)) {
+                    theInput.value = ""
+                    return
+                }
+                if (value.length > 0 && fieldIndex < classArray.length - 1) {
+                    let nextBox = Number(fieldIndex) + 1
+                    classArray[nextBox].focus()
+                    return
+                }
+                if (e.keyCode == 8 && fieldIndex > 0) {
+                    theInput.value = ""
+                    classArray[Number(fieldIndex) - 1].focus()
+                    return
+                }
+                if (e.keyCode == 8 && fieldIndex < 1) {
+                    theInput.value = ""
+                    return
+                }
+
+            })
+        })
+
+        $('.compliance-tab').each(function () {
+            $(this).on('click', function (e) {
+                let category = e.target.innerHTML
+                $('.compliance-tab').removeClass('active-compliance-tab')
+                $(this).addClass("active-compliance-tab")
+                $('.compliance-section').each(function (e) {
+                    $(this).removeClass('active')
+                    let theSection = Array.from($(this))
+                    if (theSection[0].dataset.compliance == category) {
+                        $(this).addClass('active')
+                    }
+                })
+
+            })
+        })
+
+
+
+        $('.profile-card-edit-btn').on('click', function () {
+            $('#settings-body').css('display', 'none')
+            $('#settings-user-page-body').css('display', 'flex')
+        })
+        $('#user-back-button').on('click', function () {
+            $('#settings-body').css('display', 'flex')
+            $('#settings-user-page-body').css('display', 'none')
+        })
+
+        let radios = Array.from(document.querySelectorAll('.two-factor-radio input'))
+
+        let radioLabels = document.querySelectorAll('.two-factor-radio')
+        radioLabels.forEach(label => {
+            label.addEventListener("click", () => {
+                if (label.children[0].checked) {
+                    return
+                }
+                radios.forEach(radio => radio.checked = false)
+                label.children[0].checked = true
+            })
+        })
+
+        $(".preference-toggler").on("click", function () {
+            $(this).toggleClass("inactive")
+        })
+
+        const balanceType = document.querySelector("#balance-type");
+        function showDiv() {
+            if (balanceType.value === 1) {
+                document.getElementById('collection-block').style.display = "block";
+                document.getElementById('commision-block').style.display = "none";
+            } else {
+                document.getElementById('collection-block').style.display = "none";
+                document.getElementById('commision-block').style.display = "block";
+            }
+        } 
     </script>
-  </body>
+</body>
+
 </html>
