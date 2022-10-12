@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../css/modals.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/agent-settings.css">
-    <!-- <link rel="stylesheet" href="../css/settings.css"> -->
+    <link rel="stylesheet" href="../css/settings.css">
 </head>
 
 <body>
@@ -195,7 +195,7 @@
                                         <li><button class="settings-category">Preference</button></li>
                                     </div>
                                 </div>
-                                <!-- <section class="agent-tabs" id="agent-profile-tab">
+                                <section class="agent-tabs" id="agent-profile-tab" data-tab="Profile">
                                     <div class="profile-details">
                                         <div class="agent-profile-card-left">
                                             <h3>Profile Photo</h3>
@@ -274,10 +274,286 @@
                                             </svg>
                                         </button>
                                     </div>
-                                </section> -->
+                                </section>
 
-                                <section class="agent-tabs" id="agent-compliance-tab">
-                                    <!-- <div class="profile-details">
+                                <div data-tab="Security" class="settings-category-section agent-tabs" id="settings-security-body">
+                                    <form id="settings-security-form" action="">
+                                        <section id="security-form-section-tab">
+                                            <ul>
+                                                <li class="security-tab active">Login Password</li>
+                                                <li class="security-tab">Transaction Pin</li>
+                                            </ul>
+                                        </section>
+                                        <section data-security="Login Password" class="security-tab-section active"
+                                            id="security-form-input-section">
+                                            <div>
+                                                <div>
+                                                    <h6>Passwords must be at least 8 characters long</h6>
+                                                    <div class="settings-profile-update-form-input-holder">
+                                                        <div class="settings-profile-update-form-label">Current Password
+                                                        </div>
+                                                        <input id="country-field" type="text"
+                                                            placeholder="Enter your current password" />
+                                                        <div id="drop">
+                                                            <button class="update-drop-down-button">
+                                                                show
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="settings-profile-update-form-input-holder">
+                                                        <div class="settings-profile-update-form-label">New Password
+                                                        </div>
+                                                        <input id="country-field" type="text"
+                                                            placeholder="Enter new password" />
+                                                        <div id="drop">
+                                                            <button class="update-drop-down-button">
+                                                                show
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="settings-profile-update-form-input-holder">
+                                                        <div class="settings-profile-update-form-label">Repeat New
+                                                            Password
+                                                        </div>
+                                                        <input id="country-field" type="text"
+                                                            placeholder="Enter new password again" />
+                                                        <div id="drop">
+                                                            <button class="update-drop-down-button">
+                                                                show
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div id="save-btn" class="create-account-wrapper">
+                                                    <a href="/signup" class="create-account-btn pry-bg">
+                                                        <span>Change Password</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </section>
+
+                                        <section class="security-tab-section" id="security-form-pin-section">
+                                            <div class="pin-section-heading">Enter your Current Payrail Transaction PIN
+                                            </div>
+                                            <div class="pin-section">
+                                                <div id="current-pin" class="pin-entry">
+                                                    <input class="pin-input" id="pin-input" type="text" maxlength="1">
+                                                    <input class="pin-input" id="pin-input" type="text" maxlength="1">
+                                                    <input class="pin-input" id="pin-input" type="text" maxlength="1">
+                                                    <input class="pin-input" id="pin-input" type="text" maxlength="1">
+                                                </div>
+                                            </div>
+
+                                            <div id="save-btn" class="create-account-wrapper">
+                                                <a href="#pin-updated-modal"
+                                                    class="create-account-btn pry-bg modal-trigger">
+                                                    <span>Next</span>
+                                                </a>
+                                            </div>
+                                        </section>
+
+                                        <section data-security="Transaction Pin" class="security-tab-section"
+                                            id="security-form-pin-section">
+                                            <div class="pin-section">
+                                                <div class="pin-section-heading">Create a Payrail Transaction PIN</div>
+                                                <div class="pin-section-heading">Always keep your PIN private</div>
+                                                <div class="pin-entry">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                </div>
+                                            </div>
+                                            <div class="pin-section">
+                                                <div class="pin-section-heading">Input the exact PIN you entered above
+                                                </div>
+                                                <div class="pin-entry">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                    <input class="pin-input create-pin" id="pin-input" type="text"
+                                                        maxlength="1">
+                                                </div>
+                                            </div>
+
+                                            <div id="save-btn" class="create-account-wrapper">
+                                                <a href="#auth-modal" class="create-account-btn pry-bg modal-trigger">
+                                                    <span>Next</span>
+                                                </a>
+                                            </div>
+                                        </section>
+                                    </form>
+
+                                    <div class="modal" id="pin-success-modal">
+                                        <button class="modal-close modal-close-button">
+                                            <img src="../images/close-modal.png" alt="" srcset="">
+                                        </button>
+                                        <div>
+                                            <img src="../images/completed.svg" alt="">
+                                        </div>
+                                        <section>
+                                            <div>PIN Update successful</div>
+                                            <div>Always keep your PIN private</div>
+                                        </section>
+                                    </div>
+
+                                    <div class="modal" id="otp-success-modal">
+                                        <button class="modal-close modal-close-button">
+                                            <img src="../images/close-modal.png" alt="" srcset="">
+                                        </button>
+                                        <div>
+                                            <img src="../images/completed.svg" alt="">
+                                        </div>
+                                        <section>
+                                            <div>OTP Devlivery Method Update</div>
+                                            <div>Successfully set prefered on time passwords (OTP) delivery method</div>
+                                        </section>
+                                    </div>
+
+                                    <div action="" class="modal" id="request-otp-modal">
+                                        <section class="request-otp-title-section">
+                                            <h3>
+                                                Receive OTP via email
+                                            </h3>
+                                            <button id="close-modal" class="modal-close">
+                                                <img src="../images/close-modal.png" alt="" srcset="">
+                                            </button>
+                                        </section>
+
+                                        <section class="request-otp-details-section">
+                                            <h4>
+                                                Your one-time password will be sent to your email address
+                                            </h4>
+                                        </section>
+
+                                        <div class="modal-divider" style=" border-top:1px solid #777777;"></div>
+                                        <div id="otp-request-button-holder">
+                                            <div id="save-btn" class="create-account-wrapper">
+                                                <button class="create-account-btn pry-bg modal-close">
+                                                    <span>CANCEL</span>
+                                                </button>
+                                            </div>
+                                            <div id="save-btn" class="create-account-wrapper">
+                                                <a href="#guarantor-success-modal"
+                                                    class="create-account-btn pry-bg modal-trigger">
+                                                    <span>ENABLE EMAIL OTP</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div action="" class="modal" id="auth-modal">
+                                        <button id="close-modal" class="modal-close modal-close-button">
+                                            <img src="../images/close-modal.png" alt="" srcset="">
+                                        </button>
+                                        <section class="request-otp-title-section">
+                                            <h3>
+                                                Enable two-step authentication
+                                            </h3>
+                                        </section>
+
+                                        <section class="request-otp-details-section">
+                                            <h4>
+                                                Whenever you sign in to your Payrail account, you will need to <br>
+                                                enter both your password and a security code sent to your <br>
+                                                device.
+                                            </h4>
+                                        </section>
+
+                                        <section id="auth-apps">
+                                            <h4>1. Download either of these apps and add your payrail account </h4>
+                                            <section id="auth-app-buttons">
+                                                <div style="display: flex; width:45%; justify-content:space-between;">
+                                                    <button>
+                                                        <img src="../images/google-auth.png" alt="" srcset="">
+                                                        <h4>Google Authenticator</h4>
+                                                    </button>
+                                                </div>
+                                                <div style="display: flex; width:45%; justify-content:space-between;">
+                                                    <button>
+                                                        <img src="../images/authy.png" alt="" srcset="">
+                                                        <h4>Authy App</h4>
+                                                    </button>
+                                                </div>
+                                            </section>
+
+                                        </section>
+
+                                        <section id="otp-auth">
+                                            <h4>2. Scan this QR code and enter the 6 digit OTP displayed on the app</h4>
+                                            <section>
+                                                <div id="qr-code">
+
+                                                </div>
+                                                <div id="security-code"
+                                                    style="display: flex; justify-content:space-between;">
+                                                    <div class="pin-section">
+                                                        <div class="pin-section-heading">Enter the 6 digit security code
+                                                        </div>
+                                                        <div class="pin-entry">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                            <input class="pin-input" id="pin-input" type="text"
+                                                                maxlength="1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                        </section>
+
+                                        <div class="modal-divider" style=" border-top:1px solid #777777;"></div>
+
+                                        <div id="save-btn" class="create-account-wrapper">
+                                            <a href="#guarantor-success-modal"
+                                                class="create-account-btn pry-bg modal-trigger">
+                                                <span>COMPLETE SETUP</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="two-factor-auth">
+                                        <div>
+                                            <div>Two-Factor authentication (2FA)</div>
+                                            <div>Choose your prefered method of receiving one time passwords(OTP)</div>
+                                        </div>
+                                        <div>
+                                            <label class="two-factor-radio" for="radio-email">
+                                                <input class="with-gap" type="radio" id="1" name="radio-email" checked>
+                                                <span>Receive OTP via email and SMS</span>
+                                            </label>
+                                            <label class="two-factor-radio" for="radio-email">
+                                                <input class="with-gap" type="radio" id="2" name="radio-email">
+                                                <span>Receive OTP via Authenticator app</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <section class="agent-tabs" id="agent-compliance-tab" data-tab="Compliance">
+                                    <div class="profile-details">
                                         <div class="agent-profile-card-left">
                                             <h3>BVN</h3>
                                             <h4>
@@ -291,8 +567,8 @@
                                                 <input name="bvn" type="text" placeholder="xxx-xxx-xxxx">
                                             </div>
                                         </div>
-                                    </div> -->
-                                    <!-- <div class="profile-details">
+                                    </div>
+                                    <div class="profile-details">
                                         <div class="agent-profile-card-left">
                                             <h3>Government Valid ID</h3>
                                             <h4>
@@ -334,8 +610,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> -->
-                                    <!-- <div class="profile-details">
+                                    </div>
+                                    <div class="profile-details">
                                         <div class="agent-profile-card-left">
                                             <h3>Proof of address</h3>
                                             <h4>
@@ -375,9 +651,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div>
 
-                                    <!-- <div class="profile-details">
+                                    <div class="profile-details">
                                         <div class="agent-profile-card-left">
                                             <h3>Send a guarantor request</h3>
                                             <h4>
@@ -471,10 +747,11 @@
                                             <div>Request Sent</div>
                                             <div>Please notify your guarantor that a request has been sent</div>
                                         </section>
-                                    </div> -->
+                                    </div>
                                 </section>
-                                <!-- <section class="agent-tabs" id="agent-preference-tab">
-                                    <div data-tab="Preference" class="settings-category-section" id="settings-security-body">
+
+                                <section class="settings-category-section agent-tabs"  id="agent-preference-tab" data-tab="Preference">
+                                    <div style="width:100% ;"  class="">
                                         <section id="settings-preference">
                                             <div>
                                                 <div>Messages</div>
@@ -561,7 +838,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                </section> -->
+                                </section>
                             </div>
                         </div>
                 </section>
@@ -595,6 +872,26 @@
             e.preventDefault();
         })
 
+        // $('.settings-category').each(function () {
+        //     $(this).on('click', function (e) {
+        //         let category = e.target.innerHTML
+        //         $('.settings-category').removeClass('focused')
+        //         $('.settings-category').css('border-bottom', 'none')
+        //         $(this).addClass("focused")
+        //         $(this).css('border-bottom', '1px solid #89163B')
+        //         $('.settings-category-section').each(function (e) {
+        //             $(this).css('display', 'none')
+        //             $(this).removeClass('show')
+        //             let theSection = Array.from($(this))
+        //             if (theSection[0].dataset.tab == category) {
+        //                 $(this).addClass('show')
+        //                 $(this).css('display', 'flex')
+        //             }
+        //         })
+
+        //     })
+        // })
+
         $('.settings-category').each(function () {
             $(this).on('click', function (e) {
                 let category = e.target.innerHTML
@@ -602,7 +899,7 @@
                 $('.settings-category').css('border-bottom', 'none')
                 $(this).addClass("focused")
                 $(this).css('border-bottom', '1px solid #89163B')
-                $('.settings-category-section').each(function (e) {
+                $('.agent-tabs').each(function (e) {
                     $(this).css('display', 'none')
                     $(this).removeClass('show')
                     let theSection = Array.from($(this))
@@ -614,6 +911,69 @@
 
             })
         })
+
+        $('.security-tab').each(function () {
+            $(this).on('click', function (e) {
+                let category = e.target.innerHTML
+                $('.security-tab').removeClass('active')
+                $(this).addClass("active")
+                $('.security-tab-section').each(function (e) {
+                    $(this).removeClass('active')
+                    let theSection = Array.from($(this))
+                    if (theSection[0].dataset.security == category) {
+                        $(this).addClass('active')
+                    }
+                })
+
+            })
+        })
+
+        $('.create-pin').each(function (index) {
+            $(this.dataset.index = index)
+            $(this).on("keyup", function (e) {
+                const theInput = e.target
+                let value = theInput.value;
+                let fieldIndex = theInput.dataset.index
+                console.log(fieldIndex)
+                let classArray = Array.from($(".create-pin"))
+                if (value.length > 0 && !Number(value)) {
+                    theInput.value = ""
+                    return
+                }
+                if (value.length > 0 && fieldIndex < classArray.length - 1) {
+                    let nextBox = Number(fieldIndex) + 1
+                    classArray[nextBox].focus()
+                    return
+                }
+                if (e.keyCode == 8 && fieldIndex > 0) {
+                    theInput.value = ""
+                    classArray[Number(fieldIndex) - 1].focus()
+                    return
+                }
+                if (e.keyCode == 8 && fieldIndex < 1) {
+                    theInput.value = ""
+                    return
+                }
+
+            })
+        })
+
+        let radios = Array.from(document.querySelectorAll('.two-factor-radio input'))
+
+let radioLabels = document.querySelectorAll('.two-factor-radio')
+radioLabels.forEach(label => {
+    label.addEventListener("click", () => {
+        if (label.children[0].checked) {
+            return
+        }
+        radios.forEach(radio => radio.checked = false)
+        label.children[0].checked = true
+    })
+})
+
+$(".preference-toggler").on("click", function () {
+    $(this).toggleClass("inactive")
+})
 
 
         const balanceType = document.querySelector("#balance-type");

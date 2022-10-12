@@ -484,6 +484,10 @@
     transition: .5s all linear;
 }
 
+#agent-compliance-tab {
+    display:none;
+    flex-direction: column;
+}
 
 
 @media only screen and (max-width: 790px) {
