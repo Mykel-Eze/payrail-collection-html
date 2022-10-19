@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../payrail-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#89163B" />
+    <meta name="author" content="Payrail">
+    <meta name="description" content="Payrail Collection web app" />
+    <link rel="apple-touch-icon" href="../payrail-icon.png" />
+    <title>Home - Payrail Collection</title>
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../materialize.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/top-nav.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/customers.css">
+  </head>
+  <body>
+
+    <div id="root">
+        <div class="App">
+            <div id="body-wrapper" class='dashboard-page'>
+              <!--=== SideBar Section ===-->
+              <section id="side-bar">
+                  <div class="container">
+                      <div class='user-block-wrapper'>
+                          <div class="dropdown-trigger flex-div" data-target="user-dropdown">
+                              <div class="user-details flex-div">
+                                    <!-- See: https://github.com/ambassify/react-avatar  for React-Avatar-->
+                                    <img src="../images/default-avatar.svg" alt="Olamide Olagunju" class="no-user-avatar">
+                                </div>
+                              <div class="user-name-details">
+                                  <div class="user-name-txt bold-txt truncate">Olamide Olagunju</div>
+                                  <div class="user-role">Agent</div>
+                              </div>
+                              <div class="caret-div">
+                                  <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
+                              </div>
+                          </div>
+                          <ul id='user-dropdown' class='dropdown-content'>
+                              <li>
+                                  <a href="#!">Go to profile</a>
+                              </li>
+                              <li class="divider" tabIndex="-1"></li>
+                              <li>
+                                  <a href="#!">Log out</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="nav-list-wrapper">
+                          <div class="nav-list-1">
+                              <ul class="collapsible">
+                                  <li class="link-wrapper">
+                                      <div class="collapsible-header pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/home-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Home</span>
+                                          </div>
+                                          <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
+                                      </div>
+                                      <div class="collapsible-body">
+                                          <ul>
+                                              <li class="pg-sub-link">
+                                                  <a href="./getting-started.html">
+                                                      Get Started
+                                                      <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                  </a>
+                                              </li>
+                                              <li class="pg-sub-link">
+                                                  <a href="./home.html">
+                                                      Overview
+                                                      <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/wallet" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/wallet-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Wallet</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/customers" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/customers-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Customers</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/transactions" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/tranx-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Transactions</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/payout" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Payout</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/#" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/support-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Support</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="brand-logo">
+                            <a href="../index.html">
+                                <img src="../images/payrail-logo.svg" alt="Payrail" class="brand-img" />
+                            </a>
+                            <div class="sidebar-footer">
+                                © Angala Financial Technologies Limited.
+                            </div>
+                      </div>
+                  </div>
+              </section>
+              <!--=== end of SideBar Section ===-->
+    
+              <!--=== Main Content ===-->
+              <section id="content-body">
+                  <!--=== Top-Nav Section ===-->
+                  <nav class="top-nav">
+                      <div class="flex-div align-content-center justify-content-btw">
+                          <div id="search-form">
+                              <div class="rel search-block flex-div">
+                                  <img src="../images/search.svg" alt="icon" class="search-btn-img" />
+                                  <input id="search" type="search" class="search-input" placeholder="Search Customer, payout, transactions" />
+                              </div>
+                          </div>
+          
+                          <div class="user-session-wrapper flex-div">
+                              <a href="/dashboard/settings" class="topnav-btn hover-scale">
+                                  <img src="../images/settings.svg" alt="icon" class="topnav-btn-img tbi-default*" />
+                              </a>
+                              <a href="/#" class="topnav-btn hover-scale">
+                                  <img src="../images/notification.svg" alt="icon" class="topnav-btn-img" />
+                              </a>
+                              <div class="create-account-wrapper">
+                                  <a href="/signup" class="create-account-btn pry-bg">
+                                      <span>MAKE COLLECTION</span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </nav>
+                  <!--=== end of Top-Nav Section ===-->
+    
+                  <div class="page-content-block-wrapper">
+                    <div id="customers-page" class="page-content-wrapper">
+                        <div class="container">
+                            <div class="page-title-wrapper">
+                                <h4 class="page-content-title flex-div">
+                                    <span>Customers </span>
+                                    <small class="page-label-tag">· 4</small>
+                                </h4>
+                            </div>
+            
+                            <div class="tabs-block-wrapper" id="customer-tabs-wrapper">
+                                <ul class="tabs" >
+                                    <li class="tab">
+                                        <a class="active" href="#pending-payments">
+                                            <span>Pending Payments</span>
+                                            <small class="tab-label-tag">4</small>
+                                        </a>
+                                    </li>
+                                    <li class="tab">
+                                        <a href="#completed-payments">
+                                            <span>Completed Payments</span>
+                                            <small class="tab-label-tag">0</small>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+            
+                            <div class="customers-blocks-wrapper">
+                                <div id="pending-payments">
+                                    <div class="page-bar-wrapper flex-div justify-content-btw">
+                                        <div class="page-bar-left flex-div">
+                                            <div class="filter-block flex-div">
+                                                <div class="filter-dropdown-trigger filter-trigger">
+                                                    <img src="../images/filter.svg" alt="filter-icon" class="filter-icon" />
+                                                    <span>Filters</span>
+                                                </div>
+            
+            
+                                                <ul id="filter-dropdown" class="filter-dropdown-content">
+            
+                                                    <div class="arrow-up"></div>
+            
+                                                    <div class="select-field input-field single-field rel">
+                                                        <select id="payment-status">
+                                                            <option value="Full Payment">Full Payment</option>
+                                                            <option value="Part Payment">Part Payment</option>
+                                                            <option value="No Payment">No Payment</option>
+                                                        </select>
+                                                        <label htmlFor="payment-status" class="active">Payment Status</label>
+                                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                                    </div>
+                                                    <div class="select-field input-field single-field rel">
+                                                        <select id="lcda">
+                                                            <option value="Option 1">Option 1</option>
+                                                            <option value="Option 2">Option 2</option>
+                                                            <option value="Option 3">Option 3</option>
+                                                            <option value="Option 4">Option 4</option>
+                                                            <option value="Option 5">Option 5</option>
+                                                        </select>
+                                                        <label htmlFor="lcda" class="active">LCDA </label>
+                                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                                    </div>
+                                                    <div class="select-field input-field single-field rel">
+                                                        <select id="lga">
+                                                            <option value="Option 1">Option 1</option>
+                                                            <option value="Option 2">Option 2</option>
+                                                            <option value="Option 3">Option 3</option>
+                                                            <option value="Option 4">Option 4</option>
+                                                            <option value="Option 5">Option 5</option>
+                                                        </select>
+                                                        <label htmlFor="lga" class="active">LGA </label>
+                                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                                    </div>
+                                                    <div class="select-field input-field single-field rel">
+                                                        <select id="state">
+                                                            <option value="Option 1">Option 1</option>
+                                                            <option value="Option 2">Option 2</option>
+                                                            <option value="Option 3">Option 3</option>
+                                                            <option value="Option 4">Option 4</option>
+                                                            <option value="Option 5">Option 5</option>
+                                                        </select>
+                                                        <label htmlFor="state" class="active">State </label>
+                                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                                    </div>
+                                                    <div class="select-field input-field single-field rel">
+                                                        <select id="merchant">
+                                                            <option value="Show all">Show all</option>
+                                                            <option value="Option 1">Option 1</option>
+                                                            <option value="Option 2">Option 2</option>
+                                                            <option value="Option 3">Option 3</option>
+                                                            <option value="Option 4">Option 4</option>
+                                                            <option value="Option 5">Option 5</option>
+                                                        </select>
+                                                        <label htmlFor="merchant" class="active">Merchant </label>
+                                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                                    </div>
+            
+                                                    <div class="filter-btns-wrapper">
+                                                        <button class="filter-btn pry-btn filter-trigger">Filter</button>
+                                                        <button class="filter-reset-btn filter-trigger">
+                                                            <span>Reset to default</span>
+                                                        </button>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                            <div class="vertical-divider">
+                                                <hr />
+                                            </div>
+                                            <div class="bar-search-block rel">
+                                                <img src="../images/search-2.svg" alt="search-icon" class="search-icon-2" />
+                                                <input type="search" class="bar-search" placeholder="Search Customers" />
+                                            </div>
+                                        </div>
+                                        <div class="page-bar-right flex-div">
+                                            <div class="export-trigger-block flex-div">
+                                                <span>Export CSV</span>
+                                                <img src="../images/export.svg" alt="bill-icon" class="bill-icon" />
+                                            </div>
+                                            <div class="add-btn-wrapper">
+                                                <button class="add-trigger-btn modal-trigger" data-target="add-new-customer-modal">
+                                                    &#43; Add Customers
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="table-wrapper">
+                                        <table id="customers-table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>CUSTOMER ID</th>
+                                                    <th>NAME</th>
+                                                    <th>ITEM</th>
+                                                    <th>LOCATION</th>
+                                                    <th>PAID</th>
+                                                    <th>PENDING</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                           
+                                                <tr>
+                                                    <td>
+                                                        <span class="status-disc green"></span>
+                                                    </td>
+                                                    <td>0814862009</td>
+                                                    <td>Iya Micheal Store</td>
+                                                    <td class="gray-txt">10 Bags of Rice</td>
+                                                    <td>Oshodi, Lagos</td>
+                                                    <td class="green-text">₦900,000</td>
+                                                    <td class="orange-text">₦100,000</td>
+                                                    <td>
+                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="status-disc green"></span>
+                                                    </td>
+                                                    <td>09014873110</td>
+                                                    <td>Bola Grocery Store</td>
+                                                    <td class="gray-txt">8 Cartons of Sunlight...</td>
+                                                    <td>Oshodi, Lagos</td>
+                                                    <td class="default-text">₦0</td>
+                                                    <td class="orange-text">₦99,980</td>
+                                                    <td>
+                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="status-disc red"></span>
+                                                    </td>
+                                                    <td>08025982221</td>
+                                                    <td>Okon and Sons</td>
+                                                    <td class="gray-txt">4 Cartons of Croack...</td>
+                                                    <td>Ikeja, Lagos</td>
+                                                    <td class="green-text">₦250,000</td>
+                                                    <td class="orange-text">₦500,000</td>
+                                                    <td>
+                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="status-disc green"></span>
+                                                    </td>
+                                                    <td>08136093532</td>
+                                                    <td>Iya Barakatu</td>
+                                                    <td class="gray-txt">8 Bags of Beans</td>
+                                                    <td>Ajayi Farms, Lagos </td>
+                                                    <td class="default-text">₦0</td>
+                                                    <td class="orange-text">₦1,000,000</td>
+                                                    <td>
+                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+            
+                                <div id="completed-payments">
+                                    <div class="page-bar-wrapper flex-div justify-content-btw">
+                                        <div class="page-bar-left flex-div">
+                                            <div class="filter-block flex-div">
+                                                <div class="filter-dropdown-trigger filter-trigger">
+                                                    <img src="../images/filter.svg" alt="filter-icon" class="filter-icon" />
+                                                    <span>Filters</span>
+                                                </div>
+            
+            
+                                                <ul id="filter-dropdown" class="filter-dropdown-content">
+            
+                                                    <div class="arrow-up"></div>
+            
+                                                    <div class="select-field input-field single-field rel">
+                                                        <select id="payment-status">
+                                                            <option value="Full Payment">Full Payment</option>
+                                                            <option value="Part Payment">Part Payment</option>
+                                                            <option value="No Payment">No Payment</option>
+                                                        </select>
+                                                        <label htmlFor="payment-status" class="active">Payment Status</label>
+                                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                                    </div>
+                                                    <div class="select-field input-field single-field rel">
+                                                        <select id="lcda">
+                                                            <option value="Option 1">Option 1</option>
+                                                            <option value="Option 2">Option 2</option>
+                                                            <option value="Option 3">Option 3</option>
+                                                            <option value="Option 4">Option 4</option>
+                                                            <option value="Option 5">Option 5</option>
+                                                        </select>
+                                                        <label htmlFor="lcda" class="active">LCDA </label>
+                                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                                    </div>
+                                                    <div class="select-field input-field single-field rel">
+                                                        <select id="lga">
+                                                            <option value="Option 1">Option 1</option>
+                                                            <option value="Option 2">Option 2</option>
+                                                            <option value="Option 3">Option 3</option>
+                                                            <option value="Option 4">Option 4</option>
+                                                            <option value="Option 5">Option 5</option>
+                                                        </select>
+                                                        <label htmlFor="lga" class="active">LGA </label>
+                                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                                    </div>
+                                                    <div class="select-field input-field single-field rel">
+                                                        <select id="state">
+                                                            <option value="Option 1">Option 1</option>
+                                                            <option value="Option 2">Option 2</option>
+                                                            <option value="Option 3">Option 3</option>
+                                                            <option value="Option 4">Option 4</option>
+                                                            <option value="Option 5">Option 5</option>
+                                                        </select>
+                                                        <label htmlFor="state" class="active">State </label>
+                                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                                    </div>
+                                                    <div class="select-field input-field single-field rel">
+                                                        <select id="merchant">
+                                                            <option value="Show all">Show all</option>
+                                                            <option value="Option 1">Option 1</option>
+                                                            <option value="Option 2">Option 2</option>
+                                                            <option value="Option 3">Option 3</option>
+                                                            <option value="Option 4">Option 4</option>
+                                                            <option value="Option 5">Option 5</option>
+                                                        </select>
+                                                        <label htmlFor="merchant" class="active">Merchant </label>
+                                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                                    </div>
+            
+                                                    <div class="filter-btns-wrapper">
+                                                        <button class="filter-btn pry-btn filter-trigger">Filter</button>
+                                                        <button class="filter-reset-btn filter-trigger">
+                                                            <span>Reset to default</span>
+                                                        </button>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                            <div class="vertical-divider">
+                                                <hr />
+                                            </div>
+                                            <div class="bar-search-block rel">
+                                                <img src="../images/search-2.svg" alt="search-icon" class="search-icon-2" />
+                                                <input type="search" class="bar-search" placeholder="Search Customers" />
+                                            </div>
+                                        </div>
+                                        <div class="page-bar-right flex-div">
+                                            <div class="export-trigger-block flex-div">
+                                                <span>Export CSV</span>
+                                                <img src="../images/export.svg" alt="bill-icon" class="bill-icon" />
+                                            </div>
+                                            <div class="add-btn-wrapper">
+                                                <button class="add-trigger-btn modal-trigger" data-target="add-new-customer-modal">
+                                                    &#43; Add Customers
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="table-wrapper">
+                                        <table id="customers-table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>CUSTOMER ID</th>
+                                                    <th>NAME</th>
+                                                    <th>ITEM</th>
+                                                    <th>LOCATION</th>
+                                                    <th>PAID</th>
+                                                    <th>PENDING</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                           
+                                                <tr>
+                                                    <td>
+                                                        <span class="status-disc"></span>
+                                                    </td>
+                                                    <td>
+                                                        <img src="../images/c-empty-1.svg" alt="empty" class="empty-placeholder" />
+                                                    </td>
+                                                    <td>
+                                                        <img src="../images/c-empty-2.svg" alt="empty" class="empty-placeholder" />
+                                                    </td>
+                                                    <td class="gray-txt">
+                                                        <img src="../images/c-empty-3.svg" alt="empty" class="empty-placeholder" />
+                                                    </td>
+                                                    <td>
+                                                        <img src="../images/c-empty-4.svg" alt="empty" class="empty-placeholder" />
+                                                    </td>
+                                                    <td class="green-text">
+                                                        <img src="../images/c-empty-5.svg" alt="empty" class="empty-placeholder" />
+                                                    </td>
+                                                    <td class="orange-text">
+                                                        <img src="../images/c-empty-6.svg" alt="empty" class="empty-placeholder" />
+                                                    </td>
+                                                    <td>
+                                                        <img src="../images/empty-call.svg" alt="call" class="call-info-trigger empty-call-info" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+            
+                                        <div class="empty-cont-container center">
+                                            <div class="empty-img-wrapper">
+                                                <img src="../images/empty-people.svg" alt="empty-img" class="empty-img" />
+                                            </div>
+                                            <div class="empty-txts-wrapper">
+                                                <div class="empty-txt-title">No customer assigned to you</div>
+                                                <div class="empty-txt-desc gray-txt">
+                                                    Customers are added when  a  payrail admin assigns them to you. You can also add customers yourself.
+                                                </div>
+                                                <div class="empty-cta-wrapper">
+                                                    <span class="empty-cta modal-trigger">+ Add Customers</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </section>
+              <!--=== end of Main Content ===-->
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../jquery.min.js"></script>
+    <script src="../materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elemsCollapsible = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(elemsCollapsible);
+
+            var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(elemsDropdown, {
+                constrainWidth: true,
+                coverTrigger: false,
+                hover: true
+            });
+            var elemsModal = document.querySelectorAll('.modal');
+            M.Modal.init(elemsModal);
+
+            var elemSelect = document.querySelectorAll('select');
+            M.FormSelect.init(elemSelect);
+
+            var elemsTabs = document.querySelectorAll('.tabs');
+            M.Tabs.init(elemsTabs);
+
+            $(".filter-trigger").click(function(){
+                $(".filter-dropdown-content").slideToggle();
+            });
+        });
+        const balanceType = document.querySelector("#balance-type");
+        function showDiv(){
+            if(balanceType.value === 1){
+            document.getElementById('collection-block').style.display = "block";
+            document.getElementById('commision-block').style.display = "none";
+            } else{
+            document.getElementById('collection-block').style.display = "none";
+            document.getElementById('commision-block').style.display = "block";
+            }
+        } 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../payrail-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#89163B" />
+    <meta name="author" content="Payrail">
+    <meta name="description" content="Payrail Collection web app" />
+    <link rel="apple-touch-icon" href="../payrail-icon.png" />
+    <title>Home - Payrail Collection</title>
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../materialize.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/top-nav.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/customers.css">
+  </head>
+  <body>
+
+    <div id="root">
+        <div class="App">
+            <div id="body-wrapper" class='dashboard-page'>
+              <!--=== SideBar Section ===-->
+              <section id="side-bar">
+                  <div class="container">
+                      <div class='user-block-wrapper'>
+                          <div class="dropdown-trigger flex-div" data-target="user-dropdown">
+                              <div class="user-details flex-div">
+                                    <!-- See: https://github.com/ambassify/react-avatar  for React-Avatar-->
+                                    <img src="../images/default-avatar.svg" alt="Olamide Olagunju" class="no-user-avatar">
+                                </div>
+                              <div class="user-name-details">
+                                  <div class="user-name-txt bold-txt truncate">Olamide Olagunju</div>
+                                  <div class="user-role">Agent</div>
+                              </div>
+                              <div class="caret-div">
+                                  <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
+                              </div>
+                          </div>
+                          <ul id='user-dropdown' class='dropdown-content'>
+                              <li>
+                                  <a href="#!">Go to profile</a>
+                              </li>
+                              <li class="divider" tabIndex="-1"></li>
+                              <li>
+                                  <a href="#!">Log out</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="nav-list-wrapper">
+                          <div class="nav-list-1">
+                              <ul class="collapsible">
+                                  <li class="link-wrapper">
+                                      <div class="collapsible-header pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/home-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Home</span>
+                                          </div>
+                                          <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
+                                      </div>
+                                      <div class="collapsible-body">
+                                          <ul>
+                                              <li class="pg-sub-link">
+                                                  <a href="./getting-started.html">
+                                                      Get Started
+                                                      <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                  </a>
+                                              </li>
+                                              <li class="pg-sub-link">
+                                                  <a href="./home.html">
+                                                      Overview
+                                                      <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/wallet" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/wallet-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Wallet</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/customers" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/customers-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Customers</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/transactions" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/tranx-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Transactions</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/payout" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Payout</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li class="link-wrapper">
+                                      <a href="/#" class="pg-link">
+                                          <div class="flex-div">
+                                              <img src="../images/support-icon.svg" alt="icon" class="link-img" />
+                                              <span class="link-txt">Support</span>
+                                          </div>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="brand-logo">
+                            <a href="../index.html">
+                                <img src="../images/payrail-logo.svg" alt="Payrail" class="brand-img" />
+                            </a>
+                            <div class="sidebar-footer">
+                                © Angala Financial Technologies Limited.
+                            </div>
+                      </div>
+                  </div>
+              </section>
+              <!--=== end of SideBar Section ===-->
+    
+              <!--=== Main Content ===-->
+              <section id="content-body">
+                  <!--=== Top-Nav Section ===-->
+                  <nav class="top-nav">
+                      <div class="flex-div align-content-center justify-content-btw">
+                          <div id="search-form">
+                              <div class="rel search-block flex-div">
+                                  <img src="../images/search.svg" alt="icon" class="search-btn-img" />
+                                  <input id="search" type="search" class="search-input" placeholder="Search Customer, payout, transactions" />
+                              </div>
+                          </div>
+          
+                          <div class="user-session-wrapper flex-div">
+                              <a href="/dashboard/settings" class="topnav-btn hover-scale">
+                                  <img src="../images/settings.svg" alt="icon" class="topnav-btn-img tbi-default*" />
+                              </a>
+                              <a href="/#" class="topnav-btn hover-scale">
+                                  <img src="../images/notification.svg" alt="icon" class="topnav-btn-img" />
+                              </a>
+                              <div class="create-account-wrapper">
+                                  <a href="/signup" class="create-account-btn pry-bg">
+                                      <span>MAKE COLLECTION</span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </nav>
+                  <!--=== end of Top-Nav Section ===-->
+    
+                  <div class="page-content-block-wrapper">
+                    <div id="payouts-page" class="page-content-wrapper">
+                        <div class="container">
+                            <div class="page-title-wrapper">
+                                <h4 class="page-content-title flex-div">
+                                    <span>Payouts </span>
+                                    <small class="page-label-tag">· 4</small>
+                                </h4>
+                            </div>
+            
+                            <div class="page-bar-wrapper flex-div justify-content-btw">
+                                <div class="page-bar-left flex-div">
+                                    <div class="filter-block flex-div">
+                                        <div class="filter-dropdown-trigger filter-trigger">
+                                            <img src='../images/filter.svg' alt="filter-icon" class="filter-icon" />
+                                            <span>Filters</span>
+                                        </div>
+            
+            
+                                        <ul id="filter-dropdown" class="filter-dropdown-content">
+            
+                                            <div class="arrow-up"></div>
+            
+                                            <div class="select-field input-field single-field rel">
+                                                <select id="status">
+                                                    <option value="Processed">Processed</option>
+                                                    <option value="Successful">Successful</option>
+                                                    <option value="Failed">Failed</option>
+                                                </select>
+                                                <label htmlFor="status" class="active">Status</label>
+                                                <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                            </div>
+                                            <div class="input-field single-field rel">
+                                                <input type="text" id="start-date" class="form-inp-field datepicker" />
+                                                <label htmlFor="start-date">Start Date </label>
+                                            </div>
+                                            <div class="input-field single-field rel">
+                                                <input type="text" id="end-date" class="form-inp-field datepicker" />
+                                                <label htmlFor="end-date">End Date </label>
+                                            </div>
+            
+                                            <div class="filter-btns-wrapper">
+                                                <button class="filter-btn filter-trigger pry-btn">Filter</button>
+                                                <button class="filter-reset-btn filter-trigger">
+                                                    <span>Reset to default</span>
+                                                </button>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <div class="vertical-divider">
+                                        <hr />
+                                    </div>
+                                    <div class="bar-search-block rel">
+                                        <img src='../images/search-2.svg' alt="search-icon" class="search-icon-2" />
+                                        <input type="search" class="bar-search" placeholder="Search Customers" />
+                                    </div>
+                                </div>
+                                <div class="page-bar-right flex-div">
+                                    <div class="export-trigger-block flex-div">
+                                        <span>Export CSV</span>
+                                        <img src='../images/export.svg' alt="bill-icon" class="bill-icon" />
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="table-wrapper">
+                                <table id="customers-table">
+                                    <thead>
+                                        <tr>
+                                            <th>PAY DAY</th>
+                                            <th>RECIPIENT</th>
+                                            <th>TOTAL AMOUNT</th>
+                                            <th>PAYOUT</th>
+                                            <th>STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>   
+                                        <tr class="clickable-row" data-href="./payoutsDetails.html">
+                                            <td>01 Oct, 2021</td>
+                                            <td class="gray-txt">Payrail</td>
+                                            <td>NGN 10,000.10</td>
+                                            <td>NGN 1500.00</td>
+                                            <td>Successful</td>
+                                        </tr>      
+                                        <tr class="clickable-row" data-href="./payoutsDetails.html">
+                                            <td>30 Mar, 2021 </td>
+                                            <td class="gray-txt">Payrail</td>
+                                            <td>NGN 2,000.52</td>
+                                            <td>NGN 20.52</td>
+                                            <td>Successful</td>
+                                        </tr>
+                                        <tr class="clickable-row" data-href="./payoutsDetails.html">
+                                            <td>06 Apirl, 2021</td>
+                                            <td class="gray-txt">Payrail</td>
+                                            <td>NGN 4,000.15</td>
+                                            <td>NGN 40.15</td>
+                                            <td>Successful</td>
+                                        </tr>
+                                        <tr class="clickable-row" data-href="./payoutsDetails.html">
+                                            <td>30 Mar, 2021 </td>
+                                            <td class="gray-txt">Payrail</td>
+                                            <td>NGN 1,300.49</td>
+                                            <td>NGN 130.49</td>
+                                            <td>Successful</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </section>
+              <!--=== end of Main Content ===-->
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../jquery.min.js"></script>
+    <script src="../materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elemsCollapsible = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(elemsCollapsible);
+
+            var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(elemsDropdown, {
+                constrainWidth: true,
+                coverTrigger: false,
+                hover: true
+            });
+
+            var elemsModal = document.querySelectorAll('.modal');
+            M.Modal.init(elemsModal);
+
+            var elemSelect = document.querySelectorAll('select');
+            M.FormSelect.init(elemSelect);
+
+            var elemsPicker = document.querySelectorAll('.datepicker');
+            M.Datepicker.init(elemsPicker);
+        });
+
+        $(".filter-trigger").click(function(){
+            $(".filter-dropdown-content").slideToggle();
+        });
+
+        $(".clickable-row").click(function() {
+            window.location = $(this).data("href");
+        });
+
+        const balanceType = document.querySelector("#balance-type");
+        function showDiv(){
+            if(balanceType.value === 1){
+            document.getElementById('collection-block').style.display = "block";
+            document.getElementById('commision-block').style.display = "none";
+            } else{
+            document.getElementById('collection-block').style.display = "none";
+            document.getElementById('commision-block').style.display = "block";
+            }
+        } 
+    </script>
+  </body>
+</html>
