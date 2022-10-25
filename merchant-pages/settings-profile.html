@@ -337,13 +337,13 @@
                                                     <input class="file-input" id="address-file" type="file">
                                                 </div>
                                             </div>
-                                            <div>
-                                                <label id="address-checkbox-label" for="address-checkbox">
-                                                    <input type="checkbox" name="address-checkbox" class="filled-in"
-                                                        id="address-checkbox">
-                                                    <span>Same as business address</span>
+                                            
+                                            <p>
+                                                <label for="address-checkbox">
+                                                  <input id="address-checkbox" type="checkbox" class="filled-in" checked="checked" />
+                                                  <span>Same as business address</span>
                                                 </label>
-                                            </div>
+                                              </p>
                                         </div>
                                     </form>
 
@@ -699,10 +699,10 @@
                                         <div data-compliance="Reference" id="address-section"
                                             class="update-form-id-section compliance-section">
                                             <div
-                                                class="settings-profile-update-form-input-holder address-section-input">
+                                                id="ref-one" class="settings-profile-update-form-input-holder">
                                                 <h3>Reference 1</h3>
                                                 <div id="drop">
-                                                    <button data-target="referee-form-modal"
+                                                    <button type="button" data-target="referee-form-modal"
                                                         class="update-drop-down-button modal-trigger">
                                                         <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -714,7 +714,7 @@
                                                 </div>
                                             </div>
                                             <div
-                                                class="settings-profile-update-form-input-holder address-section-input">
+                                               id="ref-two" class="settings-profile-update-form-input-holder">
                                                 <h3>Reference 2</h3>
                                                 <div id="drop">
                                                     <button data-target="referee-form-modal"
