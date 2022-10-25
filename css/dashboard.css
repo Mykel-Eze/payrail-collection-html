@@ -911,3 +911,16 @@ div#done-btn-wrapper {
     }
 }
 /*---=== end of Pending Task Styling ===---*/
+
+.show-txt {
+    display: none;
+}
+.hide-txt {
+    display: initial;
+}
+.active-txt .show-txt {
+    display: initial;
+}
+.active-txt .hide-txt {
+    display: none;
+}
