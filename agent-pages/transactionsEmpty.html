@@ -17,9 +17,7 @@
     <link rel="stylesheet" href="../css/top-nav.css">
     <link rel="stylesheet" href="../css/modals.css">
     <link rel="stylesheet" href="../css/styles.css">
-
-    <!-- Location Modal Stylesheet -->
-    <link rel="stylesheet" href="../css/location-modal.css">
+    <link rel="stylesheet" href="../css/customers.css">
   </head>
   <body>
 
@@ -166,123 +164,150 @@
                   <!--=== end of Top-Nav Section ===-->
     
                   <div class="page-content-block-wrapper">
-                    <div class="page-content-wrapper">
+                    <div id="transactions-page" class="page-content-wrapper">
                         <div class="container">
-                            <div class="page-header-wrapper">
-                                <div class="left-align">
-                                    <h2 class="page-title">Complete your KYC</h2>
-                                    <span>
-                                        Olamide, it’s important you update your profile to increase your transaction and loan purpose
-                                    </span>
+                            <div class="page-title-wrapper">
+                                <h4 class="page-content-title flex-div">
+                                    <span>Transactions </span>
+                                    <small class="page-label-tag"></small>
+                                </h4>
+                            </div>
+            
+                            <div class="page-bar-wrapper flex-div justify-content-btw">
+                                <div class="page-bar-left flex-div">
+                                    <div class="filter-block flex-div">
+                                        <div class="filter-dropdown-trigger filter-trigger">
+                                            <img src='../images/filter.svg' alt="filter-icon" class="filter-icon" />
+                                            <span>Filters</span>
+                                        </div>
+            
+            
+                                        <ul id="filter-dropdown" class="filter-dropdown-content">
+            
+                                            <div class="arrow-up"></div>
+            
+                                            <div class="select-field input-field single-field rel">
+                                                <select id="status">
+                                                    <option value="Processed">Processed</option>
+                                                    <option value="Successful">Successful</option>
+                                                    <option value="Failed">Failed</option>
+                                                </select>
+                                                <label for="status" class="active">Status</label>
+                                                <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                            </div>
+                                            <div class="select-field input-field single-field rel">
+                                                <select id="date-period">
+                                                    <option value="All Time">All Time</option>
+                                                    <option value="Yesterday">Yesterday</option>
+                                                    <option value="This Week">This Week</option>
+                                                    <option value="This Month">This Month</option>
+                                                    <option value="This Year">This Year</option>
+                                                </select>
+                                                <label for="date-period" class="active">Date Period </label>
+                                                <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                            </div>
+                                            <div class="select-field input-field single-field rel">
+                                                <select id="type">
+                                                    <option value="Payout">Payout</option>
+                                                    <option value="Deposit">Deposit</option>
+                                                    <option value="Payment">Payment</option>
+                                                </select>
+                                                <label for="type" class="active">Type </label>
+                                                <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                            </div>
+            
+                                            <div class="filter-btns-wrapper">
+                                                <button class="filter-btn filter-trigger pry-btn">Filter</button>
+                                                <button class="filter-reset-btn filter-trigger">
+                                                    <span>Reset to default</span>
+                                                </button>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <div class="vertical-divider">
+                                        <hr />
+                                    </div>
+                                    <div class="bar-search-block rel">
+                                        <img src='../images/search-2.svg' alt="search-icon" class="search-icon-2" />
+                                        <input type="search" class="bar-search" placeholder="Search Customers" />
+                                    </div>
+                                </div>
+                                <div class="page-bar-right flex-div">
+                                    <div class="export-trigger-block flex-div">
+                                        <span>Export CSV</span>
+                                        <img src='../images/export.svg' alt="bill-icon" class="bill-icon" />
+                                    </div>
                                 </div>
                             </div>
             
-                            <div class="pending-tasks-wrapper">
-                                <div class="kyc-form-wrapper">
-                                    <form action="kyc-successful.html" id="kyc-form" class="dashboard-form">
-                                        <div class="row">
-                                            <fieldset id="personal-details">
-                                                <div class="flex-div form-header justify-content-btw">
-                                                    <div class="flex-div change-avatar-wrapper">
-                                                        <div class="file-field input-field">
-                                                            <div class="btn">
-                                                                <div class="upload-logo">
-                                                                    <img src="../images/default-pix.svg" alt="default" />
-                                                                </div>
-                                                                <div class="uploaded-img-div">
-                                                                    <img src="" alt="user-img" id="uploaded-img" />
-                                                                </div>
-                                                                <input type="file" id="user-pix-filepath" accept="image/x-png,image/gif,image/jpeg" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="username-wrapper">
-                                                            <h4 class="username">Olamide Olagunju</h4>
-                                                            <span>Agent ID: 091092</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="input-field single-field">
-                                                    <input id="residential_address" type="text" value="4 Murtala Mohameed Ojodu Berger" readOnly class="form-inp-field modal-trigger" data-target="location-search-box" />
-                                                    <label for="residential_address" class="active">Residential Address</label>
-                                                    <img src="../images/location-icon.svg" alt="location icon" class="location-inp-icon" />
-                                                </div>
-                                                <div class="select-field input-field single-field">
-                                                    <select id="nationality">
-                                                        <option value="" disabled selected>Please Specify</option>
-                                                        <option value="Nigeria">Nigeria</option>
-                                                        <option value="Ghana">Ghana</option>
-                                                        <option value="Togo">Togo</option>
-                                                    </select>
-                                                    <label for="nationality" class="active">Nationality</label>
-                                                    <img src="../images/caret-1.svg" alt="caret" class="inp-caret-icon" />
-                                                </div>
-                                                <div class="input-field multiple-fields">
-                                                    <div class="rel">
-                                                        <select id="id-type">
-                                                            <option value="" disabled selected>Choose form of ID</option>
-                                                            <option value="Driver's License">Driver's License</option>
-                                                            <option value="International Passport">International Passport</option>
-                                                            <option value="Voter's Card">Voter's Card</option>
-                                                            <option value="NIN">NIN</option>
-                                                        </select>
-                                                        <img src="../images/caret-1.svg" alt="caret" class="inp-caret-icon" />
-                                                    </div>
-                                                    <div class="rel">
-                                                        <input id="id-number" type="text" placeholder="ID Number" class="sub-inp-field" />
-                                                    </div>
-                                                    <div class="file-field rel">
-                                                         <input type="file" />
-                                                        <div class="btn choose-file-btn">
-                                                            <span>Choose file</span>
-                                                        </div>
-                                                        <div class="file-path-wrapper">
-                                                            <input class="file-path sub-inp-field last-inp-field" placeholder="Upload ID" type="text" />
+                            <div class="table-wrapper">
+                                <table id="customers-table">
+                                    <thead>
+                                        <tr>
+                                            <th>STATUS</th>
+                                            <th>REFERENCE</th>
+                                            <th>TRANSACTION INFORMATION</th>
+                                            <th>NARRATION</th>
+                                            <th>TYPE</th>
+                                            <th>DATE</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>                           
+                                        <tr>
+                                            <td>
+                                                <div class="flex-div">
+                                                    <img src="../images/c-empty-7.svg" alt="transaction icon" class="tranx-activity-icon" />
+                                                    <div class="tranx-activity-details">
+                                                        <div class="tranx-activity">
+                                                            <img src='../images/c-empty-1.svg' alt="empty" class="empty-placeholder" />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="input-field multiple-fields">
-                                                    <div class="rel">
-                                                        <select id="id-type">
-                                                            <option value="" disabled selected>Choose proof of address</option>
-                                                            <option value="Driver's License">Driver's License</option>
-                                                            <option value="International Passport">International Passport</option>
-                                                            <option value="Voter's Card">Voter's Card</option>
-                                                            <option value="NIN">NIN</option>
-                                                        </select>
-                                                        <img src="../images/caret-1.svg" alt="caret" class="inp-caret-icon" />
-                                                    </div>  
-                                                    <div class="file-field rel">
-                                                         <input type="file" />
-                                                        <div class="btn choose-file-btn">
-                                                            <span>Choose file</span>
-                                                        </div>
-                                                        <div class="file-path-wrapper">
-                                                            <input class="file-path sub-inp-field last-inp-field" placeholder="Upload Proof of Address" type="text" />
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            </td>
+                                            <td>
+                                                <span>
+                                                    <img src='../images/c-empty-1.svg' alt="empty" class="empty-placeholder" />
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="tranxn-amount">
+                                                    <img src='../images/c-empty-1.svg' alt="empty" class="empty-placeholder" />
+                                                </span>
+                                                <span class="gray-txt">
+                                                    . <img src='../images/c-empty-1.svg' alt="empty" class="empty-placeholder" />
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span>
+                                                    <img src='../images/c-empty-1.svg' alt="empty" class="empty-placeholder" />
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span>
+                                                    <img src='../images/c-empty-1.svg' alt="empty" class="empty-placeholder" />
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span>
+                                                    <img src='../images/c-empty-1.svg' alt="empty" class="empty-placeholder" />
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <img src="../images/menu-circle-empty.svg" alt="icon" class="table-menu-circle" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
             
-                                                <div class="submit-btn-wrapper flex-div">
-                                                    <button type="submit" class="submit-btn pry-btn">Save</button>
-                                                </div>
-                                            </fieldset>
-                                        </div>
-                                    </form>
-            
-                                    <div id="location-search-box" class="modal">
-                                        <div class="modal-content">
-                                            <img src="../images/close-modal.svg" alt="close" class="modal-close close-location-box" />
-                                            <div class="locations-wrapper">
-                                                <div class="input-field">
-                                                    <input id="locations-inp" type="text" class="form-inp-field" placeholder="Enter your address" />
-                                                </div>
-                                                <div class="locations-list">
-                                                    <div class="flex-div list-placeholder">
-                                                        <img src="../images/location-circle-icon.svg" alt="location icon" class="red-location-icon" />
-                                                        <span id="use-current-location">Use my current location</span>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                <div class="empty-cont-container center">
+                                    <div class="empty-img-wrapper">
+                                        <img src='../images/empty-tranxn.svg' alt="empty-img" class="empty-img" />
+                                    </div>
+                                    <div class="empty-txts-wrapper">
+                                        <div class="empty-txt-title">No Transactions Yet</div>
+                                        <div class="empty-txt-desc gray-txt">
+                                            There're no transactions for this query. Please try another query or clear your filters.
                                         </div>
                                     </div>
                                 </div>
@@ -308,27 +333,30 @@
             var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
             M.Dropdown.init(elemsDropdown, {
                 constrainWidth: true,
-                coverTrigger: false
+                coverTrigger: false,
+                hover: true
             });
+            var elemsModal = document.querySelectorAll('.modal');
+            M.Modal.init(elemsModal);
+
+            var elemSelect = document.querySelectorAll('select');
+            M.FormSelect.init(elemSelect);
         });
 
-        $("#user-pix-filepath").change(function(){
-            var uploadedImageSrc1 = window.URL.createObjectURL(this.files[0]);
-            $("#personal-details .upload-logo").hide();
-            $("#personal-details .uploaded-img-div").show();
-            $("#uploaded-img").attr("src", uploadedImageSrc1);
+        $(".filter-trigger").click(function(){
+            $(".filter-dropdown-content").slideToggle();
         });
 
-        var elemSelect = document.querySelectorAll('select');
-        M.FormSelect.init(elemSelect);
-
-        var elemsModal = document.querySelectorAll('.modal');
-        M.Modal.init(elemsModal);
-
-        // var location_inp = $("#locations-inp").val()
-        $("#locations-inp").change(function(){
-            $("#residential_address").val($(this).val())
-        })
+        const balanceType = document.querySelector("#balance-type");
+        function showDiv(){
+            if(balanceType.value === 1){
+            document.getElementById('collection-block').style.display = "block";
+            document.getElementById('commision-block').style.display = "none";
+            } else{
+            document.getElementById('collection-block').style.display = "none";
+            document.getElementById('commision-block').style.display = "block";
+            }
+        } 
     </script>
   </body>
 </html>

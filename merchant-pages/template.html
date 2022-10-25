@@ -33,8 +33,8 @@
                                     <img src="../images/default-avatar.svg" alt="Olamide Olagunju" class="no-user-avatar">
                                 </div>
                               <div class="user-name-details">
-                                  <div class="user-name-txt bold-txt truncate">Olamide Olagunju</div>
-                                  <div class="user-role">Agent</div>
+                                  <div class="user-name-txt bold-txt truncate">Unilever Nigeria</div>
+                                  <div class="user-role">Olamide Olagunju</div>
                               </div>
                               <div class="caret-div">
                                   <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
@@ -103,10 +103,10 @@
                                       </a>
                                   </li>
                                   <li class="link-wrapper">
-                                      <a href="./payouts.html" class="pg-link">
+                                      <a href="./inventory.html" class="pg-link">
                                           <div class="flex-div">
                                               <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
-                                              <span class="link-txt">Payout</span>
+                                              <span class="link-txt">Inventory</span>
                                           </div>
                                       </a>
                                   </li>
@@ -162,45 +162,22 @@
                   </nav>
                   <!--=== end of Top-Nav Section ===-->
     
-                    <div class="page-content-block-wrapper">
-                        <div class="page-content-wrapper">
-                            <div class="container">
-                                <div class="page-header-wrapper">
-                                    <div class="left-align">
-                                        <h2 class="page-title">Complete your KYC</h2>
-                                        <span>
-                                            Olamide, it’s important you update your profile to increase your transaction and loan purpose
-                                        </span>
-                                    </div>
-                                </div>
-                
-                                <div class="pending-tasks-wrapper">
-                                    <div class="kyc-form-wrapper">
-                                        <div id="kyc-form" class="dashboard-form">
-                                            <div class="row">
-                                                    <div id="review-kyc-application">
-                                                        <div class="user-pix-div center mag-bottom-0">
-                                                        <img src="../images/completed.svg" alt="completed" class="user-pix" />
-                                                    </div>
-                                                    <div class="user-detected-notice center">
-                                                        <h1 class="modal-title">KYC submission succesful</h1>
-                                                        <p class="modal-desc">
-                                                            The details you provided are under review
-                                                        </p>
-                                                    </div>
-                                                    <div class="review-field flex-div" id="personal-info">
-                                                        <span class="review-field-txt">Personal Information</span>
-                                                        <img src="../images/pending-review-icon.svg" alt="pending-status" class="review-status-icon" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                  <div class="page-content-block-wrapper">
+                      <Switch>
+                          <!-- {/*---==== Contents Sections  ====---*/} -->
+                          <Route path="/dashboard">
+                              <Redirect href="/dashboard/home" />
+                          </Route>
+                          <Route path="/dashboard/home">
+                              <DashboardHome />
+                          </Route>
+                          <Route path="/dashboard/getting-started">
+                              <GettingStarted />
+                          </Route>
+                          <!-- {/*---==== end of Contents Sections  ====---*/} -->
+                      </Switch>
+                  </div>
+              </section>
               <!--=== end of Main Content ===-->
             </div>
         </div>
@@ -211,23 +188,27 @@
     <script src="../materialize.min.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elemsCollapsible = document.querySelectorAll('.collapsible');
-            M.Collapsible.init(elemsCollapsible);
+      document.addEventListener('DOMContentLoaded', function() {
+          var elemsCollapsible = document.querySelectorAll('.collapsible');
+          M.Collapsible.init(elemsCollapsible);
 
-            var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
-            M.Dropdown.init(elemsDropdown, {
-                constrainWidth: true,
-                coverTrigger: false
-            });
-        });
-
-        setTimeout(
-            function() {  
-                window.location="./getting-started.html"; 
-            } 
-        , 3000);
-        
+          var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+          M.Dropdown.init(elemsDropdown, {
+              constrainWidth: true,
+              coverTrigger: false,
+              hover: true
+          });
+      });
+      const balanceType = document.querySelector("#balance-type");
+      function showDiv(){
+          if(balanceType.value === 1){
+          document.getElementById('collection-block').style.display = "block";
+          document.getElementById('commision-block').style.display = "none";
+          } else{
+          document.getElementById('collection-block').style.display = "none";
+          document.getElementById('commision-block').style.display = "block";
+          }
+      } 
     </script>
   </body>
 </html>

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/top-nav.css">
     <link rel="stylesheet" href="../css/modals.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/customers.css">
   </head>
   <body>
 
@@ -162,45 +163,72 @@
                   </nav>
                   <!--=== end of Top-Nav Section ===-->
     
-                    <div class="page-content-block-wrapper">
-                        <div class="page-content-wrapper">
-                            <div class="container">
-                                <div class="page-header-wrapper">
-                                    <div class="left-align">
-                                        <h2 class="page-title">Complete your KYC</h2>
-                                        <span>
-                                            Olamide, it’s important you update your profile to increase your transaction and loan purpose
-                                        </span>
-                                    </div>
+                  <div class="page-content-block-wrapper">
+                    <div id="payout-details-page" class="page-content-wrapper">
+                        <div class="container">
+                            <a href="./payouts.html">
+                                <div class="go-back-wrapper flex-div gray-txt">
+                                    <img src='../images/back.svg' alt="" class="back-icon" />
+                                    <!-- <span>Back</span> -->
                                 </div>
-                
-                                <div class="pending-tasks-wrapper">
-                                    <div class="kyc-form-wrapper">
-                                        <div id="kyc-form" class="dashboard-form">
-                                            <div class="row">
-                                                    <div id="review-kyc-application">
-                                                        <div class="user-pix-div center mag-bottom-0">
-                                                        <img src="../images/completed.svg" alt="completed" class="user-pix" />
-                                                    </div>
-                                                    <div class="user-detected-notice center">
-                                                        <h1 class="modal-title">KYC submission succesful</h1>
-                                                        <p class="modal-desc">
-                                                            The details you provided are under review
-                                                        </p>
-                                                    </div>
-                                                    <div class="review-field flex-div" id="personal-info">
-                                                        <span class="review-field-txt">Personal Information</span>
-                                                        <img src="../images/pending-review-icon.svg" alt="pending-status" class="review-status-icon" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            </a>
+            
+                            <div class="page-bar-wrapper">
+                                <div class="page-bar-left flex-div justify-content-btw">
+                                    <div class="payout-cell-block">
+                                        <div class="payout-cell-title">Payout</div>
+                                        <div class="payout-cell-desc">NGN 1500.00</div>
+                                    </div>
+                                    <div class="vertical-divider">
+                                        <hr />
+                                    </div>
+                                    <div class="payout-cell-block">
+                                        <div class="payout-cell-title">Customer Name</div>
+                                        <div class="payout-cell-desc">Iya Micheal Store</div>
+                                    </div>
+                                    <div class="vertical-divider">
+                                        <hr />
+                                    </div>
+                                    <div class="payout-cell-block">
+                                        <div class="payout-cell-title">Payment Dated </div>
+                                        <div class="payout-cell-desc">Sat 06 Apirll, 2021</div>
+                                    </div>
+                                    <div class="vertical-divider">
+                                        <hr />
+                                    </div>
+                                    <div class="export-trigger-block flex-div">
+                                        <span>Export CSV</span>
+                                        <img src='../images/export.svg' alt="bill-icon" class="bill-icon" />
                                     </div>
                                 </div>
                             </div>
+            
+                            <div class="table-wrapper">
+                                <table id="customers-table">
+                                    <thead>
+                                        <tr>
+                                            <th>REFERENCE</th>
+                                            <th>WALLET</th>
+                                            <th>TOTAL AMOUNT</th>
+                                            <th>INCOME</th>
+                                            <th>DATE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>   
+                                        <tr>
+                                            <td>TRANS099002993</td>
+                                            <td class="gray-txt">Commission Wallet</td>
+                                            <td>NGN 10,000.10</td>
+                                            <td>NGN 1,500.00</td>
+                                            <td>Sun · 01 Sept, 04:25 AM</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </section>
+                  </div>
+              </section>
               <!--=== end of Main Content ===-->
             </div>
         </div>
@@ -218,16 +246,38 @@
             var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
             M.Dropdown.init(elemsDropdown, {
                 constrainWidth: true,
-                coverTrigger: false
+                coverTrigger: false,
+                hover: true
             });
+
+            var elemsModal = document.querySelectorAll('.modal');
+            M.Modal.init(elemsModal);
+
+            var elemSelect = document.querySelectorAll('select');
+            M.FormSelect.init(elemSelect);
+
+            var elemsPicker = document.querySelectorAll('.datepicker');
+            M.Datepicker.init(elemsPicker);
         });
 
-        setTimeout(
-            function() {  
-                window.location="./getting-started.html"; 
-            } 
-        , 3000);
-        
+        $(".filter-trigger").click(function(){
+            $(".filter-dropdown-content").slideToggle();
+        });
+
+        $(".clickable-row").click(function() {
+            window.location = $(this).data("href");
+        });
+
+        const balanceType = document.querySelector("#balance-type");
+        function showDiv(){
+            if(balanceType.value === 1){
+            document.getElementById('collection-block').style.display = "block";
+            document.getElementById('commision-block').style.display = "none";
+            } else{
+            document.getElementById('collection-block').style.display = "none";
+            document.getElementById('commision-block').style.display = "block";
+            }
+        } 
     </script>
   </body>
 </html>

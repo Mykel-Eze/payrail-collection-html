@@ -79,7 +79,7 @@
                                     </div>
                                 </li>
                                 <li class="link-wrapper">
-                                    <a href="/wallet" class="pg-link">
+                                    <a href="./wallet.html" class="pg-link">
                                         <div class="flex-div">
                                             <img src="../images/wallet-icon.svg" alt="icon" class="link-img" />
                                             <span class="link-txt">Wallet</span>
@@ -87,7 +87,7 @@
                                     </a>
                                 </li>
                                 <li class="link-wrapper">
-                                    <a href="/customers" class="pg-link">
+                                    <a href="./customers.html" class="pg-link">
                                         <div class="flex-div">
                                             <img src="../images/customers-icon.svg" alt="icon" class="link-img" />
                                             <span class="link-txt">Customers</span>
@@ -95,7 +95,7 @@
                                     </a>
                                 </li>
                                 <li class="link-wrapper">
-                                    <a href="/transactions" class="pg-link">
+                                    <a href="./transactions.html" class="pg-link">
                                         <div class="flex-div">
                                             <img src="../images/tranx-icon.svg" alt="icon" class="link-img" />
                                             <span class="link-txt">Transactions</span>
@@ -103,7 +103,7 @@
                                     </a>
                                 </li>
                                 <li class="link-wrapper">
-                                    <a href="/payout" class="pg-link">
+                                    <a href="./payouts.html" class="pg-link">
                                         <div class="flex-div">
                                             <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
                                             <span class="link-txt">Payout</span>
@@ -153,12 +153,143 @@
                                 <img src="../images/notification.svg" alt="icon" class="topnav-btn-img" />
                             </a>
                             <div class="create-account-wrapper">
-                                <a href="/signup" class="create-account-btn pry-bg">
+                                <a href="#make-collections-modal" class="create-account-btn pry-bg modal-trigger">
                                     <span>MAKE COLLECTION</span>
                                 </a>
                             </div>
                         </div>
                     </div>
+
+                    <!--=== Modals Section ===-->
+                    <div id="make-collections-modal" class="modal dashboardModal">
+                        <div class="modal-content">
+                            <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                            <div class="modal-content-block">
+                                <div class="modal-title-header">
+                                    <h1 class="modal-title">
+                                        Enter customer ID
+                                    </h1>
+                                    <p class="modal-desc gray-txt">
+                                        If you don’t know your customer ID, please kindly ask He/She. 
+                                    </p>
+                                </div>
+                                <div class="input-field">
+                                    <input type="tel" id="customer-phone" class="inp-field" />
+                                    <label for="customer-phone">Customer Phone number</label>
+                                </div>
+                                <div class="modal-notice gray-txt">
+                                    You can’t access He/She? Go to <a href="./customer.html" class="pry-color">Customer Page</a>
+                                </div>
+                                <div class="submit-btn-wrapper">
+                                    <button class="pry-btn continue-btn dashboard-modal-btn flex-div modal-trigger modal-close" data-target="customer-details-modal">
+                                        <span>Continue</span> <span class='right-arr'>&rsaquo;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="customer-details-modal" class="modal dashboardModal">
+                        <div class="modal-content rel">
+                            <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                            <div class="modal-content-block">
+                                <div class="modal-title-header">
+                                    <h1 class="modal-title">
+                                        Customer Details
+                                    </h1>
+                                </div>
+                                <div class="collections-scroll">
+                                    <div class="customer-id-block">
+                                        <div class="cib-row flex-div justify-content-btw">
+                                            <span class="cib-title">Customer ID</span>
+                                            <span class="cib-desc">
+                                                <a href="tel:+2348148620099" class="cib-call-link">+2348148620099</a>
+                                            </span>
+                                        </div>
+                                        <div class="cib-row flex-div justify-content-btw">
+                                            <span class="cib-title">Name</span>
+                                            <span class="cib-desc cib-big-txt">Iya Micheal Store</span>
+                                        </div>
+                                    </div>
+                                    <div class="collection-details-wrapper">
+                                        <div class="customer-collection-details">
+                                            <div class="ccd-block">
+                                                <div class="ccd-block-title">Item Description</div>
+                                                <div class="ccd-block-desc">10 • Bags of Rice • 50kg</div>
+                                            </div>
+                                            <div class="ccd-block">
+                                                <div class="ccd-block-title">Merchant</div>
+                                                <div class="ccd-block-desc">Capricon foods Nig. Limited</div>
+                                            </div>
+                                            <div class="ccd-block">
+                                                <div class="ccd-block-title">Debt</div>
+                                                <div class="ccd-block-desc bold-txt">₦1,428,000</div>
+                                            </div>
+                                            <div class="ccd-block">
+                                                <div class="ccd-block-desc">
+                                                    <u>2B Arogunbiade Street, Oshodi LCDA, Lagos, Nigeria </u>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="collection-history flex-div">
+                                            <div class="ch-txt">Collection History</div>
+                                            <div class="ch-label">Due in 28 Days</div>
+                                            <div class="show-collection-details pry-color bold-txt pointer">SHOW DETAILS</div>
+                                        </div>
+                                        <div class="more-collection-details" hidden>
+                                            <div class="customer-collection-details">
+                                                <div class="ccd-block">
+                                                    <div class="ccd-block-title">Adebayo • Agent ID: 182101</div>
+                                                    <div class="ccd-block-desc bold-txt">₦50,000.00</div>
+                                                </div>
+                                                <div class="ccd-block">
+                                                    <div class="ccd-block-title">Collection Date</div>
+                                                    <div class="ccd-block-desc">Jan 12, 2022</div>
+                                                </div>
+                                                <div class="ccd-block">
+                                                    <div class="ccd-block-title">Emeka • Agent ID: 546219</div>
+                                                    <div class="ccd-block-desc bold-txt">₦22,000.00</div>
+                                                </div>
+                                                <div class="ccd-block">
+                                                    <div class="ccd-block-title">Collection Date</div>
+                                                    <div class="ccd-block-desc bold-txt">Dec 1, 2021</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="gray-divider" />
+                                        <div class="collection-btn-wrapper center">
+                                            <button class="make-collection-btn pry-bg">Make collection</button>
+                                            <div class="create-reminder-trigger">Create a reminder</div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="collection-modal-footer">
+                                    <div class="collection-debt-figures">
+                                        <div class="cbf-row flex-div justify-content-btw">
+                                            <div class="cbf-row-title">Total Debt</div>
+                                            <div class="cbf-row-desc">₦2,450,000.00</div>
+                                        </div>
+                                        <div class="cbf-row flex-div justify-content-btw">
+                                            <div class="cbf-row-title">Remaining Debt</div>
+                                            <div class="cbf-row-desc cbf-big-txt">₦2,278,000.00</div>
+                                        </div>
+                                        <hr class="gray-divider" />
+                                        <div class="cbf-row cbf-row-2 flex-div justify-content-btw">
+                                            <div class="cbf-row-title">Phone Number</div>
+                                            <div class="cbf-row-desc">
+                                                <a href="tel:+2348148620099" class="cbf-call flex-div">
+                                                    <u class="bold-txt">+2348148620099</u>
+                                                    <img src="../images/call-2.svg" alt="call" class="call-icon-2" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=== end of Modals Section ===-->
                 </nav>
                 <!--=== end of Top-Nav Section ===-->
 
@@ -377,32 +508,35 @@
     <script src="../materialize.min.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          var elemsCollapsible = document.querySelectorAll('.collapsible');
-          M.Collapsible.init(elemsCollapsible);
+         document.addEventListener('DOMContentLoaded', function() {
+            var elemsCollapsible = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(elemsCollapsible);
 
-          var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
-          M.Dropdown.init(elemsDropdown, {
-              constrainWidth: true,
-              coverTrigger: false,
-              hover: true
-          });
+            var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(elemsDropdown, {
+                constrainWidth: true,
+                coverTrigger: false,
+                hover: true
+            });
 
-          var elemSelect = document.querySelectorAll('select');
-          M.FormSelect.init(elemSelect, {
-              coverTrigger: false
-          });
-      });
-      const balanceType = document.querySelector("#balance-type");
-      function showDiv(){
-          if(balanceType.value === 1){
-          document.getElementById('collection-block').style.display = "block";
-          document.getElementById('commision-block').style.display = "none";
-          } else{
-          document.getElementById('collection-block').style.display = "none";
-          document.getElementById('commision-block').style.display = "block";
-          }
-      } 
+            var elemSelect = document.querySelectorAll('select');
+            M.FormSelect.init(elemSelect, {
+                coverTrigger: false
+            });
+
+            var elemsModal = document.querySelectorAll('.modal');
+            M.Modal.init(elemsModal);
+        });
+        const balanceType = document.querySelector("#balance-type");
+        function showDiv(){
+            if(balanceType.value === 1){
+            document.getElementById('collection-block').style.display = "block";
+            document.getElementById('commision-block').style.display = "none";
+            } else{
+            document.getElementById('collection-block').style.display = "none";
+            document.getElementById('commision-block').style.display = "block";
+            }
+        } 
     </script>
   </body>
 </html>
