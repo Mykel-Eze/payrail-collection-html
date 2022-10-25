@@ -28,19 +28,19 @@
               <section id="side-bar">
                   <div class="container">
                       <div class='user-block-wrapper'>
-                          <div class="dropdown-trigger flex-div" data-target="user-dropdown">
-                              <div class="user-details flex-div">
-                                    <!-- See: https://github.com/ambassify/react-avatar  for React-Avatar-->
-                                    <img src="../images/default-avatar.svg" alt="Olamide Olagunju" class="no-user-avatar">
-                                </div>
-                              <div class="user-name-details">
-                                  <div class="user-name-txt bold-txt truncate">Olamide Olagunju</div>
-                                  <div class="user-role">Agent</div>
-                              </div>
-                              <div class="caret-div">
-                                  <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
-                              </div>
-                          </div>
+                        <div class="dropdown-trigger flex-div" data-target="user-dropdown">
+                            <div class="user-details flex-div">
+                                <!-- See: https://github.com/ambassify/react-avatar  for React-Avatar-->
+                                <img src="../images/default-avatar.svg" alt="Olamide Olagunju" class="no-user-avatar">
+                            </div>
+                            <div class="user-name-details">
+                                <div class="user-name-txt bold-txt truncate">Unilever Nigeria</div>
+                                <div class="user-role">Olamide Olagunju</div>
+                            </div>
+                            <div class="caret-div">
+                                <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
+                            </div>
+                        </div>
                           <ul id='user-dropdown' class='dropdown-content'>
                               <li>
                                   <a href="#!">Go to profile</a>
@@ -104,12 +104,12 @@
                                       </a>
                                   </li>
                                   <li class="link-wrapper">
-                                      <a href="./payouts.html" class="pg-link">
-                                          <div class="flex-div">
-                                              <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
-                                              <span class="link-txt">Payout</span>
-                                          </div>
-                                      </a>
+                                    <a href="./inventory.html" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Inventory</span>
+                                        </div>
+                                    </a>
                                   </li>
                                   <li class="link-wrapper">
                                       <a href="/#" class="pg-link">
@@ -164,12 +164,12 @@
                   <!--=== end of Top-Nav Section ===-->
     
                   <div class="page-content-block-wrapper">
-                    <div id="payouts-page" class="page-content-wrapper">
+                    <div id="transactions-page" class="page-content-wrapper">
                         <div class="container">
                             <div class="page-title-wrapper">
                                 <h4 class="page-content-title flex-div">
-                                    <span>Payouts </span>
-                                    <small class="page-label-tag">· 4</small>
+                                    <span>Transactions </span>
+                                    <small class="page-label-tag">· 3</small>
                                 </h4>
                             </div>
             
@@ -196,12 +196,28 @@
                                                 <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
                                             </div>
                                             <div class="input-field single-field rel">
-                                                <input type="text" id="start-date" class="form-inp-field datepicker" />
-                                                <label for="start-date">Start Date </label>
+                                                <input type="text" id="agent-id" class="form-inp-field" />
+                                                <label for="agent-id" class="active">Agent ID</label>
                                             </div>
-                                            <div class="input-field single-field rel">
-                                                <input type="text" id="end-date" class="form-inp-field datepicker" />
-                                                <label for="end-date">End Date </label>
+                                            <div class="select-field input-field single-field rel">
+                                                <select id="date-period">
+                                                    <option value="All Time">All Time</option>
+                                                    <option value="Yesterday">Yesterday</option>
+                                                    <option value="This Week">This Week</option>
+                                                    <option value="This Month">This Month</option>
+                                                    <option value="This Year">This Year</option>
+                                                </select>
+                                                <label for="date-period" class="active">Date Period </label>
+                                                <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                            </div>
+                                            <div class="select-field input-field single-field rel">
+                                                <select id="type">
+                                                    <option value="Payout">Payout</option>
+                                                    <option value="Deposit">Deposit</option>
+                                                    <option value="Payment">Payment</option>
+                                                </select>
+                                                <label for="type" class="active">Type </label>
+                                                <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
                                             </div>
             
                                             <div class="filter-btns-wrapper">
@@ -232,41 +248,92 @@
                                 <table id="customers-table">
                                     <thead>
                                         <tr>
-                                            <th>PAY DAY</th>
-                                            <th>RECIPIENT</th>
-                                            <th>TOTAL AMOUNT</th>
-                                            <th>PAYOUT</th>
                                             <th>STATUS</th>
+                                            <th>REFERENCE</th>
+                                            <th>TRANSACTION INFORMATION</th>
+                                            <th>TYPE</th>
+                                            <th>DATE</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
-                                    <tbody>   
-                                        <tr class="clickable-row" data-href="./payoutsDetails.html">
-                                            <td>01 Oct, 2021</td>
-                                            <td class="gray-txt">Payrail</td>
-                                            <td>NGN 10,000.10</td>
-                                            <td>NGN 1500.00</td>
-                                            <td>Successful</td>
-                                        </tr>      
-                                        <tr class="clickable-row" data-href="./payoutsDetails.html">
-                                            <td>30 Mar, 2021 </td>
-                                            <td class="gray-txt">Payrail</td>
-                                            <td>NGN 2,000.52</td>
-                                            <td>NGN 20.52</td>
-                                            <td>Successful</td>
+                                    <tbody>                           
+                                        <tr>
+                                            <td>
+                                                <div class="flex-div">
+                                                    <img src="../images/received-icon.svg" alt="transaction icon" class="tranx-activity-icon" />
+                                                    <div class="tranx-activity-details">
+                                                        <div class="tranx-activity">Recieved</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span>PC08148620099</span>
+                                            </td>
+                                            <td>
+                                                <span class="tranxn-amount">+ ₦10,000</span>
+                                                <span class="gray-txt"> • Adebayo • Agent: 182101</span>
+                                            </td>
+                                            <td>
+                                                <span>Collection</span>
+                                            </td>
+                                            <td>
+                                                <span>01 Sept, 04:25 AM</span>
+                                            </td>
+                                            <td>
+                                                <img src="../images/menu-circle.svg" alt="icon" class="table-menu-circle" />
+                                            </td>
                                         </tr>
-                                        <tr class="clickable-row" data-href="./payoutsDetails.html">
-                                            <td>06 Apirl, 2021</td>
-                                            <td class="gray-txt">Payrail</td>
-                                            <td>NGN 4,000.15</td>
-                                            <td>NGN 40.15</td>
-                                            <td>Successful</td>
+                                        <tr>
+                                            <td>
+                                                <div class="flex-div">
+                                                    <img src="../images/received-icon.svg" alt="transaction icon" class="tranx-activity-icon" />
+                                                    <div class="tranx-activity-details">
+                                                        <div class="tranx-activity">Recieved</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span>PC081486200YH</span>
+                                            </td>
+                                            <td>
+                                                <span class="tranxn-amount">+ ₦10,000</span>
+                                                <span class="gray-txt">. Olamide. Agent: 2345</span>
+                                            </td>
+                                            <td>
+                                                <span>Collection </span>
+                                            </td>
+                                            <td>
+                                                <span>28 Aug, 01:50 PM</span>
+                                            </td>
+                                            <td>
+                                                <img src="../images/menu-circle.svg" alt="icon" class="table-menu-circle" />
+                                            </td>
                                         </tr>
-                                        <tr class="clickable-row" data-href="./payoutsDetails.html">
-                                            <td>30 Mar, 2021 </td>
-                                            <td class="gray-txt">Payrail</td>
-                                            <td>NGN 1,300.49</td>
-                                            <td>NGN 130.49</td>
-                                            <td>Successful</td>
+                                        <tr>
+                                            <td>
+                                                <div class="flex-div">
+                                                    <img src="../images/send-icon.svg" alt="transaction icon" class="tranx-activity-icon" />
+                                                    <div class="tranx-activity-details">
+                                                        <div class="tranx-activity">Processed</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span>PC0814HGHS99</span>
+                                            </td>
+                                            <td>
+                                                <span class="tranxn-amount">- ₦10,000</span>
+                                                <span class="gray-txt">. Unilever Ng • GT Bank: 1099826517</span>
+                                            </td>
+                                            <td>
+                                                <span>Payment </span>
+                                            </td>
+                                            <td>
+                                                <span>20 Aug, 02:25 PM</span>
+                                            </td>
+                                            <td>
+                                                <img src="../images/menu-circle.svg" alt="icon" class="table-menu-circle" />
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -295,23 +362,15 @@
                 coverTrigger: false,
                 hover: true
             });
-
             var elemsModal = document.querySelectorAll('.modal');
             M.Modal.init(elemsModal);
 
             var elemSelect = document.querySelectorAll('select');
             M.FormSelect.init(elemSelect);
-
-            var elemsPicker = document.querySelectorAll('.datepicker');
-            M.Datepicker.init(elemsPicker);
         });
 
         $(".filter-trigger").click(function(){
             $(".filter-dropdown-content").slideToggle();
-        });
-
-        $(".clickable-row").click(function() {
-            window.location = $(this).data("href");
         });
 
         const balanceType = document.querySelector("#balance-type");
