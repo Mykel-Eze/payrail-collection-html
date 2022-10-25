@@ -179,21 +179,10 @@
                                             </h4>
             
                                             <div class="flex-div balance-btns-wrapper">
-                                                <button class="balance-btn pry-btn">
+                                                <button class="balance-btn pry-btn modal-trigger" data-target="add-money-modal">
                                                     Add money <span>&rsaquo;</span>
                                                 </button>
-                                                <button class="balance-btn sec-btn">
-                                                    Withdraw <span>&rsaquo;</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div id="commision-block" hidden>
-                                            <h4 class="wallet-balance bold-txt">
-                                                <small >₦</small>10,000.09
-                                            </h4>
-            
-                                            <div class="flex-div balance-btns-wrapper">
-                                                <button class="balance-btn sec-btn">
+                                                <button class="balance-btn sec-btn modal-trigger" data-target="withdraw-money-modal">
                                                     Withdraw <span>&rsaquo;</span>
                                                 </button>
                                             </div>
@@ -389,6 +378,283 @@
               </section>
               <!--=== end of Main Content ===-->
             </div>
+
+            <!--=== Modals Section ===-->
+            <!-- Add-Money-Modal -->
+            <div id="add-money-modal" class="modal dashboardModal">
+                <div class="modal-content">
+                    <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                    <div class="modal-content-block">
+                        <div class="modal-title-header">
+                            <h1 class="modal-title">
+                                Fund your Payrail Wallet
+                            </h1>
+                        </div>
+                        <div class="fund-options-wrapper">
+                            <ul class="tabs fund-option-tabs">
+                                <li class="tab">
+                                    <a class="active" href="#ussd-option">
+                                        <div class="flex-div option-state-button">
+                                            <img src="../images/ussd-black.svg" alt="ussd" class="default-state-icon">
+                                            <img src="../images/ussd-white.svg" alt="ussd" class="active-state-icon">
+                                            <span>USSD CODE</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="tab">
+                                    <a href="#bank-option">
+                                        <div class="flex-div option-state-button">
+                                            <img src="../images/bank-black.svg" alt="bank" class="default-state-icon">
+                                            <img src="../images/bank-white.svg" alt="bank" class="active-state-icon">
+                                            <span>Bank Transfer</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fund-options-content">
+                            <div id="ussd-option">
+                                <div class="fund-option-desc gray-txt">
+                                    Fund your Payrail wallet using USSD transfer from your other bank.
+                                </div>
+                                <div class="wallet-balance-block">
+                                    <div class="wbb-title">Wallet Balance</div>
+                                    <div class="wbb-figure">
+                                        <small>₦</small>35,000,000.09
+                                    </div>
+                                </div>
+
+                                <div class="ussd-details-wrapper">
+                                    <div class="input-field single-field prefix-field">
+                                        <input type="tel" class="inp-field" id="wallet-amt" placeholder="0">
+                                        <label for="wallet-amt">Amount</label>
+                                        <span class="currency-prefix">₦</span>
+                                    </div>
+                                    <div class="select-field input-field single-field rel">
+                                        <select id="wallet-banks">
+                                            <option selected disabled value="">Select Bank</option>
+                                            <option value="GTBank">GTBank</option>
+                                            <option value="Zenith Bank">Zenith Bank</option>
+                                            <option value="UBA">UBA</option>
+                                            <option value="Union Bank">Union Bank</option>
+                                            <option value="Fidelity Bank">Fidelity Bank</option>
+                                        </select>
+                                        <label for="wallet-banks" class="active">Your Bank Name </label>
+                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                    </div>
+                                    <div class="ussd-codes-wrapper">
+                                        <div class="ucw-txt gray-txt">Your USSD Code</div>
+                                        <div class="ussd-code-block flex-div justify-content-btw">
+                                            <span class="bold-txt">*737*2*10000*00912345686#</span>
+                                            <img src="../images/copy-icon.svg" alt="copy" class="copy-icon" onclick='CopyToClipboard("ussd-number")'>
+                                            <input type="text" id="ussd-number" value="*737*2*10000*00912345686#" hidden>
+                                        </div>
+                                        <div class="wallet-details-block-notice">
+                                            Dail the code on your device and follow the prompt
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="bank-option">
+                                <div class="fund-option-desc gray-txt">
+                                    Make a transfer to fund your Payrail Wallet using the account details below.
+                                </div>
+                                <div class="wallet-balance-block">
+                                    <div class="wbb-title">Wallet Balance</div>
+                                    <div class="wbb-figure">
+                                        <small>₦</small>35,000,000.09
+                                    </div>
+                                </div>
+                                <div class="wallet-bank-details">
+                                    <div class="wbb-row flex-div justify-content-btw">
+                                        <div class="wbb-row-title gray-txt">Bank</div>
+                                        <div class="wbb-row-desc">Angala MFB</div>
+                                    </div>
+                                    <div class="wbb-row flex-div justify-content-btw">
+                                        <div class="wbb-row-title gray-txt">Account</div>
+                                        <div class="wbb-row-desc">Ogbous Venture LTD</div>
+                                    </div>
+                                    <div class="wbb-row flex-div justify-content-btw">
+                                        <div class="wbb-row-title gray-txt">Acount Number</div>
+                                        <div class="wbb-row-desc">
+                                            <div class="flex-div">
+                                                <span>00912345686</span>
+                                                <img src="../images/copy-icon.svg" alt="copy-icon" class="copy-icon" onclick='CopyToClipboard("wallet-acct-number")'>
+                                            </div>
+                                            <input type="text" id="wallet-acct-number" value="00912345686" hidden>
+                                        </div>
+                                    </div>
+
+                                    <hr class="gray-divider">
+
+                                    <div class="wallet-details-block-notice">
+                                        Accept transfer from all banks
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Withdraw-Money-Modal -->
+            <div id="withdraw-money-modal" class="modal dashboardModal">
+                <div class="modal-content">
+                    <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                    <div class="modal-content-block">
+                        <div class="modal-title-header">
+                            <h1 class="modal-title">
+                                Withdraw
+                            </h1>
+                            <div class="wallet-balance-block">
+                                <div class="wbb-title">Wallet Balance</div>
+                                <div class="wbb-figure">
+                                    <small>₦</small>35,000,000.09
+                                </div>
+                            </div>
+
+                            <form action="#" id="withdrawal-form">
+                                <div class="input-field single-field prefix-field">
+                                    <input type="tel" class="inp-field" id="withdrawal-amt" placeholder="0">
+                                    <label for="withdrawal-amt">Amount</label>
+                                    <span class="currency-prefix">₦</span>
+                                    <div class="transaction-fee">₦25 Transaction Fee</div>
+                                </div>
+                                <div class="select-field input-field single-field rel saved-accounts-wrapper">
+                                    <select id="saved-accounts">
+                                        <option selected disabled value="">Select a account</option>
+                                        <option value="Olamide . GTBank - 0123456712">Olamide . GTBank - 0123456712</option>
+                                        <option value="Bose Ayo . Zenith Bank - 0123456712">Bose Ayo . Zenith Bank - 0123456712</option>
+                                        <option value="Victory . Zenith Bank - 0902903022">Victory . Zenith Bank - 0902903022</option>
+                                    </select>
+                                    <label for="wallet-banks" class="active">Your Bank Name </label>
+                                    <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+
+                                    <div class="new-account-trigger">New Account</div>
+                                </div>
+
+                                <div class="new-account-wrapper" hidden>
+                                    <div class="select-field input-field single-field rel">
+                                        <select id="new-user-bank">
+                                            <option selected disabled value="">Select Bank</option>
+                                            <option value="GTBank">GTBank</option>
+                                            <option value="Zenith Bank">Zenith Bank</option>
+                                            <option value="UBA">UBA</option>
+                                            <option value="Union Bank">Union Bank</option>
+                                            <option value="Fidelity Bank">Fidelity Bank</option>
+                                        </select>
+                                        <label for="new-user-bank" class="active">Bank </label>
+                                        <img src="../images/caret-down.svg" alt="caret" class="inp-caret-icon" />
+                                    </div>
+                                    <div class="input-field single-field">
+                                        <input type="tel" class="inp-field" id="new-user-acct-number">
+                                        <label for="new-user-acct-number">Account Number</label>
+                                    </div>
+
+                                    <div class="saved-accounts-trigger">Choose saved account</div>
+                                </div>
+
+                                <div class="submit-btn-wrapper">
+                                    <button class="pry-btn continue-btn dashboard-modal-btn flex-div modal-trigger modal-close" data-target="enter-otp-modal">
+                                        <span>Done</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enter-OTP-Modal -->
+            <div id="enter-otp-modal" class="modal dashboardModal">
+                <div class="modal-content">
+                    <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                    <div class="modal-content-block">
+                        <div class="modal-title-header">
+                            <h1 class="modal-title">
+                                Enter the verification code
+                            </h1>
+                        </div>
+                        <div class="input-row row">
+                            <div id="verification-codes">
+                                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                            </div>
+                            <div class="input-error-txt" hidden>Verification error or invalid. Request new one!</div>
+                        </div>
+                        <div class="modal-notice gray-txt">
+                            Did’nt get OTP? <a href="#" class="pry-color">Resend</a>
+                        </div>
+                        <div class="submit-btn-wrapper">
+                            <button class="pry-btn continue-btn dashboard-modal-btn sbw-btn modal-trigger modal-close" data-target="transaction-pin-modal">
+                                <span>Verify</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transaction-PIN-Modal -->
+            <div id="transaction-pin-modal" class="modal dashboardModal tranx-pin-modal">
+                <div class="modal-content">
+                    <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                    <div class="modal-content-block">
+                        <div class="modal-title-header">
+                            <h1 class="modal-title">
+                                Enter transaction PIN
+                            </h1>
+                            <p class="modal-desc gray-txt">
+                                Enter your 4-digit Payrail PIN to approve this withdrawer 
+                            </p>
+                        </div>
+                        <div class="input-row row">
+                            <div id="pin-codes">
+                                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" placeholder="-" />
+                            </div>
+                            <div class="input-error-txt" hidden>Transaction PIN invalid.</div>
+                        </div>
+                        <div class="modal-notice gray-txt">
+                            Got trouble? Reset your PIN in <a href="../merchant-pages/settings-security-change-pin.html" class="pry-color">account security settings </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment-Successful-Modal -->
+            <div id="payment-successful-modal" class="modal dashboardModal">
+                <div class="modal-content">
+                    <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                    <div class="modal-content-block">
+                        <div class="success-wrapper center">
+                            <img src="../images/completed.svg" alt="congrats" class="success-img" />
+                            <h1 class="success-title">Awesome</h1>
+                            <p class="success-desc">
+                                You just made a transfer to Olamide. View details in the
+                                <a href="./transactions.html" class="pry-color">Transaction Page</a>
+                            </p>
+                            <div class="share-receipt-wrapper flex-div justify-content-btw center">
+                                <div class="share-receipt-block">
+                                    <img src="../images/save-user.svg" alt="save" class="share-r-img pointer">
+                                    <div>Save Account</div>
+                                </div>
+                                <div class="share-receipt-block">
+                                    <img src="../images/share.svg" alt="share" class="share-r-img pointer">
+                                    <div>Share Reciept</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--=== end of Modals Section ===-->
         </div>
     </div>
     
@@ -412,6 +678,12 @@
             M.FormSelect.init(elemSelect, {
                 coverTrigger: false
             });
+
+            var elemsModal = document.querySelectorAll('.modal');
+            M.Modal.init(elemsModal);
+
+            var elemsTabs = document.querySelectorAll('.tabs');
+            M.Tabs.init(elemsTabs);
         });
         const CopyToClipboard = (selectedId) => {
             /* Get the text field */
@@ -437,6 +709,66 @@
             document.getElementById('commision-block').style.display = "block";
             }
         } 
+
+        $("#pin-codes input:last-child").keyup(function(){
+            $('#payment-successful-modal').modal('open')
+            $('.tranx-pin-modal').modal('close')
+        })
+        $(".new-account-trigger").click(function(){
+            $(".new-account-wrapper").slideDown();
+            $(".saved-accounts-wrapper").slideUp();
+        })
+        $(".saved-accounts-trigger").click(function(){
+            $(".saved-accounts-wrapper").slideDown();
+            $(".new-account-wrapper").slideUp();
+        })
+
+        // OTP input Script
+        $(function () {
+            'use strict';
+
+            var body = $('body');
+
+            function goToNextInput(e) {
+                var key = e.which,
+                    t = $(e.target),
+                    sib = t.next('input');
+
+                if (key != 9 && (key < 48 || key > 57)) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                if (key === 9) {
+                    return true;
+                }
+
+                if (!sib || !sib.length) {
+                    sib = body.find('input').eq(0);
+                }
+                sib.select().focus();
+            }
+
+            function onKeyDown(e) {
+                var key = e.which;
+
+                if (key === 9 || (key >= 48 && key <= 57)) {
+                    return true;
+                }
+
+                e.preventDefault();
+                return false;
+            }
+
+            function onFocus(e) {
+                $(e.target).select();
+            }
+
+            body.on('keyup', 'input', goToNextInput);
+            body.on('keydown', 'input', onKeyDown);
+            body.on('click', 'input', onFocus);
+
+        });
     </script>
   </body>
 </html>

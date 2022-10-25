@@ -322,8 +322,11 @@ p.success-desc a.pry-color {
     margin-bottom: 10px;
 }
 .daterangepicker {
-    top: 15% !important;
+    top: 40% !important;
     left: 32% !important;
+}
+.daterangepicker td {
+    padding: 0;
 }
 .daterangepicker td.active, .daterangepicker td.active:hover {
     background-color: var(--pry-color);
@@ -359,3 +362,139 @@ p.success-desc a.pry-color {
     margin-left: 10px;
 }
 /*---=== end of DashboardModals--2 ===---*/
+
+/*---=== Add/Withdraw-Money-Modals ===---*/
+.default-state-icon {
+    display: initial;
+}
+.active-state-icon {
+    display: none;
+}
+.active .default-state-icon {
+    display: none;
+}
+.active .active-state-icon {
+    display: initial;
+}
+.fund-options-wrapper {
+    margin: 30px 0;
+}
+ul.tabs.fund-option-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul.tabs.fund-option-tabs .indicator {
+    display: none;
+}
+ul.tabs.fund-option-tabs a {
+    height: 46px;
+    color: #353D46 !important;
+    background: #FCF9FA !important;
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    border-radius: 10px;
+    font-size: 13px;
+    width: 200px;
+    justify-content: center;
+}
+ul.tabs.fund-option-tabs a.active {
+    background: var(--pry-color) !important;
+    color: white !important;
+    border-color: var(--pry-color);
+}
+.flex-div.option-state-button {
+    justify-content: center;
+}
+.flex-div.option-state-button img {
+    margin-right: 10px;
+}
+.fund-option-desc.gray-txt {
+    margin: 20px 0 15px;
+}
+.wallet-balance-block {
+    background: #F9F9F9;
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+.wbb-title {
+    font-size: 16px;
+}
+.wbb-figure {
+    font-size: 30px;
+    font-family: var(--font-medium);
+}
+hr.gray-divider {
+    height: 0.5px;
+    background-color: rgba(119, 119, 119, 0.5);
+    border: none;
+}
+.wallet-bank-details {
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin: 30px 0 20px;
+}
+.wbb-row.flex-div {
+    margin: 20px 0;
+    font-size: 16px;
+}
+.wbb-row.flex-div:first-child {
+    margin: 0;
+}
+.wallet-details-block-notice {
+    font-size: 12px;
+    color: #979797;
+}
+.wbb-row-desc {
+    font-weight: bold;
+}
+.wallet-details-block-notice {
+    font-size: 12px;
+    color: #979797;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.wbb-row-desc img.copy-icon {
+    margin-left: 10px;
+}
+.ussd-details-wrapper {
+    margin-top: 45px;
+}
+.ussd-codes-wrapper {
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+.ucw-txt {
+    font-size: 16px;
+}
+.ussd-code-block.flex-div {
+    font-size: 18px;
+    margin-top: 5px;
+}
+button.pry-btn.continue-btn {
+    color: white;
+}
+.transaction-fee {
+    font-size: 13px;
+    text-decoration-line: underline;
+    color: #9296A6;
+    padding-left: 20px;
+}
+.saved-accounts-wrapper, .new-account-wrapper {
+    margin-top: 30px;
+}
+.new-account-trigger, .saved-accounts-trigger {
+    font-size: 13px;
+    text-decoration-line: underline;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.share-receipt-wrapper.flex-div.justify-content-btw {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*---=== end of Add/Withdraw-Money-Modals ===---*/
