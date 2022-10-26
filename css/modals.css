@@ -551,4 +551,46 @@ form#add-customer-form .input-field {
 form#add-customer-form .input-field input.inp-field {
     margin-bottom: 0 !important;
 }
+
+p.page-content-desc.gray-txt {
+    margin-top: -10px;
+}
+.umm-mag-top {
+    margin-top: 50px;
+}
+.upload-method-btn {
+    font-size: 12px;
+    height: 42px;
+    width: 160px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.upload-method-btn.sec-btn {
+    background: #FCF9FA;
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    color: #353D46;
+}
+.upload-method-btn.pry-btn {
+    background: var(--pry-color);
+    color: white;
+}
+a.upload-method-btn.pry-btn {
+    text-align: center;
+    line-height: 42px;
+}
+.upload-instruction-title {
+    font-size: 18px;
+    font-family: var(--font-medium);
+}
+p.upload-instruction.gray-txt {
+    margin-top: 5px;
+    font-size: 13px;
+}
+.upload-instructions-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0 25px;
+}
 /*---=== end of Customer-Modals ===---*/

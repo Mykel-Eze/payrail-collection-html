@@ -282,7 +282,7 @@
                                                 <img src="../images/export.svg" alt="bill-icon" class="bill-icon" />
                                             </div>
                                             <div class="add-btn-wrapper">
-                                                <button class="add-trigger-btn modal-trigger" data-target="add-new-customer-modal">
+                                                <button class="add-trigger-btn modal-trigger" data-target="upload-method-modal">
                                                     &#43; Add Customers
                                                 </button>
                                             </div>
@@ -305,59 +305,59 @@
                                             </thead>
                                             <tbody>                           
                                                 <tr>
-                                                    <td>
+                                                    <td class="modal-trigger" data-target="customer-details-modal">
                                                         <span class="status-disc green"></span>
                                                     </td>
-                                                    <td>0814862009</td>
+                                                    <td class="modal-trigger bold-txt" data-target="customer-details-modal">0814862009</td>
                                                     <td>Iya Micheal Store</td>
                                                     <td class="gray-txt">10 Bags of Rice</td>
                                                     <td>Oshodi, Lagos</td>
                                                     <td class="green-text">₦900,000</td>
                                                     <td class="orange-text">₦100,000</td>
                                                     <td>
-                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" />
+                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" data-target="contact-details-modal" />
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
+                                                    <td class="modal-trigger" data-target="customer-details-modal">
                                                         <span class="status-disc green"></span>
                                                     </td>
-                                                    <td>09014873110</td>
+                                                    <td class="modal-trigger bold-txt" data-target="customer-details-modal">09014873110</td>
                                                     <td>Bola Grocery Store</td>
                                                     <td class="gray-txt">8 Cartons of Sunlight...</td>
                                                     <td>Oshodi, Lagos</td>
                                                     <td class="default-text">₦0</td>
                                                     <td class="orange-text">₦99,980</td>
                                                     <td>
-                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" />
+                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" data-target="contact-details-modal" />
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
+                                                    <td class="modal-trigger" data-target="customer-details-modal">
                                                         <span class="status-disc red"></span>
                                                     </td>
-                                                    <td>08025982221</td>
+                                                    <td class="modal-trigger bold-txt" data-target="customer-details-modal">08025982221</td>
                                                     <td>Okon and Sons</td>
                                                     <td class="gray-txt">4 Cartons of Croack...</td>
                                                     <td>Ikeja, Lagos</td>
                                                     <td class="green-text">₦250,000</td>
                                                     <td class="orange-text">₦500,000</td>
                                                     <td>
-                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" />
+                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" data-target="contact-details-modal" />
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
+                                                    <td class="modal-trigger" data-target="customer-details-modal">
                                                         <span class="status-disc green"></span>
                                                     </td>
-                                                    <td>08136093532</td>
+                                                    <td class="modal-trigger bold-txt" data-target="customer-details-modal">08136093532</td>
                                                     <td>Iya Barakatu</td>
                                                     <td class="gray-txt">8 Bags of Beans</td>
                                                     <td>Ajayi Farms, Lagos </td>
                                                     <td class="default-text">₦0</td>
                                                     <td class="orange-text">₦1,000,000</td>
                                                     <td>
-                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" />
+                                                        <img src="../images/call.svg" alt="call" class="call-info-trigger modal-trigger" data-target="contact-details-modal" />
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -456,7 +456,7 @@
                                                 <img src="../images/export.svg" alt="bill-icon" class="bill-icon" />
                                             </div>
                                             <div class="add-btn-wrapper">
-                                                <button class="add-trigger-btn modal-trigger" data-target="add-new-customer-modal">
+                                                <button class="add-trigger-btn modal-trigger" data-target="upload-method-modal">
                                                     &#43; Add Customers
                                                 </button>
                                             </div>
@@ -530,6 +530,126 @@
               </section>
               <!--=== end of Main Content ===-->
             </div>
+
+
+            <!--=== Modals Section ===-->
+            <!-- Upload-Method-Modal -->
+            <div id="upload-method-modal" class="modal dashboardModal">
+                <div class="modal-content">
+                    <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                    <div class="modal-content-block">
+                        <div class="modal-title-header">
+                            <h1 class="modal-title">
+                                Choose upload method
+                            </h1>
+                            <p class="modal-desc gray-txt">
+                                Ensure you follow the sample format for bulk upload
+                            </p>
+                        </div>
+                        <div class="umm-mag-top">
+                            <hr class="gray-divider">
+                            <div class="submit-btn-wrapper flex-div justify-content-btw">
+                                <button class="upload-method-btn sec-btn modal-trigger modal-close" data-target="add-customer-modal">Single upload</button>
+                                <a href="./bulk-upload.html" class="upload-method-btn pry-btn">Bulk upload</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add-Customer-Modal -->
+            <div id="add-customer-modal" class="modal dashboardModal">
+                <div class="modal-content rel">
+                    <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                    <div class="modal-content-block">
+                        <div class="modal-title-header">
+                            <h1 class="modal-title">
+                                Add Customer
+                            </h1>
+                        </div>
+
+                        <form action="#" id="add-customer-form">
+                            <div class="input-field">
+                                <input type="text" class="inp-field" id="full-name" placeholder="Enter Full customer name">
+                                <label for="full-name" class="active">Full Name</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" class="inp-field" id="phone-number" placeholder="Enter phone number">
+                                <label for="phone-number" class="active">Phone Number</label>
+                            </div>
+                            <div class="select-field input-field rel">
+                                <select id="product-categories">
+                                    <option selected disabled value="">Select product categories</option>
+                                    <option value="Option 1">Option 1</option>
+                                    <option value="Option 2">Option 2</option>
+                                    <option value="Option 3">Option 3</option>
+                                    <option value="Option 4">Option 4</option>
+                                    <option value="Option 5">Option 5</option>
+                                </select>
+                                <label for="product-categories" class="active">Product Categories</label>
+                                <img src="../images/caret-1.svg" alt="caret" class="inp-caret-icon" />
+                            </div>
+                            <div class="input-field">
+                                <input type="text" class="inp-field" id="product-name" placeholder="Enter product name">
+                                <label for="product-name" class="active">Product Name</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" class="inp-field" id="product-description" placeholder="Enter product description">
+                                <label for="product-description" class="active">Product Description</label>
+                            </div>
+                            <div class="select-field input-field rel">
+                                <select id="merchant-name">
+                                    <option selected disabled value="">Select merchant name</option>
+                                    <option value="Option 1">Option 1</option>
+                                    <option value="Option 2">Option 2</option>
+                                    <option value="Option 3">Option 3</option>
+                                    <option value="Option 4">Option 4</option>
+                                    <option value="Option 5">Option 5</option>
+                                </select>
+                                <label for="merchant-name" class="active">Merchant Name</label>
+                                <img src="../images/caret-1.svg" alt="caret" class="inp-caret-icon" />
+                            </div>
+                            <div class="input-field">
+                                <input type="text" class="inp-field datepicker" id="payment-due-date" placeholder="Choose date">
+                                <label for="payment-due-date" class="active">Payment Due Date</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" class="inp-field" id="store-address" placeholder="Enter store address">
+                                <label for="store-address" class="active">Store Address</label>
+                            </div>
+                            <div class="input-field prefix-field">
+                                <input type="text" class="inp-field" id="customer-amt" placeholder="0">
+                                <label for="customer-amt" class="active">Amount</label>
+                                <span class="currency-prefix">₦</span>
+                            </div>
+                            <hr class="gray-divider">
+                            <div class="submit-btn-wrapper">
+                                <button type="button" class="pry-btn continue-btn dashboard-modal-btn flex-div modal-trigger modal-close" data-target="customer-successful-modal">
+                                    <span>Upload</span> <span class='right-arr'>&rsaquo;</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer-Successful-Modal -->
+            <div id="customer-successful-modal" class="modal dashboardModal">
+                <div class="modal-content">
+                    <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                    <div class="modal-content-block">
+                        <div class="success-wrapper center">
+                            <img src="../images/completed.svg" alt="congrats" class="success-img" />
+                            <h1 class="success-title">Good Job!</h1>
+                            <p class="success-desc">
+                                You just added a new customer to your customer list sucessfully.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--=== end of Modals Section ===-->
         </div>
     </div>
     
@@ -556,6 +676,9 @@
 
             var elemsTabs = document.querySelectorAll('.tabs');
             M.Tabs.init(elemsTabs);
+
+            var elemsDatepicker = document.querySelectorAll('.datepicker');
+            M.Datepicker.init(elemsDatepicker);
 
             $(".filter-trigger").click(function(){
                 $(".filter-dropdown-content").slideToggle();

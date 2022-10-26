@@ -370,14 +370,32 @@ span.empty-cta {
 span.tranxn-amount {
     padding-right: 5px;
 }
+form#upload-form {
+    max-width: 500px;
+}
+form#upload-form .upload-sample-wrapper {
+    margin: 40px 0;
+}
+.file-field .file-path-wrapper {
+    padding-left: 0;
+}
+.toast.success {
+    background-color: #21D184 !important;
+}
+.toast.failed {
+    background-color: #FF5C5C !important;
+}
+.toast img {
+    margin-right: 10px;
+}
 /*---=== end of Customers ===---*/
 
 
 /*---=== Payouts Page ===---*/
-#payouts-page .datepicker-date-display {
+#payouts-page .datepicker-date-display, #add-customer-modal .datepicker-date-display {
     display: none;
 }
-#payouts-page .datepicker-modal {
+#payouts-page .datepicker-modal, #add-customer-modal .datepicker-modal {
     transform: scale(0.7) !important;
     min-width: 320px;
     left: -10px;
