@@ -93,6 +93,7 @@ img.modal-close.close-modal {
 }
 .modal-title-header :is(h1, p) {
     margin: 0;
+    margin-bottom: 10px;
 }
 p.modal-desc.gray-txt {
     line-height: 1.2;
@@ -496,5 +497,35 @@ button.pry-btn.continue-btn {
     max-width: 350px;
     margin-left: auto;
     margin-right: auto;
+}
+img.share-r-img.pointer {
+    transition: transform 1.5s;
+}
+img.share-r-img.pointer:hover {
+    transform: scale(1.1);
+}
+hr.gray-divider.hr-gd-2 {
+    margin: 30px auto;
+}
+
+.processed .customer-id-block {
+    background: #FCF9FA;
+}
+.received .customer-id-block {
+    background: rgba(88, 165, 92, 0.1);
+    border: 1px solid rgba(88, 165, 92, 0.2);
+}
+.failed .customer-id-block {
+    background: #FEF8FF;
+    border: 1px solid #DA2C56;
+}
+.processed .tranxn-status-txt {
+    color: var(--pry-color);
+}
+.received .tranxn-status-txt {
+    color: green;
+}
+.failed .tranxn-status-txt {
+    color: red;
 }
 /*---=== end of Add/Withdraw-Money-Modals ===---*/

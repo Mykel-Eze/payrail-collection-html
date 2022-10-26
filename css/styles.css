@@ -58,7 +58,7 @@ body {
     font-family: var(--font);
 }
 .smbold-txt{
-    font-family: var(--font-smbold);
+    font-family: var(--font-medium);
 }
 .bold-txt{
     font-family: var(--font-bold);

@@ -254,7 +254,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>                           
-                                        <tr>
+                                        <tr class="modal-trigger" data-target="transaction-details-modal">
                                             <td>
                                                 <div class="flex-div">
                                                     <img src="../images/received-icon.svg" alt="transaction icon" class="tranx-activity-icon" />
@@ -283,7 +283,7 @@
                                                 <img src="../images/menu-circle.svg" alt="icon" class="table-menu-circle" />
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="modal-trigger" data-target="transaction-details-modal">
                                             <td>
                                                 <div class="flex-div">
                                                     <img src="../images/received-icon.svg" alt="transaction icon" class="tranx-activity-icon" />
@@ -312,7 +312,7 @@
                                                 <img src="../images/menu-circle.svg" alt="icon" class="table-menu-circle" />
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="modal-trigger" data-target="transaction-details-modal">
                                             <td>
                                                 <div class="flex-div">
                                                     <img src="../images/send-icon.svg" alt="transaction icon" class="tranx-activity-icon" />
@@ -349,6 +349,85 @@
                   </div>
               </section>
               <!--=== end of Main Content ===-->
+
+              <!--=== Modals Section ===-->
+              <!-- Transaction-Details-Modal -->
+              <div id="transaction-details-modal" class="modal dashboardModal">
+                <div class="modal-content rel">
+                    <img src="../images/close-modal-2.svg" alt="close" class="modal-close close-modal" />
+                    <div class="modal-content-block">
+                        <div class="modal-title-header">
+                            <h1 class="modal-title">
+                                Transaction Details
+                            </h1>
+                        </div>
+                        <!-- Note to Developer: classes to use for transaction status are: processed, received, failed -->
+                        <div class="collections-scroll processed">
+                            <div class="customer-id-block">
+                                <div class="cib-row flex-div justify-content-btw">
+                                    <span class="cib-title">Reference</span>
+                                    <span class="cib-desc bold-txt">PC0814HGHS99</span>
+                                </div>
+                                <div class="cib-row flex-div justify-content-btw">
+                                    <span class="cib-title">Amount</span>
+                                    <span class="cib-desc cib-big-txt bold-txt">₦10,000.00</span>
+                                </div>
+                            </div>
+
+                            <div class="collection-details-wrapper">
+                                <div class="customer-collection-details">
+                                    <div class="ccd-block">
+                                        <div class="ccd-block-title">Merchant Information</div>
+                                        <div class="ccd-block-desc">
+                                            <span>Unilever Nigeria Limited</span> <br> 
+                                            <span>GTBank  •  0123659124</span>
+                                        </div>
+                                    </div>
+                                    <div class="ccd-block">
+                                        <div class="ccd-block-title">Status</div>
+                                        <div class="ccd-block-desc tranxn-status-txt">Processed</div>
+                                    </div>
+                                    <div class="ccd-block">
+                                        <div class="ccd-block-title">Debit Account</div>
+                                        <div class="ccd-block-desc">
+                                            <span>Agent ID: 091092</span>
+                                            <span>Olamide Olagunju:  1812788912</span>
+                                        </div>
+                                    </div>
+                                    <div class="ccd-block">
+                                        <div class="ccd-block-title">Narration</div>
+                                        <div class="ccd-block-desc">08148620099</div>
+                                    </div>
+                                </div>
+                                <hr class="gray-divider hr-gd-2" />
+                                <div class="collection-debt-figures">
+                                    <div class="cbf-row flex-div justify-content-btw">
+                                        <div class="cbf-row-title">Type</div>
+                                        <div class="cbf-row-desc">Wallet Balance</div>
+                                    </div>
+                                    <div class="cbf-row flex-div justify-content-btw">
+                                        <div class="cbf-row-title">Payment</div>
+                                        <div class="cbf-row-desc cbf-big-txt smbold-txt"><small>₦</small>35,000,000.09</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="share-receipt-wrapper flex-div justify-content-btw center">
+                                <div class="share-receipt-block">
+                                    <img src="../images/download.svg" alt="download" class="share-r-img pointer">
+                                    <div>Download Reciept</div>
+                                </div>
+                                <div class="share-receipt-block">
+                                    <img src="../images/share.svg" alt="share" class="share-r-img pointer">
+                                    <div>Share Reciept</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+              <!--=== end of Modals Section ===-->
             </div>
         </div>
     </div>
