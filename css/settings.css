@@ -74,7 +74,7 @@
 
 
 .settings-profile-card {
-    height: 80px;
+    min-height: 80px;
     width: 47%;
     display: grid;
     grid-template-columns: 25% 50% 25%;
@@ -129,7 +129,7 @@
 }
 
 #profile-card-title {
-    margin-top: auto;
+    margin-top: 8px;
     font-size: 0.7em;
     font-weight: bold;
     color: #89163B;
@@ -1056,7 +1056,7 @@
 }
 
 .settings-category-section.show {
-    background-color: #F2F2F2;
+    background-color: transparent;
     display: flex;
 }
 

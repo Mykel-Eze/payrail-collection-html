@@ -210,7 +210,7 @@
                                     </div>
                                 </div>
                                 <div class="download-template-txt flex-div">
-                                    <u>Download template</u>
+                                    <u class="pointer">Download template</u>
                                     <img src="../images/document-icon.svg" alt="document" class="download-document-icon">
                                 </div>
     
@@ -275,7 +275,7 @@
         const statusMssg = () => {
             const toastMsgSuccess = '<img src="../images/good.svg"/> <span>Successfully set prefered on time passwords (OTP) delivery method</span>'
             const toastMsgFailure = '<img src="../images/wrong.svg"/> <span>Wrong formating cell or file type, download the template for sample</span>'
-            M.toast({html: toastMsgFailure, classes: 'success', displayLength: '5000'})
+            M.toast({html: toastMsgSuccess, classes: 'success', displayLength: '5000'})
             // Note to Developer: The other class apart from .success is .failed
         }
     </script>

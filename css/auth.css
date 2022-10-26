@@ -27,7 +27,7 @@ button.dropdown-trigger.flex-div {
 .language-block-wrapper {
     margin-right: 25px;
 }
-a.create-account-btn {
+a.create-account-btn, button.create-account-btn {
     display: block;
     background: #89163B;
     border-radius: 6px;
@@ -40,9 +40,17 @@ a.create-account-btn {
     transition: all 0.5s;
     border: 1px solid var(--pry-color);
 }
-a.create-account-btn.pry-bg:hover {
+a.create-account-btn.pry-bg:hover, button.create-account-btn:hover {
     background-color: transparent;
     color: var(--pry-color);
+}
+.create-account-btn svg {
+    margin-left: 5px;
+    position: relative;
+    top: 1px;
+}
+.create-account-btn svg path {
+    fill: white;
 }
 span.selected-language {
     padding: 0 5px;

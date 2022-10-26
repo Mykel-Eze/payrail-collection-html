@@ -924,3 +924,6 @@ div#done-btn-wrapper {
 .active-txt .hide-txt {
     display: none;
 }
+img.download-document-icon {
+    margin-left: 5px;
+}
