@@ -529,3 +529,26 @@ hr.gray-divider.hr-gd-2 {
     color: red;
 }
 /*---=== end of Add/Withdraw-Money-Modals ===---*/
+
+/*---=== Customer-Modals ===---*/
+.phone-number-wrapper a.flex-div {
+    justify-content: center;
+    font-size: 24px;
+    color: #353d46;
+}
+.phone-number-wrapper a.flex-div img.phone-call {
+    margin-left: 10px;
+}
+button.make-collection-btn.pry-btn {
+    color: white;
+}
+form#add-customer-form {
+    margin: 35px 0 10px;
+}
+form#add-customer-form .input-field {
+    margin: 30px auto;
+}
+form#add-customer-form .input-field input.inp-field {
+    margin-bottom: 0 !important;
+}
+/*---=== end of Customer-Modals ===---*/
