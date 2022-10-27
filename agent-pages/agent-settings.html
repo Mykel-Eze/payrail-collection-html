@@ -204,11 +204,30 @@
                                                 maximum size of 5 MB. Change photo
                                             </h4>
                                         </div>
-                                        <div class="agent-profile-card-right">
+                                        <!-- <div class="agent-profile-card-right">
                                             <div id="avatar-holder">
                                                 <img src="../images/avatar-default.png" alt="">
                                             </div>
+                                        </div> -->
+                                        <div class="agent-profile-card-right">
+                                            
+                                        <div class="flex-div change-avatar-wrapper">
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <div class="upload-logo">
+                                                        <img src="../images/default-pix.svg" alt="default" />
+                                                    </div>
+                                                    <div class="uploaded-img-div">
+                                                        <img src="" alt="user-img" id="uploaded-img" />
+                                                    </div>
+                                                    <input type="file" id="user-pix-filepath"
+                                                        accept="image/x-png,image/gif,image/jpeg" />
+                                                </div>
+                                            </div>
+
                                         </div>
+                                        </div>
+
                                     </div>
                                     <div class="profile-details">
                                         <div class="agent-profile-card-left">
@@ -219,11 +238,13 @@
                                             </h4>
                                         </div>
                                         <div class="agent-profile-card-right">
-                                            <div id="agent-profile-input-holder-sub" class="agent-profile-input-holder-sub">
+                                            <div id="agent-profile-input-holder-sub"
+                                                class="agent-profile-input-holder-sub">
                                                 <label for="firstname">Legal First Name</label>
                                                 <input name="firstname" type="text" placeholder="Firstname">
                                             </div>
-                                            <div id="agent-profile-input-holder-sub" class="agent-profile-input-holder-sub">
+                                            <div id="agent-profile-input-holder-sub"
+                                                class="agent-profile-input-holder-sub">
                                                 <label for="firstname">Legal Last Name</label>
                                                 <input name="firstname" type="text" placeholder="Lastname">
                                             </div>
@@ -265,9 +286,8 @@
 
                                     <div id="save-btn">
                                         <button href="/signup" class="create-account-btn pry-bg">
-                                            <span>SAVE CHANGES</span> <svg width="6" height="10"
-                                                viewBox="0 0 6 10" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
+                                            <span>SAVE CHANGES</span> <svg width="6" height="10" viewBox="0 0 6 10"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M0.670123 0C0.292212 0 -0.001091 0.293122 -0.001091 0.665163C-0.001091 0.851183 0.0722351 1.02029 0.201965 1.14994L4.15028 5.00564L0.201965 8.85006C0.0722351 8.97971 -0.001091 9.15445 -0.001091 9.33484C-0.001091 9.70688 0.292212 10 0.670123 10C0.850617 10 1.00855 9.93236 1.13264 9.80834L5.52091 5.52424C5.67885 5.37768 5.75781 5.19729 5.75781 5C5.75781 4.80271 5.67885 4.6336 5.52655 4.4814L1.13828 0.191657C1.00855 0.0676432 0.850617 0 0.670123 0Z"
                                                     fill="#353D46" />
@@ -276,7 +296,8 @@
                                     </div>
                                 </section>
 
-                                <div data-tab="Security" class="settings-category-section agent-tabs" id="settings-security-body">
+                                <div data-tab="Security" class="settings-category-section agent-tabs"
+                                    id="settings-security-body">
                                     <form id="settings-security-form" action="">
                                         <section id="security-form-section-tab">
                                             <ul>
@@ -550,7 +571,7 @@
                                     </div>
                                 </div>
 
-                                
+
 
                                 <section class="agent-tabs" id="agent-compliance-tab" data-tab="Compliance">
                                     <div class="profile-details">
@@ -639,7 +660,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="settings-profile-update-form-input-holder id-section-input">
                                                     <input type="text" class="filename" name="" id="id-filename"
                                                         placeholder="Drag and drop document here or Browse">
@@ -729,7 +750,8 @@
                                         <div class="modal-divider" style=" border-top:1px solid #777777;"></div>
 
                                         <div id="save-btn" class="create-account-wrapper">
-                                            <a href="#guarantor-success-modal" class="create-account-btn pry-bg modal-trigger">
+                                            <a href="#guarantor-success-modal"
+                                                class="create-account-btn pry-bg modal-trigger">
                                                 <span>SEND REQUEST</span>
                                             </a>
                                         </div>
@@ -750,8 +772,9 @@
                                     </div>
                                 </section>
 
-                                <section class="settings-category-section agent-tabs"  id="agent-preference-tab" data-tab="Preference">
-                                    <div style="width:100% ;"  class="">
+                                <section class="settings-category-section agent-tabs" id="agent-preference-tab"
+                                    data-tab="Preference">
+                                    <div style="width:100% ;" class="">
                                         <section id="settings-preference">
                                             <div>
                                                 <div>Messages</div>
@@ -960,20 +983,28 @@
 
         let radios = Array.from(document.querySelectorAll('.two-factor-radio input'))
 
-let radioLabels = document.querySelectorAll('.two-factor-radio')
-radioLabels.forEach(label => {
-    label.addEventListener("click", () => {
-        if (label.children[0].checked) {
-            return
-        }
-        radios.forEach(radio => radio.checked = false)
-        label.children[0].checked = true
-    })
-})
+        let radioLabels = document.querySelectorAll('.two-factor-radio')
+        radioLabels.forEach(label => {
+            label.addEventListener("click", () => {
+                if (label.children[0].checked) {
+                    return
+                }
+                radios.forEach(radio => radio.checked = false)
+                label.children[0].checked = true
+            })
+        })
 
-$(".preference-toggler").on("click", function () {
-    $(this).toggleClass("inactive")
-})
+        $(".preference-toggler").on("click", function () {
+            $(this).toggleClass("inactive")
+        })
+
+        $("#user-pix-filepath").change(function(){
+            var uploadedImageSrc1 = window.URL.createObjectURL(this.files[0]);
+            console.log(uploadedImageSrc1)
+            $(".upload-logo").hide();
+            $(".uploaded-img-div").show();
+            $("#uploaded-img").attr("src", uploadedImageSrc1);
+        });
 
 
         const balanceType = document.querySelector("#balance-type");
