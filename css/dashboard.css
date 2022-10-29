@@ -480,7 +480,7 @@ ul.dropdown-content {
     margin: 40px 0 30px;
 }
 .pending-action-block {
-    background: #F9F9F9;
+    background: #FFFFFF;
     border-radius: 16px;
     padding: 20px;
 }
@@ -911,6 +911,160 @@ div#done-btn-wrapper {
     }
 }
 /*---=== end of Pending Task Styling ===---*/
+
+/*---=== Pending Task (Merchant) Styling ===---*/
+div#merchant-kyc-wrapper #kyc-form {
+    max-width: none;
+}
+.form-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.form-page-counter {
+    background: #FFFFFF;
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: var(--font-medium);
+    font-size: 12px;
+}
+.radio-block label span {
+    color: #353D46;
+}
+.radio-block-desc {
+    color: #979797;
+}
+ul.check-boxes {
+    margin-top: 0;
+}
+ul.check-boxes li span {
+    margin-right: 10px;
+}
+.radio-block-desc {
+    color: #979797;
+    padding-left: 35px;
+    margin-top: 5px;
+}
+.radio-block [type="radio"]:checked + span {
+    font-weight: bold;
+}
+.form-top-mag {
+    margin: 20px 0 30px;
+}
+.mbd-block-title {
+    font-size: 18px;
+    font-family: var(--font-medium);
+    letter-spacing: -0.5px;
+}
+.mbd-block-desc {
+    font-size: 12px;
+    color: #979797;
+    max-width: 330px;
+}
+.fgb-desc-txt {
+    margin-bottom: 12px;
+}
+.owners-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.owners-block {
+    background: #FFFFFF;
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    border-radius: 28.5px;
+    min-height: 120px;
+    padding: 0 20px;
+    position: relative;
+}
+.initials-avatar {
+    width: 74px;
+    height: 74px;
+    line-height: 74px;
+    background: #FFFFFF;
+    border: 3px solid rgba(151, 151, 151, 0.2);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    margin-right: 20px;
+}
+.owner-name {
+    font-size: 21px;
+}
+.owner-email {
+    font-size: 12px;
+    color: #777777;
+    mix-blend-mode: normal;
+    opacity: 0.57;
+    margin-top: -5px;
+}
+.owner-roles {
+    font-size: 12px;
+    margin-top: 12px;
+}
+span.edit-trigger {
+    font-size: 18px;
+    cursor: pointer;
+}
+span.edit-trigger:hover {
+    text-decoration: underline;
+}
+div#add-owner-trigger .initials-avatar {
+    font-size: 43px;
+    line-height: 1.5;
+}
+div.add-owner-txt {
+    font-size: 21px;
+    color: #979797;
+}
+div#add-owner-trigger {
+    cursor: pointer;
+    transition: transform 1.5s;
+}
+div#add-owner-trigger:hover {
+    transform: scale(1.03);
+}
+img.delete-owner {
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    cursor: pointer;
+}
+.dashboard-form #owner-dob-field.single-field .select-dropdown.dropdown-trigger {
+    padding: 0 !important;
+    border: none !important;
+}
+.form-grid-block .input-field.grid-field {
+    margin-top: 0;
+}
+small.checkbox-desc {
+    color: #979797;
+    position: relative;
+    top: -5px;
+    font-size: 12px;
+}
+.input-field.checkbox-field .flex-div label {
+    margin-right: 10px;
+}
+.input-field.checkbox-field {
+    padding-left: 20px;
+}
+.input-field.checkbox-field.terms-agreement {
+    max-width: 500px;
+}
+.input-field.checkbox-field.terms-agreement label span {
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    top: 2px;
+    color: #979797;
+}
+.input-field.checkbox-field.terms-agreement label span a {
+    color: #979797;
+    text-decoration: underline;
+}
+/*---=== end of Pending Task (Merchant) Styling ===---*/
 
 .show-txt {
     display: none;

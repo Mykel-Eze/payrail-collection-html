@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../payrail-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#89163B" />
+    <meta name="author" content="Payrail">
+    <meta name="description" content="Payrail Collection web app" />
+    <link rel="apple-touch-icon" href="../payrail-icon.png" />
+    <title>Home - Payrail Collection</title>
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../materialize.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/top-nav.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Location Modal Stylesheet -->
+    <link rel="stylesheet" href="../css/location-modal.css">
+  </head>
+  <body>
+
+    <div id="root">
+        <div class="App">
+            <div id="body-wrapper" class='dashboard-page'>
+              <!--=== SideBar Section ===-->
+              <section id="side-bar">
+                <div class="container">
+                    <div class='user-block-wrapper'>
+                      <div class="dropdown-trigger flex-div" data-target="user-dropdown">
+                          <div class="user-details flex-div">
+                                <!-- See: https://github.com/ambassify/react-avatar  for React-Avatar-->
+                                <img src="../images/default-avatar.svg" alt="Olamide Olagunju" class="no-user-avatar">
+                            </div>
+                          <div class="user-name-details">
+                              <div class="user-name-txt bold-txt truncate">Unilever Nigeria</div>
+                              <div class="user-role">Olamide Olagunju</div>
+                          </div>
+                          <div class="caret-div">
+                              <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
+                          </div>
+                      </div>
+                        <ul id='user-dropdown' class='dropdown-content'>
+                            <li>
+                                <a href="#!">Merchant ID: 109298</a>
+                            </li>
+                            <li>
+                                <a href="./settings-profile.html">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#!">Support</a>
+                            </li>
+                            <li class="divider" tabIndex="-1"></li>
+                            <li>
+                                <a href="#!">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-list-wrapper">
+                        <div class="nav-list-1">
+                            <ul class="collapsible">
+                                <li class="link-wrapper">
+                                    <div class="collapsible-header pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/home-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Home</span>
+                                        </div>
+                                        <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
+                                    </div>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            <li class="pg-sub-link">
+                                                <a href="./getting-started.html">
+                                                    Get Started
+                                                    <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                </a>
+                                            </li>
+                                            <li class="pg-sub-link">
+                                                <a href="./home.html">
+                                                    Overview
+                                                    <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="./wallet.html" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/wallet-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Wallet</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="./customers.html" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/customers-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Customers</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="./transactions.html" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/tranx-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Transactions</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="./inventory.html" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Payout</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="/#" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/support-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Support</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="brand-logo">
+                          <a href="../index.html">
+                              <img src="../images/payrail-logo.svg" alt="Payrail" class="brand-img" />
+                          </a>
+                          <div class="sidebar-footer">
+                              © Angala Financial Technologies Limited.
+                          </div>
+                    </div>
+                </div>
+            </section>
+            <!--=== end of SideBar Section ===-->
+    
+              <!--=== Main Content ===-->
+              <section id="content-body">
+                  <!--=== Top-Nav Section ===-->
+                  <nav class="top-nav">
+                      <div class="flex-div align-content-center justify-content-btw">
+                          <div id="search-form">
+                              <div class="rel search-block flex-div">
+                                  <img src="../images/search.svg" alt="icon" class="search-btn-img" />
+                                  <input id="search" type="search" class="search-input" placeholder="Search Customer, payout, transactions" />
+                              </div>
+                          </div>
+          
+                          <div class="user-session-wrapper flex-div">
+                              <a href="/dashboard/settings" class="topnav-btn hover-scale">
+                                  <img src="../images/settings.svg" alt="icon" class="topnav-btn-img tbi-default*" />
+                              </a>
+                              <a href="/#" class="topnav-btn hover-scale">
+                                  <img src="../images/notification.svg" alt="icon" class="topnav-btn-img" />
+                              </a>
+                              <div class="create-account-wrapper">
+                                  <a href="./customers.html" class="create-account-btn pry-bg">
+                                      <span>UPLOAD CUSTOMERS</span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </nav>
+                  <!--=== end of Top-Nav Section ===-->
+    
+                  <div class="page-content-block-wrapper">
+                    <div class="page-content-wrapper">
+                        <div class="container">
+                            <div class="page-header-wrapper">
+                                <div class="left-align">
+                                    <h2 class="page-title">Complete your KYC</h2>
+                                    <span>
+                                        Unilever, it’s important you update your profile to before you become an agent is assign to make collections for you
+                                    </span>
+                                </div>
+                            </div>
+            
+                            <div class="pending-tasks-wrapper" id="merchant-kyc-wrapper">
+                                <div class="kyc-form-wrapper">
+                                    <form action="more-business-details.html" id="kyc-form" class="dashboard-form">
+                                        <div class="row">
+                                            <fieldset id="business-details" class="rel">
+                                                <div class="flex-div justify-content-btw form-top">
+                                                    <div class="flex-div form-header justify-content-btw">
+                                                        <div class="flex-div change-avatar-wrapper">
+                                                            <div class="file-field input-field">
+                                                                <div class="btn">
+                                                                    <div class="upload-logo">
+                                                                        <img src="../images/default-pix.svg" alt="default" />
+                                                                    </div>
+                                                                    <div class="uploaded-img-div">
+                                                                        <img src="" alt="user-img" id="uploaded-img-2" />
+                                                                    </div>
+                                                                    <input type="file" id="business-pix-filepath" accept="image/x-png,image/gif,image/jpeg" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="username-wrapper">
+                                                                <h4 class="username">Unilever Business Logo</h4>
+                                                                <span>Merchant ID: 109298</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-page-counter">
+                                                        <span>1 of 5 complete</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-grid-wrapper">
+                                                    <div class="form-grid-block">
+                                                        <div class="input-field grid-field">
+                                                            <div class="input-field single-field">
+                                                                <input id="business-name" type="text" class="form-inp-field" />
+                                                                <label for="business-name">Business Name</label>
+                                                            </div>
+                                                            <div class="input-field single-field">
+                                                                <input id="trading-name" type="text" class="form-inp-field" />
+                                                                <label for="trading-name">Trading Name</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-field single-field">
+                                                            <textarea id="business-description" class="form-inp-field materialize-textarea"></textarea>
+                                                            <label for="business-description">Description</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-grid-block">
+                                                        <div class="select-field input-field single-field">
+                                                            <select id="business-category">
+                                                                <option value="" disabled selected>Please specify business category</option>
+                                                                <option value="Option 1">Option 1</option>
+                                                                <option value="Option 2">Option 2</option>
+                                                                <option value="Option 3">Option 3</option>
+                                                                <option value="Option 4">Option 4</option>
+                                                                <option value="Option 5">Option 5</option>
+                                                            </select>
+                                                            <label for="business-category" class="active">Category</label>
+                                                            <img src="../images/caret-1.svg" alt="caret" class="inp-caret-icon" />
+                                                        </div>
+                                                        <div class="select-field input-field single-field">
+                                                            <select id="staff-size">
+                                                                <option value="" disabled selected>Select staff size</option>
+                                                                <option value="Option 1">Option 1</option>
+                                                                <option value="Option 2">Option 2</option>
+                                                                <option value="Option 3">Option 3</option>
+                                                                <option value="Option 4">Option 4</option>
+                                                                <option value="Option 5">Option 5</option>
+                                                            </select>
+                                                            <label for="staff-size" class="active">Staff Size</label>
+                                                            <img src="../images/caret-1.svg" alt="caret" class="inp-caret-icon" />
+                                                        </div>
+                                                        <div class="select-field input-field single-field">
+                                                            <select id="industry">
+                                                                <option value="" disabled selected>Select business industry</option>
+                                                                <option value="Option 1">Option 1</option>
+                                                                <option value="Option 2">Option 2</option>
+                                                                <option value="Option 3">Option 3</option>
+                                                                <option value="Option 4">Option 4</option>
+                                                                <option value="Option 5">Option 5</option>
+                                                            </select>
+                                                            <label for="industry" class="active">Industry</label>
+                                                            <img src="../images/caret-1.svg" alt="caret" class="inp-caret-icon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="submit-btn-wrapper flex-div">
+                                                    <button type="submit" class="submit-btn pry-btn">Save</button>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </form>
+            
+                                    <div id="location-search-box" class="modal">
+                                        <div class="modal-content">
+                                            <img src="../images/close-modal.svg" alt="close" class="modal-close close-location-box" />
+                                            <div class="locations-wrapper">
+                                                <div class="input-field">
+                                                    <input id="locations-inp" type="text" class="form-inp-field" placeholder="Enter your address" />
+                                                </div>
+                                                <div class="locations-list">
+                                                    <div class="flex-div list-placeholder">
+                                                        <img src="../images/location-circle-icon.svg" alt="location icon" class="red-location-icon" />
+                                                        <span id="use-current-location">Use my current location</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </section>
+              <!--=== end of Main Content ===-->
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../jquery.min.js"></script>
+    <script src="../materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elemsCollapsible = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(elemsCollapsible);
+
+            var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(elemsDropdown, {
+                constrainWidth: true,
+                coverTrigger: false
+            });
+        });
+
+        $("#user-pix-filepath").change(function(){
+            var uploadedImageSrc1 = window.URL.createObjectURL(this.files[0]);
+            $("#personal-details .upload-logo").hide();
+            $("#personal-details .uploaded-img-div").show();
+            $("#uploaded-img").attr("src", uploadedImageSrc1);
+        });
+
+        $("#business-pix-filepath").change(function(){
+            var uploadedImageSrc1 = window.URL.createObjectURL(this.files[0]);
+            $("#business-details .upload-logo").hide();
+            $("#business-details .uploaded-img-div").show();
+            $("#uploaded-img-2").attr("src", uploadedImageSrc2);
+        });
+
+        var elemSelect = document.querySelectorAll('select');
+        M.FormSelect.init(elemSelect);
+
+        var elemsModal = document.querySelectorAll('.modal');
+        M.Modal.init(elemsModal);
+
+        var elemsDatepicker = document.querySelectorAll('.datepicker');
+        M.Datepicker.init(elemsDatepicker);
+
+        // var location_inp = $("#locations-inp").val()
+        $("#locations-inp").change(function(){
+            $("#residential_address").val($(this).val())
+        })
+    </script>
+  </body>
+</html>

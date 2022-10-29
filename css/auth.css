@@ -279,7 +279,7 @@ span.toggle-show-password {
 .phone-number-wrapper .input-field input.inp-field {
     border-radius: 0 0 10px 10px;
 }
-.dropdown-content.select-dropdown {
+#root .dropdown-content.select-dropdown {
     width: 100% !important;
     height: auto !important;
 }

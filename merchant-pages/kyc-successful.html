@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../payrail-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#89163B" />
+    <meta name="author" content="Payrail">
+    <meta name="description" content="Payrail Collection web app" />
+    <link rel="apple-touch-icon" href="../payrail-icon.png" />
+    <title>Home - Payrail Collection</title>
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../materialize.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/top-nav.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+
+    <div id="root">
+        <div class="App">
+            <div id="body-wrapper" class='dashboard-page'>
+              <!--=== SideBar Section ===-->
+              <section id="side-bar">
+                <div class="container">
+                    <div class='user-block-wrapper'>
+                        <div class="dropdown-trigger flex-div" data-target="user-dropdown">
+                            <div class="user-details flex-div">
+                                  <!-- See: https://github.com/ambassify/react-avatar  for React-Avatar-->
+                                  <img src="../images/default-avatar.svg" alt="Olamide Olagunju" class="no-user-avatar">
+                              </div>
+                            <div class="user-name-details">
+                                <div class="user-name-txt bold-txt truncate">Unilever Nigeria</div>
+                                <div class="user-role">Olamide Olagunju</div>
+                            </div>
+                            <div class="caret-div">
+                                <img src="../images/caret-down-red.svg" alt="caret" class="topnav-caret" />
+                            </div>
+                        </div>
+                          <ul id='user-dropdown' class='dropdown-content'>
+                              <li>
+                                  <a href="#!">Merchant ID: 109298</a>
+                              </li>
+                              <li>
+                                  <a href="./settings-profile.html">Settings</a>
+                              </li>
+                              <li>
+                                  <a href="#!">Support</a>
+                              </li>
+                              <li class="divider" tabIndex="-1"></li>
+                              <li>
+                                  <a href="#!">Log out</a>
+                              </li>
+                          </ul>
+                    </div>
+                    <div class="nav-list-wrapper">
+                        <div class="nav-list-1">
+                            <ul class="collapsible">
+                                <li class="link-wrapper">
+                                    <div class="collapsible-header pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/home-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Home</span>
+                                        </div>
+                                        <img src="../images/caret-down.svg" alt="caret" class="caret-icon" />
+                                    </div>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            <li class="pg-sub-link">
+                                                <a href="./getting-started.html">
+                                                    Get Started
+                                                    <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                </a>
+                                            </li>
+                                            <li class="pg-sub-link">
+                                                <a href="./home.html">
+                                                    Overview
+                                                    <img src="../images/curvy.svg" alt="curved-path" class="curved-path" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="./wallet.html" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/wallet-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Wallet</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="./customers.html" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/customers-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Customers</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="./transactions.html" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/tranx-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Transactions</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="./inventory.html" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/payout-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Inventory</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="link-wrapper">
+                                    <a href="/#" class="pg-link">
+                                        <div class="flex-div">
+                                            <img src="../images/support-icon.svg" alt="icon" class="link-img" />
+                                            <span class="link-txt">Support</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="brand-logo">
+                          <a href="../index.html">
+                              <img src="../images/payrail-logo.svg" alt="Payrail" class="brand-img" />
+                          </a>
+                          <div class="sidebar-footer">
+                              © Angala Financial Technologies Limited.
+                          </div>
+                    </div>
+                </div>
+            </section>
+              <!--=== end of SideBar Section ===-->
+    
+              <!--=== Main Content ===-->
+              <section id="content-body">
+                  <!--=== Top-Nav Section ===-->
+                  <nav class="top-nav">
+                      <div class="flex-div align-content-center justify-content-btw">
+                          <div id="search-form">
+                              <div class="rel search-block flex-div">
+                                  <img src="../images/search.svg" alt="icon" class="search-btn-img" />
+                                  <input id="search" type="search" class="search-input" placeholder="Search Customer, payout, transactions" />
+                              </div>
+                          </div>
+          
+                          <div class="user-session-wrapper flex-div">
+                              <a href="/dashboard/settings" class="topnav-btn hover-scale">
+                                  <img src="../images/settings.svg" alt="icon" class="topnav-btn-img tbi-default*" />
+                              </a>
+                              <a href="/#" class="topnav-btn hover-scale">
+                                  <img src="../images/notification.svg" alt="icon" class="topnav-btn-img" />
+                              </a>
+                              <div class="create-account-wrapper">
+                                  <a href="/signup" class="create-account-btn pry-bg">
+                                      <span>MAKE COLLECTION</span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </nav>
+                  <!--=== end of Top-Nav Section ===-->
+    
+                    <div class="page-content-block-wrapper">
+                        <div class="page-content-wrapper">
+                            <div class="container">
+                                <div class="page-header-wrapper">
+                                    <div class="left-align">
+                                        <h2 class="page-title">Complete your KYC</h2>
+                                        <span>
+                                            Unilever, it’s important you update your profile  before you become an agent is assigned to handle your collections.
+                                        </span>
+                                    </div>
+                                </div>
+                
+                                <div class="pending-tasks-wrapper">
+                                    <div class="kyc-form-wrapper">
+                                        <div id="kyc-form" class="dashboard-form">
+                                            <div class="row">
+                                                    <div id="review-kyc-application">
+                                                        <div class="user-pix-div center mag-bottom-0">
+                                                        <img src="../images/completed.svg" alt="completed" class="user-pix" />
+                                                    </div>
+                                                    <div class="user-detected-notice center">
+                                                        <h1 class="modal-title">KYC submission succesful</h1>
+                                                        <p class="modal-desc">
+                                                            The details you provided are under review
+                                                        </p>
+                                                    </div>
+                                                    <div onclick="window.location.href='./personal-info.html'" class="review-field flex-div pointer" id="personal-info">
+                                                        <span class="review-field-txt">Personal Information</span>
+                                                        <img src="../images/pending-review-icon.svg" alt="pending-status" class="review-status-icon" />
+                                                    </div>
+                                                    <div onclick="window.location.href='./business-details.html'" class="review-field flex-div pointer" id="company-info">
+                                                        <span class="review-field-txt">Company Information</span>
+                                                        <img src="../images/complete-review-icon.svg" alt="pending-status" class="review-status-icon" />
+                                                    </div>
+                                                    <div onclick="window.location.href='./owners.html'" class="review-field flex-div pointer" id="business-contact">
+                                                        <span class="review-field-txt">Business Contact</span>
+                                                        <img src="../images/pending-review-icon.svg" alt="pending-status" class="review-status-icon" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+              <!--=== end of Main Content ===-->
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../jquery.min.js"></script>
+    <script src="../materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elemsCollapsible = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(elemsCollapsible);
+
+            var elemsDropdown = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(elemsDropdown, {
+                constrainWidth: true,
+                coverTrigger: false
+            });
+        });
+
+        // setTimeout(
+        //     function() {  
+        //         window.location="./getting-started.html"; 
+        //     } 
+        // , 3000);
+        
+    </script>
+  </body>
+</html>
