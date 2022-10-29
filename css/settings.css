@@ -437,8 +437,11 @@
 
 .agent-profile-input-holder {
     position: relative;
-    width: fit-content;
-    padding: 20px 400px 20px 30px;
+    width: 600px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0;
     border-radius: 10px;
     border: 1px solid rgba(119, 119, 119, 0.2);
     background-color: rgba(119, 119, 119, 0.2);
@@ -446,11 +449,14 @@
 
 .agent-profile-input-holder-sub {
     position: relative;
-    width: fit-content;
-    padding: 20px 70px 20px 30px;
+    width: 280px;
+    height: 50px;
+    padding:0;
     border-radius: 10px;
     border: 1px solid rgba(119, 119, 119, 0.2);
     background-color: rgba(119, 119, 119, 0.2);
+    display: flex;
+    align-items: center;
 }
 
 #agent-profile-input-holder input,
@@ -461,7 +467,8 @@
     border: none;
     /* background-color: rgba(119, 119, 119, 0.2); */
     height: 17px;
-    width: 175px;
+    width: 90%;
+    margin-left: 15px;
 }
 
 .agent-profile-input-holder label,
@@ -472,14 +479,16 @@
     line-height: 13.02px;
     position: absolute;
     background-color: #F9F9F9;
-    margin-top: -28px;
+    margin-top: -45px;
+    margin-left: 15px;
     z-index: 10;
     height: 14px;
     width: fit-content;
-    padding: 0 10px;
+    padding: 0 3px;
     text-align: center;
 
 }
+
 
 #referee-form-modal .referee-form-details-section #agent-profile-input-holder {
     margin-top: 50px;

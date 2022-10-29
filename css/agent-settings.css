@@ -49,8 +49,10 @@
 }
 
 #agent-profile-tab {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    background-color: #F9F9F9;
 }
 
 #agent-security-tab {}
@@ -127,7 +129,7 @@
 .agent-profile-input-holder {
     position: relative;
     width: fit-content;
-    padding: 20px 400px 20px 30px;
+    /* padding: 20px 400px 20px 30px; */
     border-radius: 10px;
     border: 1px solid rgba(119, 119, 119, 0.2);
     background-color: rgba(119, 119, 119, 0.2);
@@ -136,7 +138,7 @@
 .agent-profile-input-holder-sub {
     position: relative;
     width: fit-content;
-    padding: 20px 70px 20px 30px;
+    /* padding: 20px 70px 20px 30px; */
     border-radius: 10px;
     border: 1px solid rgba(119, 119, 119, 0.2);
     background-color: rgba(119, 119, 119, 0.2);
@@ -489,6 +491,8 @@
 }
 
 #agent-compliance-tab {
+    background-color: #F9F9F9;
+    margin-top: 20px;
     display:none;
     flex-direction: column;
 }
